@@ -23,6 +23,7 @@ cp -f "${PATCH_DIR}/int3472/intel_skl_int3472_common.ko.xz" "${UPDATE_DIR}/"
 cp -f "${PATCH_DIR}/int3472/intel_skl_int3472_discrete.ko.xz" "${UPDATE_DIR}/"
 cp -f "${PATCH_DIR}/ipu-bridge/ipu_bridge.ko.xz" "${UPDATE_DIR}/"
 cp -f "${PATCH_DIR}/ov5675/ov5675.ko.xz" "${UPDATE_DIR}/"
+cp -f "${PATCH_DIR}/gc5035/gc5035.ko.xz" "${UPDATE_DIR}/"
 
 echo "[3/5] depmod -a çalıştırılıyor (öncelikli güncel modüller taranıyor)..."
 depmod -a

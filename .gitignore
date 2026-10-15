@@ -14,8 +14,10 @@
 .*.mod.o.cmd
 modules.order
 .modules.order.cmd
+.*.cmd
+.*.o
+.module*
 Module.symvers
-.Module.symvers.cmd
 .tmp_versions/
 
 # Windows installer and large binary blobs

@@ -111,6 +111,15 @@ static unsigned long skl_int3472_clk_recalc_rate(struct clk_hw *hw,
 static int skl_int3472_clk_determine_rate(struct clk_hw *hw,
 					  struct clk_rate_request *req)
 {
+	struct int3472_clock *clk = to_int3472_clk(hw);
+
+	if (req->rate == 192000000UL || req->rate == 0)
+		req->rate = 19200000;
+	else if (clk->frequency)
+		req->rate = clk->frequency;
+	else
+		req->rate = 19200000;
+
 	return 0;
 }
 
@@ -118,6 +127,9 @@ static int skl_int3472_clk_set_rate(struct clk_hw *hw, unsigned long rate,
 				    unsigned long parent_rate)
 {
 	struct int3472_clock *clk = to_int3472_clk(hw);
+
+	if (rate == 192000000UL || rate == 0)
+		rate = 19200000;
 
 	clk->frequency = rate;
 	return 0;
