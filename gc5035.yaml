@@ -1,0 +1,30 @@
+# SPDX-License-Identifier: CC0-1.0
+# Lenovo IdeaPad Duet 5 12IRU8 - GalaxyCore GC5035 Rear Camera Factory Tuning
+# Extracted from Lenovo Windows 11 Driver (gc5035_CJAK519_ADL.aiqb / D570 Chicony)
+%YAML 1.1
+---
+version: 1
+algorithms:
+  - BlackLevel:
+      black_level: 64
+  - Awb:
+  - Ccm:
+      ccms:
+        - ct: 6500
+          ccm: [ 2.082, -0.936, -0.146,
+                -0.404,  2.064, -0.660,
+                -0.098, -0.693,  1.791 ]
+        - ct: 4000
+          ccm: [ 2.124, -1.083, -0.041,
+                -0.473,  2.278, -0.805,
+                -0.136, -0.583,  1.718 ]
+        - ct: 2850
+          ccm: [ 2.413, -1.527,  0.114,
+                -0.218,  1.801, -0.584,
+                -0.074, -0.702,  1.776 ]
+  - Adjust:
+      gamma: 2.2
+      contrast: 1.1
+      saturation: 1.15
+  - Agc:
+...

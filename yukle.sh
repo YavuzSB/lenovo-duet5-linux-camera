@@ -41,11 +41,17 @@ modprobe gc5035 || true
 
 echo "[5/5] Resmi fabrika kalibrasyon dosyaları ve renk profilleri kuruluyor..."
 
-# 1. libcamera renk düzeltme ve kızılötesi sızıntı bastırma profili
+# 1. libcamera renk düzeltme ve fabrika kalibrasyon profilleri
 if [ -f "${PATCH_DIR}/ov5675.yaml" ]; then
-  echo "  [+] libcamera fabrika renk ve IR bastırma profili (/usr/share/libcamera/ipa/simple/ov5675.yaml) kuruluyor..."
+  echo "  [+] libcamera ön kamera (OV5675) fabrika profili kuruluyor..."
   mkdir -p /usr/share/libcamera/ipa/simple
   cp -f "${PATCH_DIR}/ov5675.yaml" /usr/share/libcamera/ipa/simple/ov5675.yaml
+fi
+
+if [ -f "${PATCH_DIR}/gc5035.yaml" ]; then
+  echo "  [+] libcamera arka kamera (GC5035) fabrika profili kuruluyor..."
+  mkdir -p /usr/share/libcamera/ipa/simple
+  cp -f "${PATCH_DIR}/gc5035.yaml" /usr/share/libcamera/ipa/simple/gc5035.yaml
 fi
 
 # 2. Intel IPU6 HAL resmi Windows fabrika dosyaları

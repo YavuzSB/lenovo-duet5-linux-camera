@@ -18,6 +18,7 @@ rm -rf "${UPDATE_DIR}"
 
 echo "[2/4] Eklenen fabrika kalibrasyon ve profil dosyaları temizleniyor..."
 rm -f /usr/share/libcamera/ipa/simple/ov5675.yaml
+rm -f /usr/share/libcamera/ipa/simple/gc5035.yaml
 rm -f "${HAL_DIR}/OV5678_CJFL515_ADL.aiqb" "${HAL_DIR}/OV5678_CJFL515_ADL.cpf"
 rm -f "${HAL_DIR}/gc5035_CJAK519_ADL.aiqb" "${HAL_DIR}/gc5035_CJAK519_ADL.cpf"
 rm -f "${HAL_DIR}/gcss/graph_settings_OV5678_CJFL515_ADL.xml"
