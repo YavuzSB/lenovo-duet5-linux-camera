@@ -1771,6 +1771,29 @@ static const struct v4l2_subdev_video_ops gc5035_video_ops = {
 	.s_stream = gc5035_s_stream,
 };
 
+static int gc5035_get_selection(struct v4l2_subdev *sd,
+				struct v4l2_subdev_state *state,
+				struct v4l2_subdev_selection *sel)
+{
+	switch (sel->target) {
+	case V4L2_SEL_TGT_CROP_BOUNDS:
+	case V4L2_SEL_TGT_NATIVE_SIZE:
+		sel->r.top = 0;
+		sel->r.left = 0;
+		sel->r.width = 2592;
+		sel->r.height = 1944;
+		return 0;
+	case V4L2_SEL_TGT_CROP:
+	case V4L2_SEL_TGT_CROP_DEFAULT:
+		sel->r.top = 0;
+		sel->r.left = 0;
+		sel->r.width = 2592;
+		sel->r.height = 1944;
+		return 0;
+	}
+	return -EINVAL;
+}
+
 static const struct v4l2_subdev_pad_ops gc5035_pad_ops = {
 #if LINUX_VERSION_CODE < KERNEL_VERSION(6, 8, 0)
 	.init_cfg = gc5035_entity_init_cfg,
@@ -1779,6 +1802,7 @@ static const struct v4l2_subdev_pad_ops gc5035_pad_ops = {
 	.enum_frame_size = gc5035_enum_frame_sizes,
 	.get_fmt = gc5035_get_fmt,
 	.set_fmt = gc5035_set_fmt,
+	.get_selection = gc5035_get_selection,
 };
 
 static const struct v4l2_subdev_ops gc5035_subdev_ops = {
@@ -1973,7 +1997,7 @@ static int gc5035_initialize_controls(struct gc5035 *gc5035)
 
 	handler = &gc5035->ctrl_handler;
 	mode = gc5035->cur_mode;
-	ret = v4l2_ctrl_handler_init(handler, 8);
+	ret = v4l2_ctrl_handler_init(handler, 10);
 	if (ret)
 		return ret;
 
@@ -2018,6 +2042,14 @@ static int gc5035_initialize_controls(struct gc5035 *gc5035)
 				     V4L2_CID_TEST_PATTERN,
 				     ARRAY_SIZE(gc5035_test_pattern_menu) - 1,
 				     0, 0, gc5035_test_pattern_menu);
+
+	v4l2_ctrl_new_std(handler, NULL, V4L2_CID_CAMERA_ORIENTATION,
+			  V4L2_CAMERA_ORIENTATION_BACK,
+			  V4L2_CAMERA_ORIENTATION_BACK, 1,
+			  V4L2_CAMERA_ORIENTATION_BACK);
+
+	v4l2_ctrl_new_std(handler, NULL, V4L2_CID_CAMERA_SENSOR_ROTATION,
+			  0, 0, 1, 0);
 
 	if (handler->error) {
 		ret = handler->error;

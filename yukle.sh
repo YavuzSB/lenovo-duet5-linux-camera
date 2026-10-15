@@ -61,6 +61,11 @@ fi
 # Eski takılı paylaşımlı bellek segmentini temizle
 ipcrm -M 0x0043414d 2>/dev/null || true
 
+# Masaüstü WirePlumber oturumunu tazele (yeni kameraları anında tescille)
+if [ -n "${SUDO_USER}" ]; then
+  su - "${SUDO_USER}" -c "systemctl --user restart wireplumber 2>/dev/null || true"
+fi
+
 echo ""
 echo "=============================================================================="
 echo "[+] TEBRİKLER! Yamalı modüller ve resmi fabrika kalibrasyonları yüklendi."
