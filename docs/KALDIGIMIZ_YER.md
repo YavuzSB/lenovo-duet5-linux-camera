@@ -50,4 +50,10 @@ sudo bash yukle.sh
 ---
 
 ## 📝 Son Log
-- 2026-10-15: Ön kamera aktif edildi; Windows 11 fabrika kalibrasyonları (`OV5678_CJFL515_ADL.aiqb`) ayıklanıp arşivlendi; ön kamera renk ayarına ara verilip arka kamera (GC5035) hedefine geçildi. Standart `docs/` ağacı kuruldu.
+- 2026-10-15: Ön kamera aktif edildi; Windows 11 fabrika kalibrasyonları (`OV5678_CJFL515_ADL.aiqb`) ayıklanıp arşivlendi; ön kamera renk ayarına ara verilip arka kamera (GC5035) hedefine geçildi.
+- 2026-10-15 (19:35): Arka kamera sürücüsü (`gc5035/gc5035.c`) kökten revize edildi:
+  * Eksik mclk devm_clk_get bağlandı ve 19.2 MHz saat ayarlandı.
+  * Açılmayan voltaj regülatörleri (`avdd`, `dovdd`, `dvdd`) sisteme bağlandı ve `regulator_bulk_enable` eklendi.
+  * Ters tutulan `reset_gpio` mantığı düzeltildi (donanım reset bırakma sırası eklendi).
+  * `gc5035.ko.xz` derlendi ve `yukle.sh` içine eklendi.
+  * Kullanıcının `sudo bash /home/yavuz/duet5-camera/yukle.sh` çalıştırması bekleniyor.
