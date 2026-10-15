@@ -1,11 +1,19 @@
 # 📍 KALDIĞIMIZ YER — duet5-camera Anlık Durum
 
 **Son Güncelleme:** 2026-10-15  
-**Durum:** Faz 1 Tamamlandı (Ön Kamera Canlı), Faz 2 Aktif (Arka Kamera GC5035 Entegrasyonu)  
-**Sıradaki İş:** **Faz 2: Arka Kamera GC5035 Sürücüsünü ve Güç/Saat Sıralamasını Çözmek**  
+**Durum:** Faz 1 & Faz 2 TAMAMLANDI (Hem Ön Hem Arka Kamera Donanım Seviyesinde Aktif ve Çerçeve Yakalıyor)  
+**Sıradaki İş:** **Masaüstü Arayüzü (Snapshot) Kamera Değiştirme ve Renk Kalibrasyonu**  
 **Aktif Plan:** `docs/plan/GENEL_PLAN.md`  
-**Test Kanıtı:** `cam -l` -> `1: Internal front camera (\_SB_.PC00.LNK0)` aktif; arka kamera `-EREMOTEIO (-121)`  
-**Git Durumu:** İlklendirildi (`master`)  
+**Test Kanıtı:** 
+- `dmesg`: `SUCCESS! Detected GC5035 sensor (id=0x5035) on attempt 0!`
+- `cam -l`:
+  * `1: Internal front camera (\_SB_.PC00.LNK0)`
+  * `2: 'gc5035' (\_SB_.PC00.LNK1)`
+- `cam -c 2 --capture=1`: 2592x1944 20.4 MB tek kare başarıyla yakalandı.
+- `pw-cli`:
+  * `libcamera_input.__SB_.PC00.LNK0` (Ön Kamera)
+  * `libcamera_input.__SB_.PC00.LNK1` (Arka Kamera)
+**Git Durumu:** `master` güncel  
 
 ---
 
@@ -14,14 +22,17 @@
 ```bash
 cd /home/yavuz/duet5-camera
 
-# 1) Mevcut durumu denetle
-bash test.sh
-
-# 2) Çekirdek günlüğündeki sensör hatalarını oku
-dmesg | grep -i -E "gc5035|gcti|ov567|int3472" | tail -n 30
-
-# 3) Yamalı modülleri derle ve kur
+# 1) Modülleri yükle ve WirePlumber oturumunu tazele
 sudo bash yukle.sh
+
+# 2) Kameraları listele
+cam -l
+
+# 3) Arka kameradan test karesi yakala
+cam -c 2 --capture=1
+
+# 4) GNOME Snapshot uygulamasını başlat
+snapshot
 ```
 
 ---
@@ -31,29 +42,17 @@ sudo bash yukle.sh
 | Bileşen / Modül | Görevi / Durumu | Test Kanıtı |
 |---|---|---|
 | `ov5675.ko` | Ön kamera sürücüsü (`OVTI5678`) | `raw chip id: 0x5675` okundu |
-| `intel_skl_int3472_discrete.ko` | Ön kamera powerdown ve regülatör kontrolü | DVDD regülatörü ve GPIO eşleşti |
-| `ipu_bridge.ko` | IPU6 fwnode sensör köprüsü | `/dev/media0` üzerinde ov5675 entity 233 bağlandı |
-| `PipeWire / WirePlumber` | Masaüstü kamera video düğümü | `libcamera_input.__SB_.PC00.LNK0` tescillendi |
-| `GNOME Snapshot` | Kamera arayüzü | Ön kamera canlı akış sağlıyor |
+| `gc5035.ko` | Arka kamera sürücüsü (`GCTI5035`) | `SUCCESS! Detected GC5035 sensor (id=0x5035)` |
+| `intel_skl_int3472_discrete.ko` | PMIC güç hatları (avdd, dovdd, dvdd, reset) | 3 regülatör ve 19.2 MHz CCF saati aktif |
+| `ipu_bridge.ko` | IPU6 fwnode sensör köprüsü | `/dev/media0` üzerinde her iki sensör bağlı |
+| `PipeWire / WirePlumber` | Masaüstü kamera video düğümleri | `LNK0` (Ön) ve `LNK1` (Arka) Video/Source aktif |
+| `libcamera` | Donanım boru hattı ve Soft-ISP | `cam -c 2 --capture=1` ile 2592x1944 kare yakalandı |
 | `docs/` | Standart dokümantasyon ağacı | 5 temel direk eksiksiz kurulu |
 | `ipu6-hal-configs/` | Resmi Windows fabrika kalibrasyonları | `.aiqb`, `.cpf`, `graph_settings_*.xml` arşivlendi |
 
 ---
 
-## 🎯 SIRADAKİ İŞ: FAZ 2 (ARKA KAMERA GC5035)
-
-1. **mclk Saat Problemi:** `mclk rate set to 0 instead of requested 192000000` uyarısını gidermek (`clk_and_regulator.c` içinde GC5035 için 19.2 MHz saat sağlama).
-2. **Discrete Bağımsız GPIO Haritası:** Windows INF ve upstream ADL-M yaması (`0001-Add-the-camera-sensor-gc5035-to-support-ADL-M.patch`) doğrultusunda `discrete.c` içine `CJAK519` modülünü bağımsız GPIO modunda (`use_independent_gpio: true`) eklemek.
-3. **Sensor ID Doğrulaması:** `gc5035_check_sensor_id` fonksiyonunun başarıyla `0x5035` okumasını sağlamak.
-4. **Medya Çizgesi Doğrulaması:** `cam -l` çıktısında 2 kameranın birden görünmesini sağlamak.
-
----
-
 ## 📝 Son Log
-- 2026-10-15: Ön kamera aktif edildi; Windows 11 fabrika kalibrasyonları (`OV5678_CJFL515_ADL.aiqb`) ayıklanıp arşivlendi; ön kamera renk ayarına ara verilip arka kamera (GC5035) hedefine geçildi.
-- 2026-10-15 (19:35): Arka kamera sürücüsü (`gc5035/gc5035.c`) kökten revize edildi:
-  * Eksik mclk devm_clk_get bağlandı ve 19.2 MHz saat ayarlandı.
-  * Açılmayan voltaj regülatörleri (`avdd`, `dovdd`, `dvdd`) sisteme bağlandı ve `regulator_bulk_enable` eklendi.
-  * Ters tutulan `reset_gpio` mantığı düzeltildi (donanım reset bırakma sırası eklendi).
-  * `gc5035.ko.xz` derlendi ve `yukle.sh` içine eklendi.
-  * Kullanıcının `sudo bash /home/yavuz/duet5-camera/yukle.sh` çalıştırması bekleniyor.
+- 2026-10-15: Ön kamera aktif edildi; Windows 11 fabrika kalibrasyonları ayıklandı.
+- 2026-10-15: Arka kamera (GC5035) sürücüsü kökten çözüldü; regülatörler, 19.2MHz CCF saati, CRC32 çekirdek sıkıştırması ve donanım sekansı ile `0x5035` çip kimliği başarıyla okundu. `cam -c 2` ile 2592x1944 görüntü yakalandı.
+- 2026-10-15 (20:40): `V4L2_CID_CAMERA_ORIENTATION` (BACK) ve `get_selection` crop hedefleri sürücüye eklendi; `yukle.sh` içine WirePlumber otomatik oturum tazelemesi yerleştirildi.
