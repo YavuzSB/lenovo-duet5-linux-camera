@@ -37,7 +37,7 @@ modprobe -r intel_skl_int3472_common 2>/dev/null || true
 modprobe intel_skl_int3472_common
 modprobe intel_skl_int3472_discrete
 modprobe ov5675
-modprobe gc5035 2>/dev/null || true
+modprobe gc5035 || true
 
 echo "[5/5] Resmi fabrika kalibrasyon dosyaları ve renk profilleri kuruluyor..."
 
@@ -67,7 +67,10 @@ echo "[+] TEBRİKLER! Yamalı modüller ve resmi fabrika kalibrasyonları yükle
 echo "=============================================================================="
 echo ""
 echo "Çekirdek günlüğündeki sensör ve IPU durumu:"
-dmesg | grep -i -E "int3472|ov567|gcti|gc5035|ipu" | tail -n 30 || true
+dmesg | grep -i -E "int3472|ov567|gcti|gc5035|mclk" | grep -v "Modules linked in" | tail -n 25 || true
+echo ""
+echo "Yüklü modüller:"
+lsmod | grep -E "ov5675|gc5035|int3472" || true
 echo ""
 echo "libcamera kameraları:"
 cam -l 2>/dev/null || true
