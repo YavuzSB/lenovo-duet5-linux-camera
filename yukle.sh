@@ -10,7 +10,7 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 KVER=$(uname -r)
-PATCH_DIR="/home/yavuz/duet5-camera"
+PATCH_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 UPDATE_DIR="/lib/modules/${KVER}/updates/duet5-camera"
 HAL_DIR="/usr/share/defaults/etc/camera/ipu6ep"
 

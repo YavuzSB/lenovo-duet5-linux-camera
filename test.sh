@@ -11,6 +11,7 @@ modinfo -n intel_skl_int3472_common
 modinfo -n intel_skl_int3472_discrete
 modinfo -n ipu_bridge
 modinfo -n ov5675
+modinfo -n gc5035
 
 echo ""
 echo "=== 3. V4L2 Aygıt Listesi ==="
