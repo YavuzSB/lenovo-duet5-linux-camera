@@ -1,0 +1,122 @@
+﻿; INTEL CONFIDENTIAL Copyright 2021-2022 Intel Corporation All Rights Reserved.
+;
+; The source code contained or described herein and all documents related to the source code
+; ("Material") are owned by Intel Corporation or its suppliers or licensors. Title to the Material
+; remains with Intel Corporation or its suppliers and licensors. The Material contains trade secrets
+; and proprietary and confidential information of Intel or its suppliers and licensors. The Material is
+; protected by worldwide copyright and trade secret laws and treaty provisions. No part of the
+; Material may be used, copied, reproduced, modified, published, uploaded, posted, transmitted,
+; distributed, or disclosed in any way without Intel's prior express written permission.
+;
+; No license under any patent, copyright, trade secret or other intellectual property right is
+; granted to or conferred upon you by disclosure or delivery of the Materials, either expressly, by
+; implication, inducement, estoppel or otherwise. Any license under such intellectual property
+; rights must be express and approved by Intel in writing.
+;*************************************************************************************************/
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%INTEL%
+DriverVer = 12/22/2022,63.22000.3.10290
+CatalogFile=iaisp64.cat
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir=12
+Driver_Device_CoInstaller_CopyFiles = 11
+Companion_Dir=12,UMDF
+
+[SourceDisksNames]
+1=%DiskId1%,,,""
+
+[SourceDisksFiles]
+iaisp64.sys=1,,
+;
+
+iaisptrustlet64.dll=1,,
+
+;*****************************************
+; ISP Device Install Section
+;*****************************************
+
+[Manufacturer]
+%INTEL%=Standard,NTamd64
+
+[Standard.NTamd64]
+%iaisp64.DeviceDesc%=iaisp64_Device, PCI\VEN_8086&DEV_465D
+%iaisp64.DeviceDesc%=iaisp64_Device, PCI\VEN_8086&DEV_462E
+%iaisp64.DeviceDesc%=iaisp64_Device, PCI\VEN_8086&DEV_A75D
+
+;---------------- copy files
+
+[iaisp64_Device.NT]
+CopyFiles=Drivers_Dir
+CopyFiles=Companion_Dir
+
+[Drivers_Dir]
+iaisp64.sys
+
+[Companion_Dir]
+iaisptrustlet64.dll
+
+[iaisp64_Device.NT.hw]
+AddReg=iaisp64_MSIsupport
+
+;-------------- Service installation
+[iaisp64_Device.NT.Services]
+AddService=iaisp64,0x00000002,iaisp64_ServiceInstall
+
+[iaisp64_ServiceInstall]
+DisplayName     = %iaisp64.SVCDESC%
+ServiceType     = 1
+StartType       = 3
+ErrorControl    = 1
+ServiceBinary   = %12%\iaisp64.sys
+
+;--- Driver_Device Coinstaller installation ------
+[iaisp64_Device.NT.CoInstallers]
+AddReg=Secure_Device_CoInstaller_AddReg
+CopyFiles=Secure_Device_CoInstaller_CopyFiles
+
+[Secure_Device_CoInstaller_AddReg]
+;
+
+
+[Secure_Device_CoInstaller_CopyFiles]
+;
+
+
+;-------------- WDF specific section -------------
+[iaisp64_Device.NT.Wdf]
+KmdfService =  iaisp64, Driver_wdfsect
+UmdfService =  iaisptrustlet64, iaisptrustlet64_wdfsect
+CompanionConfiguration = iaisp64, iaisp64_companions
+
+[Driver_wdfsect]
+KmdfLibraryVersion = 1.23
+
+[iaisptrustlet64_wdfsect]
+; UmdfLibraryVersion = $UMDFVERSION$
+UmdfLibraryVersion = 2.23.0
+ServiceBinary = %12%\umdf\iaisptrustlet64.dll
+ServiceType = SecureCompanion    ; allowed options are: Driver (default), SecureCompanion, NonSecureCompanion
+TrustletIdentity = 4096
+
+[iaisp64_companions]
+CompanionServices = iaisptrustlet64
+
+[iaisp64_MSIsupport]
+HKR,Interrupt Management,,0x00000010
+HKR,Interrupt Management\MessageSignaledInterruptProperties,,0x00000010
+HKR,Interrupt Management\MessageSignaledInterruptProperties,MSISupported,0x00010001,0
+HKR,"WDF","WdfDirectedPowerTransitionEnable",0x00010001,1
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+WUDF_SERVICES=SOFTWARE\Microsoft\Windows NT\CurrentVersion\WUDF\Services
+INTEL = "Intel Corporation"
+DiskId1="ISP Support Driver Installation Disk #1"
+iaisp64.DeviceDesc = "Intel(R) Imaging Signal Processor"
+iaisp64.SVCDESC = "Intel(R) Imaging Signal Processor"

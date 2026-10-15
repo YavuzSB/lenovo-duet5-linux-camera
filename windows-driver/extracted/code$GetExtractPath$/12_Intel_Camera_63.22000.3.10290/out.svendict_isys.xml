@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SvenDictionary Name="IPU catalog">
+
+  <Guids>
+    <Guid ID="{00000000-001b-0000-0000-000000000000}" Mask="{00000000-ffff-0000-0000-000000000000}" />
+    <Guid ID="{dfc0867a-4853-4cbf-b6d3-563e9a431ada}" />
+  </Guids>
+
+  <SourceFiles>
+    <File ID="0x00000000"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/err_handling_support/src/v1/err_handling_support.c]]></File>
+    <File ID="0x00000001"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/streamdeviceapi/src/v1/ia_css_isys_stream_device.c]]></File>
+    <File ID="0x00000002"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/streamdeviceapi/src/ipu6v5/ia_css_isys_stream_device_util_dep.c]]></File>
+    <File ID="0x00000003"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/syscom/src/ia_css_syscom_fw.c]]></File>
+    <File ID="0x00000004"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/isysapi/src/v1/isys_fw.c]]></File>
+    <File ID="0x00000005"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/isysapi/src/isys_fw_utils.c]]></File>
+    <File ID="0x00000006"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/streamdeviceapi/src/isys_rsrc.c]]></File>
+    <File ID="0x00000007"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/isys_traffic_ctrl/src/isys_traffic_ctrl.c]]></File>
+    <File ID="0x00000008"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/nci_dec400/src/nci_dec400.c]]></File>
+    <File ID="0x00000009"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/nci_gda/src/nci_gda.c]]></File>
+    <File ID="0x0000000a"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/nci_pma_if/src/nci_pma_if.c]]></File>
+    <File ID="0x0000000b"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/eqc/src/vied_nci_eqc.c]]></File>
+    <File ID="0x0000000c"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/ibufctrl/src/vied_nci_ibufctrl.c]]></File>
+    <File ID="0x0000000d"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/isldevice/src/vied_nci_isldevice_cio2stream.c]]></File>
+    <File ID="0x0000000e"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/isldevice/src/vied_nci_isldevice_mipi_backend.c]]></File>
+    <File ID="0x0000000f"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/isldevice/src/vied_nci_isldevice_soc_mipi_backend.c]]></File>
+    <File ID="0x00000010"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/isldevice/src/vied_nci_isldevice_socpf.c]]></File>
+    <File ID="0x00000011"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/vied_nci_sig2cio/src/vied_nci_sig2cio.c]]></File>
+    <File ID="0x00000012"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/str2mmio/src/vied_nci_str2mmio_private.c]]></File>
+  </SourceFiles>
+
+  <Messages IdSize="32Bit">
+    <Message ID="0x3c9a89cb" File="0x00000000" Line="89"><![CDATA[[ERR_HANDLING]err_handling_get_validity_and_replace | ERROR: Frame address: %x was not found
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xbeeb480a" File="0x00000001" Line="5184"><![CDATA[[STREAMDEVICEAPI]istream_report_ibuf_feeder_status || {cur_unit_in_line_in = 0x%08x} {cur_line_in = 0x%08x} {cur_snd_cmds = 0x%08x} {cur_rcvd_acks = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6943e80e" File="0x00000001" Line="3939"><![CDATA[[STREAMDEVICEAPI]istream_start || -> istream_start of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9def981b" File="0x00000001" Line="1487"><![CDATA[[STREAMDEVICEAPI]istream_open || {buffer_stream_size = %d} {mipi_buffer_pin_size_total = %d} {available_pixel_buffer_pin_size_total = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x43d76836" File="0x00000001" Line="4186"><![CDATA[[STREAMDEVICEAPI]out_pin = %d: link_id = %d > 0 for stream_id = %d: mem_slot = %d is put into SW-queue!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x00d3903d" File="0x00000001" Line="1508"><![CDATA[[STREAMDEVICEAPI]istream_open || sensor_type INVALID sensor_type %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3e756061" File="0x00000001" Line="1236"><![CDATA[[STREAMDEVICEAPI]istream_init || <- istream_init
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4263a075" File="0x00000001" Line="4787"><![CDATA[[STREAMDEVICEAPI]istream_delayed_hw_enqueue_for_is2ps_mode || <- istream_delayed_hw_enqueue_for_is2ps_mode of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc925b086" File="0x00000001" Line="4641"><![CDATA[[STREAMDEVICEAPI]istream_reconfigure_for_is2ps_mode || config->dfm_port_addr = 0x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb133c8c3" File="0x00000001" Line="4602"><![CDATA[[STREAMDEVICEAPI]istream_reconfigure_for_is2ps_mode || -> istream_reconfigure_for_is2ps_mode of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb73418d3" File="0x00000001" Line="4345"><![CDATA[[STREAMDEVICEAPI]istream_flush_stop || <- istream_flush_stop of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc8ade8e5" File="0x00000001" Line="5106"><![CDATA[[STREAMDEVICEAPI]istream_report_ibuf_shared_status || {ibuf_dev_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x315d20ec" File="0x00000001" Line="3322"><![CDATA[[STREAMDEVICEAPI]istream_open non SOC path ibufCtrl progress reporting enabled!!!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8b8b48f8" File="0x00000001" Line="4532"><![CDATA[[STREAMDEVICEAPI]reconfigure_ibufctrl_for_buffer_chasing_mode || -> reconfigure_ibufctrl_for_buffer_chasing_mode of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1229b105" File="0x00000001" Line="4639"><![CDATA[[STREAMDEVICEAPI]istream_reconfigure_for_is2ps_mode || config->num_of_buffers = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x261fc111" File="0x00000001" Line="4604"><![CDATA[[STREAMDEVICEAPI]istream_reconfigure_for_is2ps_mode || stream_id = %d, link_id = %d, on_line = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe1114926" File="0x00000001" Line="2087"><![CDATA[[STREAMDEVICEAPI]istream_open || Failure SRAM analysis with {estimated_pb_nr_lines = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc0391134" File="0x00000001" Line="678"><![CDATA[[DEC400]ia_css_isys_server_dec400_frame_config || {Compression NOT requested for frame on stream_id: %d, out_pin: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf6fc5943" File="0x00000001" Line="685"><![CDATA[[DEC400]ia_css_isys_server_dec400_frame_config || {Compression frame configuration:  compression enabled: %d, stream_id: %d, outpin: %d, mem_slot: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6eb49146" File="0x00000001" Line="5081"><![CDATA[[STREAMDEVICEAPI]istream_report_gda_status || nr_pages_allocated = 0x%08x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xce011956" File="0x00000001" Line="531"><![CDATA[[DEC400]ia_css_isys_server_dec400_channel_config || {Compression requested for UNsupported case. datatype: %d, formattype: %d, stride: %d, on stream_id: %d, out_pin: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2a26115e" File="0x00000001" Line="2651"><![CDATA[[STREAMDEVICEAPI]istream_open || ext_chan_res.terminal_B_addr = 0x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x445a67ac" File="0x00000001" Line="3908"><![CDATA[[STREAMDEVICEAPI]istream_open || {istr_ctx[stream_id = %d].expected_init_mask[0] = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xbc2df972" File="0x00000001" Line="4441"><![CDATA[[STREAMDEVICEAPI]reconfigure_ibufctrl_for_is2ps_mode || -> reconfigure_ibufctrl_for_is2ps_mode of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd981d984" File="0x00000001" Line="526"><![CDATA[[DEC400]dt_config_entry is NULL : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0bbb618e" File="0x00000001" Line="370"><![CDATA[[STREAMDEVICEAPI]get_mmu_stream_id - sensor_type out of range.
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xdbe39190" File="0x00000001" Line="3924"><![CDATA[[STREAMDEVICEAPI]istream_open || <- istream_open FAILURE of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9e5641ab" File="0x00000001" Line="4677"><![CDATA[[STREAMDEVICEAPI]istream_reconfigure_for_buffer_chasing_mode || -> istream_reconfigure_for_buffer_chasing_mode of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x972e12f3" File="0x00000001" Line="4841"><![CDATA[[STREAMDEVICEAPI]istream_resume || <- istream_resume of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x41cbf1bc" File="0x00000001" Line="4425"><![CDATA[[STREAMDEVICEAPI]reconfigure_str2mmio_for_is2ps_mode ||<- reconfigure_str2mmio_for_is2ps_mode of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xdaebe9be" File="0x00000001" Line="4385"><![CDATA[[STREAMDEVICEAPI]str2mmio stride:%d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x606241c2" File="0x00000001" Line="5080"><![CDATA[[STREAMDEVICEAPI]istream_report_gda_status || allocation_status = 0x%08x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x76bcb9dc" File="0x00000001" Line="4463"><![CDATA[[STREAMDEVICEAPI]reconfigure_ibufctrl_for_is2ps_mode || IBUF units_p_line = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7bb5dafb" File="0x00000001" Line="2631"><![CDATA[[STREAMDEVICEAPI]istream_open || dma_ext_chan_res[out_pin]  == NULL
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc4f0a1f6" File="0x00000001" Line="4643"><![CDATA[[STREAMDEVICEAPI]istream_reconfigure_for_is2ps_mode || frame_width = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1f84f20d" File="0x00000001" Line="321"><![CDATA[[DEC400]ia_css_isys_server_dec400_stream_reserve || {No available compression resources (max: %d)!}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb8ea921d" File="0x00000001" Line="639"><![CDATA[[DEC400]dt_config_entry is NULL : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0b5c9a6c" File="0x00000001" Line="4638"><![CDATA[[STREAMDEVICEAPI]istream_reconfigure_for_is2ps_mode || config->bpe = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd1cbbaa4" File="0x00000001" Line="3909"><![CDATA[[STREAMDEVICEAPI]istream_open || {istr_ctx[stream_id = %d].expected_init_mask[1] = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xfe937aba" File="0x00000001" Line="3912"><![CDATA[[STREAMDEVICEAPI]istream_open || <- istream_open of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcefb3ac6" File="0x00000001" Line="4958"><![CDATA[[STREAMDEVICEAPI]istream_detect_and_handle_str2mmio_error || -> istream_detect_and_handle_str2mmio_error of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x049a02e0" File="0x00000001" Line="5061"><![CDATA[[STREAMDEVICEAPI]istream_detect_and_handle_str2mmio_error || <- istream_detect_and_handle_str2mmio_error of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7fce2ae4" File="0x00000001" Line="62"><![CDATA[[VIED_NCI_IBUFCTRL]vied_nci_ibufctrl_reg_load || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x80c5caee" File="0x00000001" Line="370"><![CDATA[[DEC400]ia_css_isys_server_dec400_stream_reserve || {Compression reservation NOT requested on out_pin: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xeab0b2f9" File="0x00000001" Line="4546"><![CDATA[[STREAMDEVICEAPI]buffer_chasing: %d, bcpr_reg_addr: %x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xfa497afb" File="0x00000001" Line="5114"><![CDATA[[STREAMDEVICEAPI]istream_report_ibuf_shared_status || {arbiter_status = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x12d7430c" File="0x00000001" Line="1441"><![CDATA[[STREAMDEVICEAPI]istream_open || actual mb_nr_lines[in_pin] = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2a067c8a" File="0x00000001" Line="2109"><![CDATA[[STREAMDEVICEAPI]Setting up VC %d for stream %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb728933f" File="0x00000001" Line="4877"><![CDATA[[STREAMDEVICEAPI]istream_suspend || <- istream_suspend of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9185c37f" File="0x00000001" Line="2094"><![CDATA[[STREAMDEVICEAPI]istream_open || Repeating SRAM analysis with {estimated_pb_nr_lines = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x92206b8d" File="0x00000001" Line="2767"><![CDATA[[STREAMDEVICEAPI]istream_open || dma_ext_chan_res_soc[plane_index] == NULL
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x113d3390" File="0x00000001" Line="4725"><![CDATA[[STREAMDEVICEAPI]istream_delayed_hw_enqueue_for_is2ps_mode || -> istream_delayed_hw_enqueue_for_is2ps_mode of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa14d7391" File="0x00000001" Line="4727"><![CDATA[[STREAMDEVICEAPI]istream_delayed_hw_enqueue_for_is2ps_mode || stream_id = %d, link_id = %d, mem_slot = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xdef34ba8" File="0x00000001" Line="4679"><![CDATA[[STREAMDEVICEAPI]istream_reconfigure_for_buffer_chasing_mode || stream_id = %d, link_id = %d,  buffer_chasing = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xfabc9bf1" File="0x00000001" Line="890"><![CDATA[[STREAMDEVICEAPI]istream_init || STREAM_SRAM_BUFFER_PARTITION_BASE(%d) = 0x%08x, STREAM_SRAM_BUFFER_PARTITION_SIZE(%d) = 0x%08x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x27055bfc" File="0x00000001" Line="670"><![CDATA[[DEC400]ia_css_isys_server_dec400_frame_config || {Compression disabled for frame on a compressed stream. stream_id: %d, out_pin: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xbc931406" File="0x00000001" Line="4584"><![CDATA[[STREAMDEVICEAPI]reconfigure_ibufctrl_for_buffer_chasing_mode || <- reconfigure_ibufctrl_for_buffer_chasing_mode of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x74f8cc0b" File="0x00000001" Line="4857"><![CDATA[[STREAMDEVICEAPI]istream_suspend || -> istream_suspend of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x38cf7c0d" File="0x00000001" Line="2014"><![CDATA[[STREAMDEVICEAPI]istream_open || {pb_bits_p_line_total = %d} {estimated_pb_nr_lines = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe3d3f358" File="0x00000001" Line="882"><![CDATA[[STREAMDEVICEAPI]istream_init || STREAM_SRAM_BUFFER_PARTITION_BASE(0) = 0x%08x, STREAM_SRAM_BUFFER_PARTITION_SIZE(0) = 0x%08x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0ce4ec1c" File="0x00000001" Line="4821"><![CDATA[[STREAMDEVICEAPI]istream_resume || -> istream_resume of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2ad1d422" File="0x00000001" Line="347"><![CDATA[[STREAMDEVICEAPI]get_ext1_mmu_stream_id - MMU Stream ID needs to be sent.
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5b56043d" File="0x00000001" Line="309"><![CDATA[[DEC400]ia_css_isys_server_dec400_stream_reserve || {Compression reservation IS requested on stream_id: %d, out_pin: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xce9c1c48" File="0x00000001" Line="4370"><![CDATA[[STREAMDEVICEAPI]reconfigure_str2mmio_for_is2ps_mode || -> reconfigure_str2mmio_for_is2ps_mode of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe0961c8a" File="0x00000001" Line="4519"><![CDATA[[STREAMDEVICEAPI]reconfigure_ibufctrl_for_is2ps_mode || <- reconfigure_ibufctrl_for_is2ps_mode of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa01d7495" File="0x00000001" Line="4295"><![CDATA[[STREAMDEVICEAPI]istream_capture || <- istream_capture of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x405fd497" File="0x00000001" Line="4894"><![CDATA[[STREAMDEVICEAPI]istream_close || -> istream_close of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5ae5949b" File="0x00000001" Line="5087"><![CDATA[[STREAMDEVICEAPI]istream_report_gda_status || SRAM full
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1a2fc49e" File="0x00000001" Line="5150"><![CDATA[[STREAMDEVICEAPI]istream_report_ibuf_sid_status || {sync_state_2nd_buff = 0x%08x} {dest0_cur_ack_unit = 0x%08x} {dest0_cur_ack_unit_in_line = 0x%08x} {dest0_cur_ack_line = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x71e0d4dc" File="0x00000001" Line="5082"><![CDATA[[STREAMDEVICEAPI]istream_report_gda_status || port_status = 0x%08x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x04f3ece3" File="0x00000001" Line="2976"><![CDATA[[STREAMDEVICEAPI]istream_open || dma_chan == NULL
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x18cd8526" File="0x00000001" Line="4930"><![CDATA[[STREAMDEVICEAPI]istream_close || <- istream_close of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0f6f4d27" File="0x00000001" Line="2900"><![CDATA[[STREAMDEVICEAPI]istream_open || dma_chan == NULL
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3df1655b" File="0x00000001" Line="329"><![CDATA[[DEC400]ia_css_isys_server_dec400_stream_reserve || {Allocated compression resource: (ctx_id: %d)!}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8a6c7563" File="0x00000001" Line="628"><![CDATA[[DEC400]ia_css_isys_server_dec400_frame_config || {Compression requested for an unsupported data type and format. stream_id: %d, out_pin: %d, dt: %d, ft: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa622d577" File="0x00000001" Line="4204"><![CDATA[[STREAMDEVICEAPI]istr_private_ctx[stream_id = %d].out_pixel_pin_plane_count[out_pin = %d] is: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xdd405d90" File="0x00000001" Line="720"><![CDATA[[STREAMDEVICEAPI]dec400_clear_shadow_regs || stream_id: %d, frames_to_flush: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x63aae599" File="0x00000001" Line="3987"><![CDATA[[STREAMDEVICEAPI]istream_start || <- istream_start of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x77a785a2" File="0x00000001" Line="4640"><![CDATA[[STREAMDEVICEAPI]istream_reconfigure_for_is2ps_mode || config->buffer_width = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x563475ae" File="0x00000001" Line="305"><![CDATA[[STREAMDEVICEAPI]get_ext0_mmu_stream_id - MMU Stream ID needs to be sent.
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x70f26dd1" File="0x00000001" Line="4654"><![CDATA[[STREAMDEVICEAPI]istream_reconfigure_for_is2ps_mode || <- istream_reconfigure_for_is2ps_mode of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe2b09de9" File="0x00000001" Line="395"><![CDATA[[STREAMDEVICEAPI]calculate_cio_info_setup - MMU Stream ID %d sent.snoopable=%d sensor_type=%d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb1938df4" File="0x00000001" Line="5144"><![CDATA[[STREAMDEVICEAPI]istream_report_ibuf_sid_status || {s2m_cur_cmds = 0x%08x} {s2m_cur_ack_unit_in_line = 0x%08x} {cur_ack_line = 0x%08x} {main_control_state = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb66c0dfb" File="0x00000001" Line="1498"><![CDATA[[STREAMDEVICEAPI]istream_open || {FrameFormatType = %d of out_pin = %d} : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe2b13dff" File="0x00000001" Line="5140"><![CDATA[[STREAMDEVICEAPI]istream_report_ibuf_sid_status || {ibuf_dev_id = %d} {ibuf_sid = %d} {nr_dests = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf4aebe13" File="0x00000001" Line="425"><![CDATA[[DEC400]ia_css_isys_server_dec400_stream_release || {Released compression resource: (stream_id: %d), (ctx_id: %d)}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7133c64b" File="0x00000001" Line="4372"><![CDATA[[STREAMDEVICEAPI]reconfigure_str2mmio_for_is2ps_mode || nof_planes = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7305265f" File="0x00000001" Line="2083"><![CDATA[[STREAMDEVICEAPI]istream_open || Successful SRAM analysis with {estimated_pb_nr_lines = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1c889e63" File="0x00000001" Line="5110"><![CDATA[[STREAMDEVICEAPI]istream_report_ibuf_shared_status || {error_reg_set = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5c775e6c" File="0x00000001" Line="4073"><![CDATA[[STREAMDEVICEAPI]istream_capture || -> istream_capture of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6c1c1ea8" File="0x00000001" Line="2196"><![CDATA[[STREAMDEVICEAPI]Sensor_Type: %d capture_mode: %d
+ Sensor_Type_Other=0
+ Sensor_Type_Tobii=1
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0a4436b4" File="0x00000001" Line="1415"><![CDATA[[STREAMDEVICEAPI]istream_open || DT = %d of in_pin = %d : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc71d0fed" File="0x00000001" Line="5180"><![CDATA[[STREAMDEVICEAPI]istream_report_ibuf_feeder_status || {ibuf_dev_id = %d} {ibuf_feeder = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3397f6dd" File="0x00000001" Line="4642"><![CDATA[[STREAMDEVICEAPI]istream_reconfigure_for_is2ps_mode || config->bcpr_reg_addr = 0x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x428876df" File="0x00000001" Line="3523"><![CDATA[[STREAMDEVICEAPI]istream_open SOC path ibufCtrl progress reporting enabled!!!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xaef9f6ec" File="0x00000001" Line="4313"><![CDATA[[STREAMDEVICEAPI]istream_flush_stop || -> istream_flush_stop of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3f94ef01" File="0x00000001" Line="605"><![CDATA[[DEC400]ia_css_isys_server_dec400_frame_config || {Compression IS requested for frame: %d on stream_id: %d, out_pin: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8a51b731" File="0x00000001" Line="5157"><![CDATA[[STREAMDEVICEAPI]istream_report_ibuf_sid_status || dest %d/%d: {destk_sync_state[dest] = 0x%08x} {destk_cur_cmds[dest] = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1f532d35" File="0x00000001" Line="732"><![CDATA[[STREAMDEVICEAPI]dec400_clear_shadow_regs || Issuing SW (AHB) flush for stream_id: %d, pin_id: %d, and mmu_stream_id: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x94cf3753" File="0x00000001" Line="615"><![CDATA[[DEC400]ia_css_isys_server_dec400_frame_config || {Compression requested for frame on an UNcompressed stream. stream_id: %d, out_pin: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x684dbf55" File="0x00000001" Line="807"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_ext_dma_dev_and_channel_select_and_acquire || Switch DMA devices
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd87fbf7d" File="0x00000001" Line="4484"><![CDATA[[STREAMDEVICEAPI]Online: %d, bcpr_reg_addr: %x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5610cf86" File="0x00000001" Line="864"><![CDATA[[STREAMDEVICEAPI]istream_init || -> istream_init
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb2af478b" File="0x00000001" Line="1253"><![CDATA[[STREAMDEVICEAPI]istream_open || -> istream_open of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb6790fea" File="0x00000001" Line="4637"><![CDATA[[STREAMDEVICEAPI]istream_reconfigure_for_is2ps_mode || config->buffer_addr = 0x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc70f4ff2" File="0x00000001" Line="4703"><![CDATA[[STREAMDEVICEAPI]istream_reconfigure_for_buffer_chasing_mode || <- istream_reconfigure_for_buffer_chasing_mode of stream = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd6b20ee9" File="0x00000002" Line="111"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_set_csi_port_clock || port_access_reg = 0x%x, value = 0x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9027fce8" File="0x00000002" Line="116"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_set_csi_port_clock || <- ia_css_isys_set_csi_port_clock
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe8bdf50c" File="0x00000002" Line="97"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_set_csi_port_clock || Mismatch between #enables and #disables!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x12a4ed5a" File="0x00000002" Line="82"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_set_csi_port_clock || -> ia_css_isys_set_csi_port_clock
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa4670692" File="0x00000002" Line="84"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_set_csi_port_clock || csi_port_id = %d, enable = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x60a2183a" File="0x00000003" Line="103"><![CDATA[[SYSCOM]ia_css_syscom_is_dmem_ready() dmem_addr(0x%x) secure(%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x59f18896" File="0x00000003" Line="227"><![CDATA[[SYSCOM]ia_css_syscom_open_fw failed: MAX_CONTEXTS(%d) already opened
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9d9b589d" File="0x00000003" Line="159"><![CDATA[[SYSCOM]ia_css_syscom_open_fw (secure %d) start
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x84ed10ef" File="0x00000003" Line="204"><![CDATA[[SYSCOM]ia_css_syscom_open_fw load CONFIG_REG @ %#x = %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x58de8102" File="0x00000003" Line="618"><![CDATA[[SYSCOM]ia_css_syscom_get_vtl0_addr_mask reg(0x%x) (secure %d) mask %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb3ac8919" File="0x00000003" Line="263"><![CDATA[[SYSCOM]ia_css_syscom_open_fw store STATE_REG %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5f51f11e" File="0x00000003" Line="180"><![CDATA[[SYSCOM]ia_css_syscom_open_fw load STATE_REG @ %#x = %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x10d3f83d" File="0x00000003" Line="298"><![CDATA[[SYSCOM]ia_css_syscom_open_fw (secure %d) completed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x50d051a3" File="0x00000003" Line="575"><![CDATA[[SYSCOM]ia_css_syscom_get_trustlet_status() fail - invalid syscom_id
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7d3ce1aa" File="0x00000003" Line="546"><![CDATA[[SYSCOM]ia_css_syscom_set_irq (secure %d) start
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8525eafe" File="0x00000003" Line="595"><![CDATA[[SYSCOM]ia_css_syscom_set_ab_spc_ready() fail - invalid syscom_id
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd7cc8b3e" File="0x00000003" Line="182"><![CDATA[[SYSCOM]ia_css_syscom_open_fw load COMMAND_REG @ %#x = %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9a8efb80" File="0x00000003" Line="117"><![CDATA[[SYSCOM]ia_css_syscom_is_dmem_ready - secure(%d): wait-retry(%d), cmd(0x%x) state(0x%x)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe0d443f8" File="0x00000003" Line="548"><![CDATA[[SYSCOM]ia_css_syscom_set_irq load IRQ_REG @ %#x= %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x04b3f49f" File="0x00000003" Line="189"><![CDATA[[SYSCOM]ia_css_syscom_open_fw (secure %d) is uninitialized. Skip!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x372e2d75" File="0x00000003" Line="363"><![CDATA[[SYSCOM]ia_css_syscom_check_close_requests closing due to unexpected num_contexts (%d) MAX (%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x34a24ddf" File="0x00000003" Line="217"><![CDATA[[SYSCOM]ia_css_syscom_open_fw failed: num_output_queues=%d from cfg is greater than MAX_OUTPUT_QUEUES(%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x45ba6e16" File="0x00000003" Line="165"><![CDATA[[SYSCOM]ia_css_syscom_open_fw (secure %d) invalid uninitialized state. Skip!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3aaf9652" File="0x00000003" Line="211"><![CDATA[[SYSCOM]ia_css_syscom_open_fw failed: num_input_queues=%d from cfg is greater than MAX_INPUT_QUEUES(%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5d4ae699" File="0x00000003" Line="237"><![CDATA[[SYSCOM]ia_css_syscom_open_fw contexts %d inputQ %d outputQ %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1815c769" File="0x00000003" Line="556"><![CDATA[[SYSCOM]ia_css_syscom_set_irq store IRQ_REG @ %#x= %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xef18777f" File="0x00000003" Line="581"><![CDATA[[SYSCOM]ia_css_syscom_get_trustlet_status(%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0102a792" File="0x00000003" Line="592"><![CDATA[[SYSCOM]ia_css_syscom_set_ab_spc_ready ssid(%d) ipu_device_idx(%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc52ab801" File="0x00000004" Line="1271"><![CDATA[[ISYSAPI]run_stream_controller || istream_start error for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3295c005" File="0x00000004" Line="3236"><![CDATA[[ISYSAPI]isys_wdt_handler || trigger fired after %d iterations
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xdefe3018" File="0x00000004" Line="1057"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), processing frame %i online
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd82c801c" File="0x00000004" Line="2072"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {stream_id_from_event = %d is out of range}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb97f0830" File="0x00000004" Line="1162"><![CDATA[[ISYSAPI]run_stream_controller || {&pread_token->buf_handle = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x393a4031" File="0x00000004" Line="3424"><![CDATA[[ISYSAPI]execute_deferred_actions || Non-flushable message received after stream_stop with {send_type = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcd050838" File="0x00000004" Line="1415"><![CDATA[[ISYSAPI]run_stream_controller || check CAPTURE (stream %d #pins %d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x701c2847" File="0x00000004" Line="664"><![CDATA[[ISYSAPI]kick_ibufctrl(), starting frame %i in state = %i
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf7cf0050" File="0x00000004" Line="968"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), iBufCtrl not idle, reconfiguring for online delayed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd598b85e" File="0x00000004" Line="1218"><![CDATA[[ISYSAPI]run_stream_controller || STREAM_UNINIT state errored command type {send_type = %d} for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xfa94e869" File="0x00000004" Line="530"><![CDATA[[ISYSAPI]isys_initialise || invalid syscom context
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xbec7106a" File="0x00000004" Line="1173"><![CDATA[[ISYSAPI]run_stream_controller || istream_open error for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x43cda873" File="0x00000004" Line="567"><![CDATA[[ISYSAPI]isys_initialise || {*pnof_send_queues = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xddfd4079" File="0x00000004" Line="2525"><![CDATA[[ISYSAPI]run_xcom_event_processor || {error: invalid ERR_HANDLING command}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5646107d" File="0x00000004" Line="3079"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || unrecognized sig2cio event - stream %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3ec9b87e" File="0x00000004" Line="549"><![CDATA[[ISYSAPI]isys_initialise || invalid {number of streams = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7c02d895" File="0x00000004" Line="2169"><![CDATA[[ISYSAPI]run_ibuf_event_processor || istream_detect_and_handle_str2mmio_error STR2MMIO HW error detected
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xbc2be0a6" File="0x00000004" Line="109"><![CDATA[[VIED_NCI_ACCESS_BLOCKER]nci_ab_set_ab_config_array device %d target %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa77830aa" File="0x00000004" Line="1012"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), SOF %i before connecting for frame %i, aborting.
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7b4f38b1" File="0x00000004" Line="2087"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {stream_id_from_event = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xaa89c8b9" File="0x00000004" Line="520"><![CDATA[[ISYSAPI]isys_initialise || no secure context, skipped
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa6deb0d2" File="0x00000004" Line="1839"><![CDATA[[ISYSAPI]update_stream_mask_and_pin_count || Pin from next frame received before current frame is complete
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe9dcc0f0" File="0x00000004" Line="2900"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || Synch Error: SOF/EOF count surpassed frames done by 2 for stream %d, applying correction
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7c4dc8f3" File="0x00000004" Line="3135"><![CDATA[[ISYSAPI]run_event_processor || {stream_id_from_event = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xad1068f9" File="0x00000004" Line="961"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), reconfiguration on frame %i for online
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa08130fa" File="0x00000004" Line="3059"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || sig2cio reported error for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb792f0fb" File="0x00000004" Line="2836"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || {pisys_ctrl->active_sof_count = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x44ce18fe" File="0x00000004" Line="1421"><![CDATA[[ISYSAPI]run_stream_controller || security_check error {stream = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd02ca11b" File="0x00000004" Line="1286"><![CDATA[[ISYSAPI]run_stream_controller || istream_resume error for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x73296120" File="0x00000004" Line="2320"><![CDATA[[ISYSAPI]run_xcom_event_processor || {Request for online before matching stream open}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xbd8de924" File="0x00000004" Line="436"><![CDATA[[ISYSAPI]security_check on {stream %d} {secure %d} {pin %d} {addr_mask %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x77b3313e" File="0x00000004" Line="3044"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || {pisys_ctrl->active_eof_count = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x57dca2e6" File="0x00000004" Line="2741"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || Invalid src
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0741e96e" File="0x00000004" Line="2680"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || UNIS Sig2Cio Generic IRQ
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xeb5833bb" File="0x00000004" Line="1100"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), iBufCtrl not idle, reconfiguring for buffer chasing delayed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x097e5997" File="0x00000004" Line="993"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), iBufCtrl not idle, reconfiguring for online delayed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x50c0d19f" File="0x00000004" Line="3109"><![CDATA[[ISYSAPI]run_event_processor || {pevent_token->event = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf53331a2" File="0x00000004" Line="1302"><![CDATA[[ISYSAPI]run_stream_controller || check START_&_CAPTURE (stream %d #pins %d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb57a31af" File="0x00000004" Line="2714"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || CSI Sig2Cio internal FIFO overflow error
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xae4ee9b5" File="0x00000004" Line="1396"><![CDATA[[ISYSAPI]run_stream_controller || STREAM_IDLE state errored command type {send_type = %d} for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xdfc3e9bf" File="0x00000004" Line="2592"><![CDATA[[DEC400]run_dec400_event_processor || {SYSCOM Context is invalid}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x345479c4" File="0x00000004" Line="2250"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {istr_ctx[stream_id_from_event = %d].event_init_mask[init_mem_slot][1] = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x98a609c7" File="0x00000004" Line="2340"><![CDATA[[ISYSAPI]run_xcom_event_processor || {Activate before stream open in invalid state = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0e2181d2" File="0x00000004" Line="3538"><![CDATA[[ISYSAPI]ia_css_isys_fw_main || isys_initialise failed with {error = %d} and {details = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb9cda1a3" File="0x00000004" Line="2144"><![CDATA[[ISYSAPI]run_ibuf_event_processor || istream_detect_and_handle_str2mmio_error error for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xdfee69dd" File="0x00000004" Line="2504"><![CDATA[[ISYSAPI]run_xcom_event_processor || {error: err_handling_get_data() failed - request_index is out of bounds: %u }
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x91c449f4" File="0x00000004" Line="2840"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || Synch Error: SOF count surpassed cmds sent for stream %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe9be120b" File="0x00000004" Line="3047"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || {pisys_ctrl->frames_done = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x59c62210" File="0x00000004" Line="2476"><![CDATA[[ISYSAPI]run_xcom_event_processor || {Deactivate after stream open in invalid state = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xba27ea1a" File="0x00000004" Line="614"><![CDATA[[ISYSAPI]isys_initialise || {secure = %d} Successful
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x92096a3e" File="0x00000004" Line="2328"><![CDATA[[ISYSAPI]run_xcom_event_processor || {Link ID activation before matching stream open}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1e81ea5a" File="0x00000004" Line="2964"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || istream_suspend error for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa6396a63" File="0x00000004" Line="2173"><![CDATA[[ISYSAPI]run_ibuf_event_processor || Register error for {output_pin = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0ea06281" File="0x00000004" Line="3545"><![CDATA[[ISYSAPI]ia_css_isys_fw_main context %d nof_streams_per_ctx %d nof_streams %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5665a282" File="0x00000004" Line="541"><![CDATA[[ISYSAPI]isys_initialise || invalid ISYS config
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd99342ae" File="0x00000004" Line="3613"><![CDATA[[ISYSAPI]Got wrong stream_id from device queue.Stream_id %u used for secured context.Out of secured boundaries! Skip processing
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4142d2bf" File="0x00000004" Line="3052"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || sig2cio reported error for {stream_id = %d} for ambiguous frame
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1d023ac1" File="0x00000004" Line="830"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), %i frames already processed, latest frame_id processed is  %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9ddf4ae2" File="0x00000004" Line="3690"><![CDATA[[ISYSAPI]ia_css_server_init || {return status = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x867ad2e5" File="0x00000004" Line="2892"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || Synch Error: Unexpected EOF received for stream %d, applying correction
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1f9ceae6" File="0x00000004" Line="2676"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || UNIS Sig2Cio event
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf75e7af3" File="0x00000004" Line="1029"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), reconfiguring for buffer chasing
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcda92f31" File="0x00000004" Line="2116"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {istr_ctx[stream_id_from_event = %d].event_init_mask[mem_slot = %d][1] = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xef37a330" File="0x00000004" Line="2848"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || Synch Error: Unexpected SOF received for stream %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6ce54b34" File="0x00000004" Line="2667"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || {pevent_token->event = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa35ffb42" File="0x00000004" Line="2358"><![CDATA[[ISYSAPI]run_xcom_event_processor || {Deactivate before stream open in invalid state = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc7ac5b43" File="0x00000004" Line="2122"><![CDATA[[ISYSAPI]run_ibuf_event_processor || LINES_PER_FRAME_ERROR bit is set in the event for stream %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x835a1b45" File="0x00000004" Line="1984"><![CDATA[[ISYSAPI]ia_css_isys_server_handle_flush_event || {pin_id = %d is out of range}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0c5e7b48" File="0x00000004" Line="1159"><![CDATA[[ISYSAPI]run_stream_controller || {pread_token->send_type = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x389b7b52" File="0x00000004" Line="3557"><![CDATA[[ISYSAPI]ia_css_isys_fw_main || istream_init failed with {error = %d} and {details = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6e320b54" File="0x00000004" Line="1886"><![CDATA[[ISYSAPI]handle_frame_done || { Frame done for: stream_id: %d, mem_slot: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xdb716b76" File="0x00000004" Line="2086"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {dev_type = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3dd27378" File="0x00000004" Line="2683"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || UNIS Sig2Cio GDA urgent threshold irq set
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xeb0d5096" File="0x00000004" Line="1038"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), iBufCtrl not idle, reconfiguring for buffer chasing delayed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x69054394" File="0x00000004" Line="2256"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {isys_ctrl[stream_id_from_event = %d].perform_poll = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6bd1a396" File="0x00000004" Line="1665"><![CDATA[[ISYSAPI]run_msg_processor || {token_info.frame_buf.output_pins[j = %d].addr = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x462862f3" File="0x00000004" Line="944"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), SOF %i before connecting for frame %i, aborting.
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8399cb45" File="0x00000004" Line="3119"><![CDATA[[ISYSAPI]run_event_processor || invalid dev_id %d (Range 0-%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd410bba5" File="0x00000004" Line="173"><![CDATA[[ISYSAPI]comm_buffer_load || DMA load {size == %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x048723b1" File="0x00000004" Line="3511"><![CDATA[[ISYSAPI]ia_css_isys_fw_main
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcc87cbbb" File="0x00000004" Line="3460"><![CDATA[[ISYSAPI]execute_deferred_actions || istream_resume error for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x822babc0" File="0x00000004" Line="2113"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {istr_ctx[stream_id_from_event = %d].event_init_mask[mem_slot = %d][0] = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd07bcbc5" File="0x00000004" Line="2246"><![CDATA[[ISYSAPI]run_ibuf_event_processor || IBUF_EVENT_INIT_ACK
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcd7b0402" File="0x00000004" Line="2457"><![CDATA[[ISYSAPI]run_xcom_event_processor || {Link ID deactivation after matching stream open}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xab77841e" File="0x00000004" Line="1160"><![CDATA[[ISYSAPI]run_stream_controller || {pread_token->payload = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xfebf8428" File="0x00000004" Line="1308"><![CDATA[[ISYSAPI]run_stream_controller || security_check error {stream = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x59f9643e" File="0x00000004" Line="2346"><![CDATA[[ISYSAPI]run_xcom_event_processor || {Link ID deactivation before matching stream open}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x090da451" File="0x00000004" Line="2037"><![CDATA[[ISYSAPI]ia_css_isys_server_handle_flush_event || {stream_id: %d, mem_slot: %d, pin_id: %d, compression flushes complete, but waiting for pending ibuf store-ack's.}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x93bf5210" File="0x00000004" Line="856"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), iBufCtrl not idle, reconfiguring for offline delayed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5cf53c65" File="0x00000004" Line="425"><![CDATA[[ISYSAPI]securiy_check skipped for non-dual-cmd-ctx case
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9816f46b" File="0x00000004" Line="2085"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {proc_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xce488c84" File="0x00000004" Line="2150"><![CDATA[[ISYSAPI]run_ibuf_event_processor || istream_detect_and_handle_str2mmio_error UNMATCHED input pin error
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x320f4c98" File="0x00000004" Line="834"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), no frames are processed yet
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x673034a3" File="0x00000004" Line="767"><![CDATA[[ISYSAPI]handle_on_the_fly_connection || No online connection for {link_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3e158cc6" File="0x00000004" Line="2200"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {isys_response[stream_id_from_event = %d].buffer_write_token_pin_ready[mem_slot = %d][pin_from_event = %d].resp_info.pin.addr = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcd197c8f" File="0x00000004" Line="2305"><![CDATA[[ISYSAPI]run_xcom_event_processor(), invalid link id: %i
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1e9c8cb6" File="0x00000004" Line="2129"><![CDATA[[ISYSAPI]run_ibuf_event_processor || STR2MMIO_ERROR bit is set in the event for stream %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x54bdbcbb" File="0x00000004" Line="866"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), iBufCtrl not idle, reconfiguring for offline delayed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0b1714bc" File="0x00000004" Line="3113"><![CDATA[[ISYSAPI]run_event_processor || {pevent_token->event = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x28a3ccc1" File="0x00000004" Line="1161"><![CDATA[[ISYSAPI]run_stream_controller || {&pread_token->buf_handle = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x873824c6" File="0x00000004" Line="2112"><![CDATA[[ISYSAPI]run_ibuf_event_processor || IBUF_EVENT_STORE_COMPLETE
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd54df4cf" File="0x00000004" Line="1070"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), staying connected for frame %i
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3a9ca4e7" File="0x00000004" Line="2234"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {stream_id: %d, mem_slot: %d, pin_id: %d, ibuf complete, but waiting for pending compression flushes.}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x058954ea" File="0x00000004" Line="572"><![CDATA[[ISYSAPI]isys_initialise || invalid stream_id %d (Range 0-%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xacf15cf8" File="0x00000004" Line="730"><![CDATA[[ISYSAPI]otf_send_xcom_command || cmd: %d, frame_counter:%d, link_id:%d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x809f4502" File="0x00000004" Line="2532"><![CDATA[[ISYSAPI]run_xcom_event_processor || {error: invalid xcom msg type}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc6823d07" File="0x00000004" Line="876"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), going online for frame %i granted
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x49d62d12" File="0x00000004" Line="1371"><![CDATA[[ISYSAPI]run_stream_controller || istream_close error for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9c349d1d" File="0x00000004" Line="1847"><![CDATA[[ISYSAPI]update_stream_mask_and_pin_count || Pin latency exceeded maximum number of stored contexts
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0e332cdc" File="0x00000004" Line="1668"><![CDATA[[ISYSAPI]run_msg_processor || {isys_response[stream_id = %d].buffer_write_token_pin_ready[mem_slot = %d][j = %d].resp_info.pin.addr = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xaa64dd35" File="0x00000004" Line="2691"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || UNIS Sig2Cio GDA urgent threshold irq reset
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd3a6bd4b" File="0x00000004" Line="2297"><![CDATA[[ISYSAPI]	 cmd: %d, frame_counter:%d, link_id:%d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x82f76d53" File="0x00000004" Line="2817"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xdf0cad6d" File="0x00000004" Line="3114"><![CDATA[[ISYSAPI]run_event_processor || {dev_type = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd69a1d86" File="0x00000004" Line="2820"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || {pisys_ctrl->frames_done = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xff576d8d" File="0x00000004" Line="2888"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || {pisys_ctrl->active_eof_count = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe446bda1" File="0x00000004" Line="2560"><![CDATA[[DEC400]run_dec400_event_processor || {Detected hardware error irq. irq_error_mask: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf9a505ac" File="0x00000004" Line="3643"><![CDATA[[ISYSAPI]Got wrong stream_id from device queue.Stream_id %u used for non secured context.Out of non secured boundaries! Skip processing
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x42ec0daf" File="0x00000004" Line="2762"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || CSI-RX FIFO overflow detected for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xfef1ddbf" File="0x00000004" Line="2084"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {ibuf_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe4165dd2" File="0x00000004" Line="3400"><![CDATA[[ISYSAPI]execute_deferred_actions || {isys_response[stream_id = %d].buffer_write_token_pin_ready[mem_slot = %d][pin_id = %d].resp_info.pin.addr = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x49bbddda" File="0x00000004" Line="2165"><![CDATA[[ISYSAPI]run_ibuf_event_processor || istream_detect_and_handle_str2mmio_error success for {stream_id = %d} and {input_pin = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb57ac5ec" File="0x00000004" Line="442"><![CDATA[[ISYSAPI]security_check failed with {out_buf_addr 0x%x} {payload 0x%x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x325a0601" File="0x00000004" Line="2450"><![CDATA[[ISYSAPI]run_xcom_event_processor || {Activate after stream open in invalid state = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x89562609" File="0x00000004" Line="985"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), reconfiguration on frame %i for online
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x66afca5a" File="0x00000004" Line="2080"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {pin_from_event = %d is out of range}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xce3c9507" File="0x00000004" Line="3141"><![CDATA[[ISYSAPI]run_event_processor || illegal ctx_id %d (Range [0, %d))
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x87c68e2d" File="0x00000004" Line="2247"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {istr_ctx[stream_id_from_event = %d].event_init_mask[init_mem_slot][0] = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xeb0b1632" File="0x00000004" Line="1530"><![CDATA[[ISYSAPI]run_stream_controller || STREAM_IN_TRANSFER state errored command type {send_type = %d} for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc0b72e42" File="0x00000004" Line="2699"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || UNIS Sig2Cio DEC400 compressor flush event
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcccf2e4d" File="0x00000004" Line="1323"><![CDATA[[ISYSAPI]run_stream_controller || istream_capture error for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xbc29964e" File="0x00000004" Line="110"><![CDATA[[ERR_HANDLING]err_handling_add_validity_pair | ERROR: Space already occupied. The oldest frame was not processed and evacuated in the expected time. In index:%u, oldest frame address is: %x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd69b6a63" File="0x00000004" Line="787"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), active_sof_count %i, active_eof_count %i, curr_frame_counter %i, next_frame_counter %i, cmds_sent %i, frames_done %i
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7d7c3668" File="0x00000004" Line="2156"><![CDATA[[ISYSAPI]run_ibuf_event_processor || Register error for {output_pin = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2c5b5e71" File="0x00000004" Line="3068"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || unrecognized sig2cio event - type
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8d4cf683" File="0x00000004" Line="2283"><![CDATA[[ISYSAPI]run_xcom_event_processor || {event_token = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x06d7be86" File="0x00000004" Line="2083"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {pevent_token->event = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5cee5ea7" File="0x00000004" Line="39"><![CDATA[[VIED_NCI_ACCESS_BLOCKER]vied_nci_access_blocker_reg_store || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0bd52eaa" File="0x00000004" Line="1499"><![CDATA[[ISYSAPI]run_stream_controller || istream_flush_stop error for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x22f0eeb6" File="0x00000004" Line="924"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), iBufCtrl not idle, reconfiguring for offline delayed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf70d56d0" File="0x00000004" Line="2708"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || UNIS Sig2Cio non-existent group
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe340a6d3" File="0x00000004" Line="1540"><![CDATA[[ISYSAPI]run_stream_controller || errored state {state = %d} for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe52b9ed8" File="0x00000004" Line="2687"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || UNIS Sig2Cio GDA critical threshold irq set
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x83d706d9" File="0x00000004" Line="2669"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || {tsc_high = %d}, {tsc_low = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7f15fa7b" File="0x00000004" Line="3115"><![CDATA[[ISYSAPI]run_event_processor || {dev_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa4401ee9" File="0x00000004" Line="568"><![CDATA[[ISYSAPI]isys_initialise || {*pnof_recv_queues = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0a286ef4" File="0x00000004" Line="895"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), going online for frame %i granted
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe2532706" File="0x00000004" Line="1934"><![CDATA[[ISYSAPI]handle_frame_done || {isys_ctrl[stream_id_from_event = %d].perform_poll = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xec904720" File="0x00000004" Line="2695"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || UNIS Sig2Cio GDA critical threshold irq reset
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x25785f2d" File="0x00000004" Line="1480"><![CDATA[[ISYSAPI]run_stream_controller || istream_flush_stop error for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8b144739" File="0x00000004" Line="2088"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {pin_from_event = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8740f73e" File="0x00000004" Line="566"><![CDATA[[ISYSAPI]isys_initialise || {*pnof_streams = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb072bf4a" File="0x00000004" Line="2822"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || {pisys_ctrl->cmds_sent = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x59fd0f5d" File="0x00000004" Line="1913"><![CDATA[[ISYSAPI]handle_frame_done || istream_flush_stop error for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd0309f71" File="0x00000004" Line="2432"><![CDATA[[ISYSAPI]run_xcom_event_processor || {Link ID activation after matching stream open}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5247df8d" File="0x00000004" Line="777"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), stream_id %i, link_id = %i, state = %i, psys_frame_online_requested %i, psys_frame_online_start %i, ibufctrl_kicked_count %i
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x94bb87ed" File="0x00000004" Line="3028"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || istream_flush_stop error for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xaad19799" File="0x00000004" Line="2365"><![CDATA[[ISYSAPI]run_xcom_event_processor || {Invalid command = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x93b19f9b" File="0x00000004" Line="1444"><![CDATA[[ISYSAPI]run_stream_controller || {isys_ctrl[stream_id = %d].perform_poll = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x63f6c7a5" File="0x00000004" Line="3518"><![CDATA[[ISYSAPI]isys_fw || AB_SPC_READY
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x484707a8" File="0x00000004" Line="1436"><![CDATA[[ISYSAPI]run_stream_controller || istream_capture error for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6befb7ac" File="0x00000004" Line="940"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), SOF %i before connecting for frame %i, online request remains granted.
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2a67c7b2" File="0x00000004" Line="2514"><![CDATA[[ISYSAPI]run_xcom_event_processor || {error: Get frame validity with 2 replacements is not enabled yet}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1db92fb6" File="0x00000004" Line="1362"><![CDATA[[ISYSAPI]run_stream_controller || {isys_ctrl[stream_id = %d].perform_poll = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xad8ff7e7" File="0x00000004" Line="2090"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {isys_ctrl[stream_id_from_event = %d].frames_done = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc5e4bfeb" File="0x00000004" Line="2945"><![CDATA[[ISYSAPI]run_sig2cio_event_processor || istream_suspend error for {stream_id_iter = %d} triggered by {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x21c377ed" File="0x00000004" Line="3379"><![CDATA[[ISYSAPI]execute_deferred_actions || istream_flush_stop error for {stream_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4fb627f4" File="0x00000004" Line="2089"><![CDATA[[ISYSAPI]run_ibuf_event_processor || {isys_ctrl[stream_id_from_event = %d].cmds_sent = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf6bc17f7" File="0x00000004" Line="1020"><![CDATA[[ISYSAPI]handle_on_the_fly_connection(), EOF %i before connecting for frame %i, aborting.
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf7d4d05b" File="0x00000005" Line="261"><![CDATA[[ISYSAPI]send_opt_response_opt_irq || {trigger_resp = %d} {trigger_irq = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc9d22062" File="0x00000005" Line="93"><![CDATA[[ISYSAPI]poll_msg_queue || {read_tokens_available = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb7c1a179" File="0x00000005" Line="336"><![CDATA[[ISYSAPI]send_proxy_response_opt_irq || {write_tokens_available = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x025a7192" File="0x00000005" Line="217"><![CDATA[[ISYSAPI]poll_event_queue || {available = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x09f8a212" File="0x00000005" Line="290"><![CDATA[[ISYSAPI]send_opt_response_opt_irq || {write_tokens_available = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9c8c821b" File="0x00000005" Line="146"><![CDATA[[ISYSAPI]poll_dev_queue || {read_tokens_available = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6a89e2e8" File="0x00000005" Line="134"><![CDATA[[ISYSAPI]poll_dev_queue || {read_tokens_available = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4ca1ab0d" File="0x00000005" Line="180"><![CDATA[[ISYSAPI]poll_proxy_queue || consistency error for {msg_queue_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb56d9491" File="0x00000005" Line="175"><![CDATA[[ISYSAPI]poll_proxy_queue || {read_tokens_available = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe5ffc4a0" File="0x00000005" Line="139"><![CDATA[[ISYSAPI]poll_dev_queue || consistency error for {dev_queue_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8f2f3cf9" File="0x00000005" Line="281"><![CDATA[[ISYSAPI]send_opt_response_opt_irq || consistency error for {msg_queue_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd5369d3f" File="0x00000005" Line="98"><![CDATA[[ISYSAPI]poll_msg_queue || consistency error for {msg_queue_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5c808d87" File="0x00000005" Line="340"><![CDATA[[ISYSAPI]send_proxy_response_opt_irq || consistency error for {msg_queue_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf6f6cda9" File="0x00000005" Line="105"><![CDATA[[ISYSAPI]poll_msg_queue || {read_tokens_available = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc9fd1502" File="0x00000005" Line="274"><![CDATA[[ISYSAPI]send_opt_response_opt_irq || {write_tokens_available = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x01a2a6a6" File="0x00000005" Line="187"><![CDATA[[ISYSAPI]poll_proxy_queue || {read_tokens_available = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5763befb" File="0x00000005" Line="347"><![CDATA[[ISYSAPI]send_proxy_response_opt_irq || {write_tokens_available = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2e2a5f47" File="0x00000005" Line="216"><![CDATA[[ISYSAPI]poll_event_queue || {pevent_token->event = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x67713027" File="0x00000006" Line="45"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_ctx_rsrc_acquire || -> ia_css_isys_ctx_rsrc_acquire  {dev_type_id = %d} 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x97dfb864" File="0x00000006" Line="109"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_ctx_rsrc_release || {pisys_rsrc[dev_instance_id = %d].active_table = %d} : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe8cf5a7b" File="0x00000006" Line="95"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_ctx_rsrc_release || {dev_instance_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x61eb1a86" File="0x00000006" Line="110"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_ctx_rsrc_release || <- ia_css_isys_ctx_rsrc_release
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x323c3c2a" File="0x00000006" Line="74"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_ctx_rsrc_acquire || Device ctx not found!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9557a48f" File="0x00000006" Line="78"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_ctx_rsrc_acquire || {*ctx = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x681bece9" File="0x00000006" Line="94"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_ctx_rsrc_release || {dev_type_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2fd18d34" File="0x00000006" Line="96"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_ctx_rsrc_release || {ctx = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe2bccdfd" File="0x00000006" Line="93"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_ctx_rsrc_release || -> ia_css_isys_ctx_rsrc_release
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x768dae7d" File="0x00000006" Line="79"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_ctx_rsrc_acquire || <- ia_css_isys_ctx_rsrc_acquire
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4578d743" File="0x00000006" Line="46"><![CDATA[[STREAMDEVICEAPI]ia_css_isys_ctx_rsrc_acquire ||{dev_instance_id = %d} {dev_instance_base_ctx = %d} {dev_instance_nof_ctxs = %d} {dev_max[dev_type_id] = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x07d6cd34" File="0x00000007" Line="297"><![CDATA[[ISYS_TRAFFIC_CTRL]isys_traffic_ctrl_wait_completion || -> isys_traffic_ctrl_wait_completion
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0222fb4a" File="0x00000007" Line="329"><![CDATA[[ISYS_TRAFFIC_CTRL]isys_traffic_ctrl_wait_completion || DMA timed out after %d tries
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x444b3b58" File="0x00000007" Line="218"><![CDATA[[ISYS_TRAFFIC_CTRL]isys_traffic_ctrl_open || <- isys_traffic_ctrl_open
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0563ab5b" File="0x00000007" Line="337"><![CDATA[[ISYS_TRAFFIC_CTRL]isys_traffic_ctrl_wait_completion || <- isys_traffic_ctrl_wait_completion
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe859800a" File="0x00000007" Line="283"><![CDATA[[ISYS_TRAFFIC_CTRL]isys_traffic_ctrl_transfer || <- isys_traffic_ctrl_transfer
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2e6aa536" File="0x00000007" Line="321"><![CDATA[[ISYS_TRAFFIC_CTRL]isys_traffic_ctrl_wait_completion || DMA incomplete after %d tries
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc6782589" File="0x00000007" Line="156"><![CDATA[[ISYS_TRAFFIC_CTRL]isys_traffic_ctrl_open || -> isys_traffic_ctrl_open
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd7d3cedc" File="0x00000007" Line="237"><![CDATA[[ISYS_TRAFFIC_CTRL]isys_traffic_ctrl_transfer || -> isys_traffic_ctrl_transfer
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xff425571" File="0x00000008" Line="636"><![CDATA[[NCI_DEC400]nci_dec400_irq_wrapper_regs_setup || {enable_mask: %d, edge_mask: %d, level_n_pulse_mask: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc91e3a9f" File="0x00000009" Line="44"><![CDATA[[NCI_GDA]nci_gda_reg_store || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4dd5c320" File="0x00000009" Line="57"><![CDATA[[NCI_GDA]nci_gda_reg_load || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcbe3796e" File="0x00000009" Line="133"><![CDATA[[NCI_GDA]nci_gda_get_reset_iwake_state_addr || {gda_dev_id = %d} {address = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xdb2b6274" File="0x0000000a" Line="56"><![CDATA[[NCI_PMA_IF]nci_pma_if_reg_store || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa93d1369" File="0x0000000a" Line="87"><![CDATA[[NCI_PMA_IF]nci_pma_if_get_wake_done_addr || {pma_if_dev_id = %d} {address = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x892f9117" File="0x0000000b" Line="51"><![CDATA[[VIED_NCI_EQC]nci_eqc_set_reg || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1f84c208" File="0x0000000c" Line="40"><![CDATA[[VIED_NCI_IBUFCTRL]vied_nci_ibufctrl_cond_reg_store || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe57e62d5" File="0x0000000c" Line="62"><![CDATA[[VIED_NCI_IBUFCTRL]vied_nci_ibufctrl_reg_load || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4b215b84" File="0x0000000d" Line="47"><![CDATA[[VIED_NCI_ISLDEVICE]vied_nci_isldevice_cio2stream_reg_store || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x66393c75" File="0x0000000e" Line="56"><![CDATA[[VIED_NCI_ISLDEVICE]vied_nci_isldevice_mipi_backend_reg_load || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe66c1d61" File="0x0000000e" Line="43"><![CDATA[[VIED_NCI_ISLDEVICE]vied_nci_isldevice_mipi_backend_reg_store || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x49f1ca39" File="0x0000000f" Line="38"><![CDATA[[VIED_NCI_ISLDEVICE]vied_nci_isldevice_soc_mipi_backend_reg_store || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcdf7fccf" File="0x0000000f" Line="51"><![CDATA[[VIED_NCI_ISLDEVICE]vied_nci_isldevice_soc_mipi_backend_reg_load || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9fad0abf" File="0x00000010" Line="46"><![CDATA[[VIED_NCI_ISLDEVICE]vied_nci_isldevice_socpf_reg_store || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf339d04e" File="0x00000011" Line="72"><![CDATA[[VIED_NCI_SIG2CIO]vied_nci_sig2cio_reg_load || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe5e247ae" File="0x00000011" Line="59"><![CDATA[[VIED_NCI_SIG2CIO]vied_nci_sig2cio_reg_store || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x16f59b94" File="0x00000012" Line="39"><![CDATA[[VIED_NCI_STR2MMIO]vied_nci_str2mmio_reg_store || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb2ddf6ea" File="0x00000012" Line="52"><![CDATA[[VIED_NCI_STR2MMIO]vied_nci_str2mmio_reg_load || {address = 0x%08x} {value = 0x%08x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+  </Messages>
+
+</SvenDictionary>

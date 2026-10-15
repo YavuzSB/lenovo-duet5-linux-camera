@@ -1,0 +1,104 @@
+﻿;/*++
+;
+;Copyright (c) 2010-2020 Intel Corporation
+;
+;Module Name:
+;
+;    ov5678.inf
+;
+;Abstract:
+;    INF file for installing OV5678 camera sensor (ACPI\OVTI5678) driver
+;
+;Installation Notes:
+;    Using Devcon: Type "devcon update ov5678.inf ACPI\OVTI5678" to install
+;
+;--*/
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%INTEL%
+DriverVer = 11/29/2022,63.22000.1.8
+CatalogFile=ov5678.cat
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+CopyCPFFiles=11
+CopyX64ExtraCPFFiles=10, SysWOW64
+
+;*****************************************
+; Sensor Device  Install Section
+;*****************************************
+
+[Manufacturer]
+%Ov5678%=Standard,NTamd64
+
+; For XP and later
+[Standard.NTamd64]
+%ov5678.DeviceDesc%=Ov5678_Device, ACPI\OVTI5678
+
+[Ov5678_Device.NTamd64]
+CopyFiles=Ov5678_Device.NT.Copy
+CopyFiles=CopyCPFFiles
+CopyFiles=CopyX64ExtraCPFFiles
+
+[Ov5678_Device.NTamd64.HW]
+AddReg=Ov5678_Dev.AddReg
+
+[Ov5678_Device.NTx86.HW]
+AddReg=Ov5678_Dev.AddReg
+
+[Ov5678_Dev.AddReg]
+HKR,"WDF","WdfDirectedPowerTransitionEnable",0x00010001,1
+
+[Ov5678_Device.NT.Copy]
+ov5678.sys
+graph_settings_OV5678_CJFL515_ADL.xml
+
+[CopyCPFFiles]
+OV5678_CJFL515_ADL.aiqb
+OV5678_CJFL515_ADL.cpf
+
+[CopyX64ExtraCPFFiles]
+OV5678_CJFL515_ADL.aiqb
+OV5678_CJFL515_ADL.cpf
+
+;-------------- Service installation
+[Ov5678_Device.NTamd64.Services]
+AddService = ov5678, %SPSVCINST_ASSOCSERVICE%, ov5678_Service_Inst
+
+[ov5678_Service_Inst]
+DisplayName    = %ov5678.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\ov5678.sys
+Dependencies   = SpbCx,inteli2c
+AddReg         = Ov5678_Device.AddReg
+
+[Ov5678_Device.AddReg]
+;Use same security checks on relative opens
+HKR,,DeviceCharacteristics,0x10001,0x0100
+;Grant access just to built-in administrators, local system, and usermode drivers
+HKR,,Security,,"D:P(A;;GA;;;BA)(A;;GA;;;SY)(A;;GA;;;S-1-5-84-0-0-0-0-0)(D;;GA;;;WD)"
+HKR,,IRFlashLedIntensity,0x10001, 100
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+ov5678.sys = 1
+OV5678_CJFL515_ADL.aiqb = 1
+OV5678_CJFL515_ADL.cpf = 1
+graph_settings_OV5678_CJFL515_ADL.xml = 1
+
+[Strings]
+SPSVCINST_ASSOCSERVICE = 0x00000002
+INTEL = "Intel Corporation"
+Ov5678 = "OV5678 Camera Sensor"
+DiskId1 = "OV5678 Camera Installation Disk #1"
+ov5678.DeviceDesc = "Camera Sensor Front"
+ov5678.SVCDESC = "Camera Sensor Front"
+IRSensor = "{CD59E198-F241-4ACD-BB6D-16CB977E5DDC}"

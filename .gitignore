@@ -1,0 +1,29 @@
+# Build artifacts
+*.o
+*.o.cmd
+.*.o.cmd
+*.ko
+*.ko.xz
+*.ko.cmd
+.*.ko.cmd
+*.mod
+*.mod.c
+*.mod.o
+*.mod.o.cmd
+.*.mod.cmd
+.*.mod.o.cmd
+modules.order
+.modules.order.cmd
+Module.symvers
+.Module.symvers.cmd
+.tmp_versions/
+
+# Windows installer and large binary blobs
+windows-driver/*.exe
+windows-driver/*.rpm
+windows-driver/usr/
+windows-driver/extracted/**/*.dll
+windows-driver/extracted/**/*.cat
+windows-driver/extracted/**/*.sys
+windows-driver/extracted/**/*.bmp
+windows-driver/extracted/**/*.pdf

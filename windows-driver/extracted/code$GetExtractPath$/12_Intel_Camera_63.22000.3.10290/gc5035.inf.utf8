@@ -1,0 +1,100 @@
+﻿;/*++
+;
+;Copyright (c) 2018 Intel Corporation
+;
+;Module Name:
+;
+;    gc5035.inf
+;
+;Abstract:
+;    INF file for installing gc5035 camera sensor (ACPI\GCTI5035) driver
+;
+;Installation Notes:
+;    Using Devcon: Type "devcon update gc5035.inf ACPI\GCTI5035" to install
+;--*/
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%INTEL%
+DriverVer = 02/07/2023,63.22000.1.6
+CatalogFile=gc5035.cat
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+CopyCPFFiles=11
+CopyX64ExtraCPFFiles=10, SysWOW64
+
+;*****************************************
+; Sensor Device  Install Section
+;*****************************************
+
+[Manufacturer]
+%gc5035%=Standard,NTamd64
+
+; For XP and later
+[Standard.NTamd64]
+%gc5035.DeviceDesc%=gc5035_Device, ACPI\GCTI5035
+
+[gc5035_Device.NTamd64]
+CopyFiles=gc5035_Device.NT.Copy
+CopyFiles=CopyCPFFiles
+CopyFiles=CopyX64ExtraCPFFiles
+
+[gc5035_Device.NT.Copy]
+gc5035.sys
+graph_settings_gc5035_CJAK519_ADL.xml
+
+[gc5035_Device.NTamd64.HW]
+AddReg=gc5035_Dev.AddReg
+
+[gc5035_Device.NTx86.HW]
+AddReg=gc5035_Dev.AddReg
+
+[gc5035_Dev.AddReg]
+HKR,"WDF","WdfDirectedPowerTransitionEnable",0x00010001,1
+
+[CopyCPFFiles]
+gc5035_CJAK519_ADL.cpf
+gc5035_CJAK519_ADL.aiqb
+
+[CopyX64ExtraCPFFiles]
+gc5035_CJAK519_ADL.cpf
+gc5035_CJAK519_ADL.aiqb
+
+;-------------- Service installation
+[gc5035_Device.NTamd64.Services]
+AddService = gc5035, %SPSVCINST_ASSOCSERVICE%, gc5035_Service_Inst
+
+[gc5035_Service_Inst]
+DisplayName    = %gc5035.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\gc5035.sys
+AddReg         = gc5035_Device.AddReg
+
+[gc5035_Device.AddReg]
+;Use same security checks on relative opens
+HKR,,DeviceCharacteristics,0x10001,0x0100
+;Grant access just to built-in administrators, local system, and usermode drivers
+HKR,,Security,,"D:P(A;;GA;;;BA)(A;;GA;;;SY)(A;;GA;;;S-1-5-84-0-0-0-0-0)(D;;GA;;;WD)"
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+gc5035.sys = 1
+gc5035_CJAK519_ADL.cpf = 1
+gc5035_CJAK519_ADL.aiqb = 1
+graph_settings_gc5035_CJAK519_ADL.xml = 1
+
+[Strings]
+SPSVCINST_ASSOCSERVICE = 0x00000002
+INTEL = "Intel Corporation"
+gc5035 = "GC5035 Camera Sensor"
+DiskId1 = "GC5035 Camera Installation Disk #1"
+gc5035.DeviceDesc = "Camera Sensor Rear"
+gc5035.SVCDESC = "Camera Sensor Rear"

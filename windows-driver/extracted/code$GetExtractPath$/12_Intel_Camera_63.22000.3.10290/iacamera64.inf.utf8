@@ -1,0 +1,967 @@
+﻿;/*++
+;
+;Copyright (c) 2018 - 2022 Intel Corporation
+;
+;Module Name:
+;
+;    iacamera.inf
+;
+;Abstract:
+;    INF file for installing intel iacamera driver
+;
+;Installation Notes:
+;    Using Devcon: Type "devcon update iacamera64.inf PCI\VEN_8086&DEV_9A39" to install
+;
+;--*/
+
+[Version]
+signature="$CHICAGO$"
+Class=Camera
+ClassGUID={ca3e7ab9-b4c3-4ae6-8251-579ef933890f}
+Provider=%PROVIDER_NAME%
+DriverVer = 12/22/2022,63.22000.3.10290
+Catalogfile=iacamera64.cat
+
+[SourceDisksNames]
+1000=%cdname%,,,
+
+[SourceDisksFiles]
+iacamera64.sys=1000
+cpd_component_signed.bin=1000
+cpd_component_signed_adln.bin=1000
+cpd_component_signed_rpl.bin=1000
+IntelDeviceMFT64.dll=1000
+evcp.dll=1000
+subway_user_framing.dll=1000
+subway_blazeface_tracking.dll=1000
+subway_centernet_tracking.dll=1000
+pvl64.dll=1000
+pvl_perspective_control64.dll=1000
+pvl_skin_smoothing64.dll=1000
+mute.bmp=1000
+mute-mirror.bmp=1000
+libia_cp64.dll=1000
+burstisp_ipux.dll = 1000
+TPG1_INTEL.cpf=1000
+TPG1_INTEL.aiqb=1000
+TPG2_INTEL.cpf=1000
+TPG2_INTEL.aiqb=1000
+TPG2_INTEL_rgbir.cpf=1000
+TPG1_INTEL_SVE.cpf=1000
+graph_descriptor.xml = 1000
+graph_settings_TPG1_INTEL_DEFAULT.xml = 1000
+graph_settings_TPG2_INTEL_DEFAULT.xml = 1000
+tnr7_cm.dll=1000
+
+[DestinationDirs]
+DefaultDestDir=12
+iacamera.CopyFiles=12
+iacamera.CopyX64DLLs=11
+
+[Manufacturer]
+%COMPANY_NAME%=Device, NTamd64
+
+
+[Device.NTamd64]
+%iacamera.DeviceDesc_ADL%       =iacamera, VIDEO\INT3480
+
+[iacamera.NT]
+Include=ks.inf, KSCAPTUR.inf
+Needs=KS.Registration,KSCAPTUR.Registration.NT
+CopyFiles=iacamera.CopyFiles
+CopyFiles=iacamera.CopyX64DLLs
+AddReg=iacamera.MFT.AddReg
+
+[iacamera.MFT.AddReg]
+HKCR,CLSID\%IHV_DEVICE_PLUGIN%,,,%iacamera.FriendlyNameDeviceMFT%
+HKCR,CLSID\%IHV_DEVICE_PLUGIN%\InprocServer32,,%REG_EXPAND_SZ%, "%%SystemRoot%%\System32\IntelDeviceMFT64.dll"
+HKCR,CLSID\%IHV_DEVICE_PLUGIN%\InprocServer32,"ThreadingModel", %REG_SZ%, "Both"
+
+[iacamera.CopyFiles]
+iacamera64.sys
+mute.bmp
+mute-mirror.bmp
+TPG1_INTEL.cpf
+TPG1_INTEL.aiqb
+TPG2_INTEL.cpf
+TPG2_INTEL.aiqb
+TPG2_INTEL_rgbir.cpf
+TPG1_INTEL_SVE.cpf
+graph_descriptor.xml
+graph_settings_TPG1_INTEL_DEFAULT.xml
+graph_settings_TPG2_INTEL_DEFAULT.xml
+cpd_component_signed.bin
+cpd_component_signed_adln.bin
+cpd_component_signed_rpl.bin
+
+[iacamera.CopyX64DLLs]
+IntelDeviceMFT64.dll
+evcp.dll
+subway_user_framing.dll
+subway_blazeface_tracking.dll
+subway_centernet_tracking.dll
+pvl64.dll
+pvl_perspective_control64.dll
+pvl_skin_smoothing64.dll
+libia_cp64.dll
+burstisp_ipux.dll
+TPG1_INTEL.cpf
+TPG1_INTEL.aiqb
+TPG2_INTEL.cpf
+TPG2_INTEL.aiqb
+TPG2_INTEL_rgbir.cpf
+TPG1_INTEL_SVE.cpf
+tnr7_cm.dll
+
+[iacamera.NT.Interfaces]
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterFIFO%, iacamera.AddInterface,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterTPG1%, iacamera.AddInterfaceTPG1,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterTPG2%, iacamera.AddInterfaceTPG2,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterOV13858%, iacamera.AddInterfaceOV13858,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterOV13858_1%, iacamera.AddInterfaceOV13858_1,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterOV13858U%, iacamera.AddInterfaceOV13858U,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterOV13858W%, iacamera.AddInterfaceOV13858W,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterOV01AS%, iacamera.AddInterfaceOV01AS,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterOV01AS_2%, iacamera.AddInterfaceOV01AS_2,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterIMX488%, iacamera.AddInterfaceIMX488,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterOV01A%, iacamera.AddInterfaceOV01A,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterChimera1%, iacamera.AddInterfaceChimera1,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterChimera2%, iacamera.AddInterfaceChimera2,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterChimera3%, iacamera.AddInterfaceChimera3,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterChimera4%, iacamera.AddInterfaceChimera4,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterS5K3J1SX04%, iacamera.AddInterfaceS5K3J1SX04,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterLT6911UXC%, iacamera.AddInterfaceLT6911UXC,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterLT6911UXC_1%, iacamera.AddInterfaceLT6911UXC_1,
+AddInterface=%KSCATEGORY_VIDEO_CAMERA%, %FilterOV02C10%, iacamera.AddInterfaceOV02C10,
+
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterFIFO%, iacamera.AddInterface,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterTPG1%, iacamera.AddInterfaceTPG1,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterTPG2%, iacamera.AddInterfaceTPG2,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterOV13858%, iacamera.AddInterfaceOV13858,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterOV13858_1%, iacamera.AddInterfaceOV13858_1,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterOV13858U%, iacamera.AddInterfaceOV13858U,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterOV13858W%, iacamera.AddInterfaceOV13858W,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterOV01AS%, iacamera.AddInterfaceOV01AS,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterOV01AS_2%, iacamera.AddInterfaceOV01AS_2,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterIMX488%, iacamera.AddInterfaceIMX488,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterOV01A%, iacamera.AddInterfaceOV01A,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterChimera1%, iacamera.AddInterfaceChimera1,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterChimera2%, iacamera.AddInterfaceChimera2,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterChimera3%, iacamera.AddInterfaceChimera3,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterChimera4%, iacamera.AddInterfaceChimera4,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterS5K3J1SX04%, iacamera.AddInterfaceS5K3J1SX04,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterLT6911UXC%, iacamera.AddInterfaceLT6911UXC,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterLT6911UXC_1%, iacamera.AddInterfaceLT6911UXC_1,
+AddInterface=%KSCATEGORY_CAPTURE%, %FilterOV02C10%, iacamera.AddInterfaceOV02C10,
+
+AddInterface=%KSCATEGORY_VIDEO%, %FilterFIFO%, iacamera.AddInterface,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterTPG1%, iacamera.AddInterfaceTPG1,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterTPG2%, iacamera.AddInterfaceTPG2,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterOV13858%, iacamera.AddInterfaceOV13858,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterOV13858_1%, iacamera.AddInterfaceOV13858_1,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterOV13858U%, iacamera.AddInterfaceOV13858U,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterOV13858W%, iacamera.AddInterfaceOV13858W,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterOV01AS%, iacamera.AddInterfaceOV01AS,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterOV01AS_2%, iacamera.AddInterfaceOV01AS_2,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterIMX488%, iacamera.AddInterfaceIMX488,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterOV01A%, iacamera.AddInterfaceOV01A,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterChimera1%, iacamera.AddInterfaceChimera1,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterChimera2%, iacamera.AddInterfaceChimera2,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterChimera3%, iacamera.AddInterfaceChimera3,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterChimera4%, iacamera.AddInterfaceChimera4,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterS5K3J1SX04%, iacamera.AddInterfaceS5K3J1SX04,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterLT6911UXC%, iacamera.AddInterfaceLT6911UXC,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterLT6911UXC_1%, iacamera.AddInterfaceLT6911UXC_1,
+AddInterface=%KSCATEGORY_VIDEO%, %FilterOV02C10%, iacamera.AddInterfaceOV02C10,
+
+AddInterface=%KSCATEGORY_SENSOR_CAMERA%, %FilterOV9234%, iacamera.AddInterfaceOV9234,
+AddInterface=%KSCATEGORY_SENSOR_CAMERA%, %FilterOV01AS%, iacamera.AddInterfaceOV01AS,
+AddInterface=%KSCATEGORY_SENSOR_CAMERA%, %FilterOV01AS_2%, iacamera.AddInterfaceOV01AS_2,
+AddInterface=%KSCATEGORY_SENSOR_CAMERA%, %FilterIMX488%, iacamera.AddInterfaceIMX488,
+
+[iacamera.AddInterface]
+AddReg=iacamera.AddReg
+
+[iacamera.AddInterfaceTPG1]
+AddReg=iacamera.AddRegTPG1
+
+[iacamera.AddInterfaceTPG2]
+AddReg=iacamera.AddRegTPG2
+
+[iacamera.AddInterfaceOV13858]
+AddReg=iacamera.AddRegOV13858
+AddReg=iacamera.AddRegOV13858_profile
+
+[iacamera.AddInterfaceOV13858_1]
+AddReg=iacamera.AddRegOV13858_1
+AddReg=iacamera.AddRegOV13858_profile
+
+[iacamera.AddInterfaceOV13858U]
+AddReg=iacamera.AddRegOV13858U
+
+[iacamera.AddInterfaceOV13858W]
+AddReg=iacamera.AddRegOV13858W
+
+[iacamera.AddInterfaceIMX488]
+AddReg=iacamera.AddRegIMX488
+AddReg=iacamera.AddRegIMX488_Profile
+
+[iacamera.AddInterfaceOV01AS]
+AddReg=iacamera.AddRegOV01AS
+
+[iacamera.AddInterfaceOV01AS_2]
+AddReg=iacamera.AddRegOV01AS_2
+
+[iacamera.AddInterfaceOV9234]
+AddReg=iacamera.AddRegOV9234
+
+[iacamera.AddInterfaceOV01A]
+AddReg=iacamera.AddRegOV01A
+
+[iacamera.AddInterfaceChimera1]
+AddReg=iacamera.AddRegChimera1
+
+[iacamera.AddInterfaceChimera2]
+AddReg=iacamera.AddRegChimera2
+
+[iacamera.AddInterfaceChimera3]
+AddReg=iacamera.AddRegChimera3
+
+[iacamera.AddInterfaceChimera4]
+AddReg=iacamera.AddRegChimera4
+
+[iacamera.AddInterfaceLT6911UXC]
+AddReg=iacamera.AddRegLT6911UXC
+
+[iacamera.AddInterfaceLT6911UXC_1]
+AddReg=iacamera.AddRegLT6911UXC_1
+
+[iacamera.AddInterfaceS5K3J1SX04]
+AddReg=iacamera.AddRegS5K3J1SX04
+
+[iacamera.AddInterfaceOV02C10]
+AddReg=iacamera.AddRegOV02C10
+
+[iacamera.AddReg]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyName%
+
+[iacamera.NT.HW]
+Include=machine.inf
+AddReg=camera_hw_AddReg
+
+[iacamera.AddRegTPG1]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameTPG1%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+
+; Profile version v2
+HKR,,"OEMCameraProfileVersion",0x00010001,2
+
+; Legacy Profile
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF0",0,"Pin0:((RES==;FRT==;SUT==ALL))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF1",0,"Pin1:((RES==;FRT==;SUT==ALL))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF2",0,"Pin2:((RES==;FRT==;SUT==ALL))"
+
+; WCG P010 Profile
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,0","Constraint",0,"LRS;LST;LFR;eSPSubtype_HEVC"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,0","BlockedControls",0,"VHDR;VPS"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,0","MTF0",0,"Pin0:((RES==1920,1080;FRT==30,1;SUT==P010))((RES==3840,2160;FRT==30,1;SUT==P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,0","MTF1",0,"Pin1:((RES==1920,1080;FRT==30,1;SUT==P010))((RES==3840,2160;FRT==30,1;SUT==P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,0","MTF2",0,"Pin2:(!)"
+
+; Balanced Video And Photo Profile
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF0",0,"Pin0:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF1",0,"Pin1:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF2",0,"Pin2:((RES>=1920,1080;FRT==30,1;SUT==ALL))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF0",0,"Pin0:((RES==2560,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF1",0,"Pin1:((RES==2560,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF2",0,"Pin2:((RES>=2560,1440;FRT==30,1;SUT==ALL))"
+
+; Video Recording Profile
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF0",0,"Pin0:((RES==;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF1",0,"Pin1:((RES==;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF2",0,"Pin2:(!)"
+
+[iacamera.AddRegTPG2]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameTPG2%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+
+; Profile version v2
+HKR,,"OEMCameraProfileVersion",0x00010001,2
+
+; Legacy Profile
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF0",0,"Pin0:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF1",0,"Pin1:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF2",0,"Pin2:((RES==;FRT==;SUT==ALL))"
+; Balanced Video And Photo Profile
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF0",0,"Pin0:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF1",0,"Pin1:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF2",0,"Pin2:((RES>=1920,1080;FRT==30,1;SUT==ALL))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF0",0,"Pin0:((RES==2560,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF1",0,"Pin1:((RES==2560,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF2",0,"Pin2:((RES>=2560,1440;FRT==30,1;SUT==ALL))"
+
+; Video Recording Profile
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF0",0,"Pin0:((RES==;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF1",0,"Pin1:((RES==;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF2",0,"Pin2:(!)"
+
+[iacamera.AddRegOV13858]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameOV13858%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+
+[iacamera.AddRegOV13858_1]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameOV13858_1%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+
+[iacamera.AddRegOV13858_profile]
+; Profile version v2
+HKR,,"OEMCameraProfileVersion",0x00010001,2
+
+; Legacy Profile
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF0",0,"Pin0:((RES==;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF1",0,"Pin1:((RES==;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF2",0,"Pin2:((RES==;FRT==;SUT==ALL))"
+
+; High Frame Rate Profile
+HKR,"Profiles\KSCAMERAPROFILE_HighFrameRate,0","Constraint",0,"LRS;LST"
+HKR,"Profiles\KSCAMERAPROFILE_HighFrameRate,0","BlockedControls",0,"VIDST"
+HKR,"Profiles\KSCAMERAPROFILE_HighFrameRate,0","MTF0",0,"Pin0:((RES==1280,720;FRT==120,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighFrameRate,0","MTF1",0,"Pin1:((RES==1280,720;FRT==120,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighFrameRate,0","MTF2",0,"Pin2:(!)"
+
+HKR,"Profiles\KSCAMERAPROFILE_HighFrameRate,1","Constraint",0,"LRS;LST"
+HKR,"Profiles\KSCAMERAPROFILE_HighFrameRate,1","BlockedControls",0,"VIDST"
+HKR,"Profiles\KSCAMERAPROFILE_HighFrameRate,1","MTF0",0,"Pin0:((RES==1920,1080;FRT==60,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighFrameRate,1","MTF1",0,"Pin1:((RES==1920,1080;FRT==60,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighFrameRate,1","MTF2",0,"Pin2:(!)"
+
+
+; Photo Sequence Profile
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF0",0,"Pin0:((RES==1920,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF2",0,"Pin2:((RES==3712,2784;FRT==30,1;SUT!=P010))"
+
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF0",0,"Pin0:((RES==1920,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF2",0,"Pin2:((RES==4096,3072;FRT==30,1;SUT!=P010))"
+
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,2","MTF0",0,"Pin0:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,2","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,2","MTF2",0,"Pin2:((RES==3840,2160;FRT==30,1;SUT!=P010))"
+
+; High Quality Photo Profile
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF0",0,"Pin0:((RES==1920,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF2",0,"Pin2:((RES==3712,2784;FRT==30,1;SUT!=P010))"
+
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF0",0,"Pin0:((RES==1920,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF2",0,"Pin2:((RES==4096,3072;FRT==30,1;SUT!=P010))"
+
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,2","MTF0",0,"Pin0:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,2","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,2","MTF2",0,"Pin2:((RES==3840,2160;FRT==30,1;SUT!=P010))"
+
+; Video Recording Profile
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF0",0,"Pin0:((RES<=3840,2160;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF1",0,"Pin1:((RES<=3840,2160;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF2",0,"Pin2:(!)"
+
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF0",0,"Pin0:((RES<=1920,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF1",0,"Pin1:((RES<=1920,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF2",0,"Pin2:(!)"
+
+; WCG P010 Profile
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,0","Constraint",0,"LRS;LST;LFR;eSPSubtype_HEVC"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,0","BlockedControls",0,"VHDR;VPS;"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,0","MTF0",0,"Pin0:((RES==1920,1080;FRT==30,1;SUT==P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,0","MTF1",0,"Pin1:((RES==1920,1080;FRT==30,1;SUT==P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,0","MTF2",0,"Pin2:(!)"
+
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,1","Constraint",0,"LRS;LST;LFR;eSPSubtype_HEVC"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,1","BlockedControls",0,"VHDR;VPS;"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,1","MTF0",0,"Pin0:((RES==3840,2160;FRT==30,1;SUT==P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,1","MTF1",0,"Pin1:((RES==3840,2160;FRT==30,1;SUT==P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,1","MTF2",0,"Pin2:(!)"
+
+; Balanced Video And Photo Profile
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF0",0,"Pin0:((RES==3840,2160;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF1",0,"Pin1:((RES==3840,2160;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF2",0,"Pin2:((RES==3840,2160;FRT==30,1;SUT==ALL))"
+
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF0",0,"Pin0:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF1",0,"Pin1:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF2",0,"Pin2:((RES==3840,2160;FRT==30,1;SUT==ALL))"
+
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,2","MTF0",0,"Pin0:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,2","MTF1",0,"Pin1:((RES==2560,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,2","MTF2",0,"Pin2:((RES==3840,2160;FRT==30,1;SUT==ALL))"
+
+[iacamera.AddRegOV13858U]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameOV13858U%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+HKR,,FSSensorGroupID,,"{55B26476-C5C9-4BA8-8559-73D905E1F40E}"
+HKR,,FSSensorGroupName,,"IntelIRCameraSensorGroup"
+
+; Profile version v2
+HKR,,"OEMCameraProfileVersion",0x00010001,2
+; Legacy Profile
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF0",0,"Pin0:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF1",0,"Pin1:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF2",0,"Pin2:((RES==;FRT==;SUT==ALL))"
+
+; Photo Sequence Profile
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF0",0,"Pin0:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF2",0,"Pin2:((RES==2048,1152;FRT==30,1;SUT==ALL))"
+
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF0",0,"Pin0:((RES==1920,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF2",0,"Pin2:((RES==2048,1536;FRT==30,1;SUT==ALL))"
+
+; High Quality Photo Profile
+
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF0",0,"Pin0:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF2",0,"Pin2:((RES==2048,1152;FRT==30,1;SUT==ALL))((RES==1920,1080;FRT==30,1;SUT==ALL))"
+
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF0",0,"Pin0:((RES==1920,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF2",0,"Pin2:((RES==2048,1536;FRT==30,1;SUT==ALL))"
+
+; Video Recording Profile
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF0",0,"Pin0:((RES<=1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF1",0,"Pin1:((RES<=1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF2",0,"Pin2:(!)"
+
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF0",0,"Pin0:((RES<=1920,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF1",0,"Pin1:((RES<=1920,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF2",0,"Pin2:(!)"
+
+; Balanced Video And Photo Profile
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF0",0,"Pin0:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF1",0,"Pin1:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF2",0,"Pin2:((RES==2048,1152;FRT==30,1;SUT==ALL))"
+
+
+[iacamera.AddRegOV13858W]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameOV13858W%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+
+; Profile version v2
+HKR,,"OEMCameraProfileVersion",0x00010001,2
+; Legacy Profile
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF0",0,"Pin0:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF1",0,"Pin1:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF2",0,"Pin2:((RES==;FRT==;SUT==ALL))"
+
+; VideoConferencing Profile
+; 16:9
+HKR,"Profiles\KSCAMERAPROFILE_VideoConferencing,0","MTF0",0,"Pin0:((RES<=1920,1080;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoConferencing,0","MTF1",0,"Pin1:((RES<=1920,1080;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoConferencing,0","MTF2",0,"Pin2:(!)"
+
+;4:3
+HKR,"Profiles\KSCAMERAPROFILE_VideoConferencing,1","MTF0",0,"Pin0:((RES==640,480;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoConferencing,1","MTF1",0,"Pin1:((RES==640,480;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoConferencing,1","MTF2",0,"Pin2:(!)"
+
+; Photo Sequence Profile
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF0",0,"Pin0:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF2",0,"Pin2:((RES==2048,1152;FRT==30,1;SUT==ALL))"
+
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF0",0,"Pin0:((RES==1920,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF2",0,"Pin2:((RES==2048,1536;FRT==30,1;SUT==ALL))"
+
+; High Quality Photo Profile
+
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF0",0,"Pin0:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF2",0,"Pin2:((RES==2048,1152;FRT==30,1;SUT==ALL))"
+
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF0",0,"Pin0:((RES==1920,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF2",0,"Pin2:((RES==2048,1536;FRT==30,1;SUT==ALL))"
+
+; Video Recording Profile
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF0",0,"Pin0:((RES<=1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF1",0,"Pin1:((RES<=1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF2",0,"Pin2:(!)"
+
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF0",0,"Pin0:((RES<=1920,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF1",0,"Pin1:((RES<=1920,1440;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF2",0,"Pin2:(!)"
+
+; WCG P010 Profile
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,0","Constraint",0,"LRS;LST;LFR;eSPSubtype_HEVC"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,0","BlockedControls",0,"VHDR;VPS;"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,0","MTF0",0,"Pin0:((RES==1920,1080;FRT==30,1;SUT==P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,0","MTF1",0,"Pin1:((RES==1920,1080;FRT==30,1;SUT==P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HDRWithWCGVideo,0","MTF2",0,"Pin2:(!)"
+
+; Balanced Video And Photo Profile
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF0",0,"Pin0:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF1",0,"Pin1:((RES==1920,1080;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF2",0,"Pin2:((RES==2048,1152;FRT==30,1;SUT==ALL))"
+
+[iacamera.AddRegOV01AS]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameOV01AS%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+HKR,,FSSensorGroupID,,"{55B26476-C5C9-4BA8-8559-73D905E1F40E}"
+HKR,,FSSensorGroupName,,"IntelIRCameraSensorGroup"
+
+; Profile version v2
+HKR,,"OEMCameraProfileVersion",0x00010001,2
+
+; Legacy Profile
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF0",0,"Pin0:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF1",0,"Pin1:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF2",0,"Pin2:((RES==;FRT==;SUT!=P010))"
+;HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","BlockedControls",0,"PHSEQ"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF3",0,"Pin3:((RES==;FRT==;SUT==ALL))"
+
+; Photo Sequence Profile
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF0",0,"Pin0:((RES<=1280,720;FRT<=30,1;SUT!=P010))((RES==640,480;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF2",0,"Pin2:((RES==1280,720;FRT==30,1;SUT==ALL))((RES==1024,768;FRT==30,1;SUT==ALL))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF3",0,"Pin3:(!)"
+
+; High Quality Photo Profile
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF0",0,"Pin0:((RES<=1280,720;FRT<=30,1;SUT!=P010))((RES==640,480;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF2",0,"Pin2:((RES==1280,720;FRT==30,1;SUT==ALL))((RES==1024,768;FRT==30,1;SUT==ALL))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF3",0,"Pin3:(!)"
+
+; Video Recording Profile
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF0",0,"Pin0:((RES<=1280,720;FRT<=30,1;SUT!=P010))((RES==640,480;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF1",0,"Pin1:((RES<=1280,720;FRT<=30,1;SUT!=P010))((RES==640,480;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF2",0,"Pin2:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF3",0,"Pin3:(!)"
+
+; Balanced Video And Photo Profile
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF0",0,"Pin0:((RES<=1280,720;FRT==30,1;SUT!=P010))((RES==640,480;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF1",0,"Pin1:((RES<=1280,720;FRT==30,1;SUT!=P010))((RES==640,480;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF2",0,"Pin2:((RES==1280,720;FRT==30,1;SUT==ALL))((RES==1024,768;FRT==30,1;SUT==ALL))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF3",0,"Pin3:(!)"
+
+; Declare FaceAuth profile.
+HKR,"Profiles\KSCAMERAPROFILE_FaceAuth_Mode,0","BlockedControls",0,"FACEDT"
+HKR,"Profiles\KSCAMERAPROFILE_FaceAuth_Mode,0","MTF0",0,"Pin0:((RES==1280,720;FRT>=15,1;SUT==NV12))"
+HKR,"Profiles\KSCAMERAPROFILE_FaceAuth_Mode,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_FaceAuth_Mode,0","MTF2",0,"Pin2:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_FaceAuth_Mode,0","MTF3",0,"Pin3:((RES>=320,240;FRT>=15,1;SUT==NV12))"
+
+[iacamera.AddRegOV01AS_2]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameOV01AS_2%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+;Disable Face Authentication mode KsProperty explicitly
+HKR,ExtPropControls\35,Disable,0x00010001,1
+
+; Profile version v2
+HKR,,"OEMCameraProfileVersion",0x00010001,2
+
+; Legacy Profile
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF0",0,"Pin0:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF1",0,"Pin1:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF2",0,"Pin2:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF3",0,"Pin3:(!)"
+;HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","BlockedControls",0,"PHSEQ"
+
+; Photo Sequence Profile
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF0",0,"Pin0:((RES<=1280,720;FRT<=30,1;SUT!=P010))((RES==640,480;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF2",0,"Pin2:((RES==1280,720;FRT==30,1;SUT==ALL))((RES==1024,768;FRT==30,1;SUT==ALL))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF3",0,"Pin3:(!)"
+
+; High Quality Photo Profile
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF0",0,"Pin0:((RES<=1280,720;FRT<=30,1;SUT!=P010))((RES==640,480;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF2",0,"Pin2:((RES==1280,720;FRT==30,1;SUT==ALL))((RES==1024,768;FRT==30,1;SUT==ALL))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF3",0,"Pin3:(!)"
+
+; Video Recording Profile
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF0",0,"Pin0:((RES<=1280,720;FRT<=30,1;SUT!=P010))((RES==640,480;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF1",0,"Pin1:((RES<=1280,720;FRT<=30,1;SUT!=P010))((RES==640,480;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF2",0,"Pin2:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF3",0,"Pin3:(!)"
+
+; Balanced Video And Photo Profile
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF0",0,"Pin0:((RES<=1280,720;FRT==30,1;SUT!=P010))((RES==640,480;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF1",0,"Pin1:((RES<=1280,720;FRT==30,1;SUT!=P010))((RES==640,480;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF2",0,"Pin2:((RES==1280,720;FRT==30,1;SUT==ALL))((RES==1024,768;FRT==30,1;SUT==ALL))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF3",0,"Pin3:(!)"
+
+[iacamera.AddRegIMX488]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameIMX488%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+HKR,,FSSensorGroupID,,"{55B26476-C5C9-4BA8-8559-73D905E1F40E}"
+HKR,,FSSensorGroupName,,"IntelIRCameraSensorGroup"
+
+[iacamera.AddRegIMX488_Profile]
+; Profile version v2
+HKR,,"OEMCameraProfileVersion",0x00010001,2
+
+; Legacy Profile
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF0",0,"Pin0:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF1",0,"Pin1:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF2",0,"Pin2:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF3",0,"Pin3:((RES==;FRT==;SUT==ALL))"
+
+; PhotoSequence Profile
+; 16:9
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF0",0,"Pin0:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF2",0,"Pin2:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF3",0,"Pin3:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF0",0,"Pin0:((RES==640,360;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF2",0,"Pin2:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF3",0,"Pin3:(!)"
+; 4:3
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,2","MTF0",0,"Pin0:((RES==640,480;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,2","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,2","MTF2",0,"Pin2:((RES==1024,768;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,2","MTF3",0,"Pin3:(!)"
+
+; HighQualityPhoto Profile
+; 16:9
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF0",0,"Pin0:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF2",0,"Pin2:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF3",0,"Pin3:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF0",0,"Pin0:((RES==640,360;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF2",0,"Pin2:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF3",0,"Pin3:(!)"
+; 4:3
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,2","MTF0",0,"Pin0:((RES==640,480;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,2","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,2","MTF2",0,"Pin2:((RES==1024,768;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,2","MTF3",0,"Pin3:(!)"
+
+; VideoRecording Profile
+; 16:9
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF0",0,"Pin0:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF1",0,"Pin1:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF2",0,"Pin2:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF3",0,"Pin3:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF0",0,"Pin0:((RES==640,360;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF1",0,"Pin1:((RES==640,360;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF2",0,"Pin2:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF3",0,"Pin3:(!)"
+; 4:3
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,2","MTF0",0,"Pin0:((RES==640,480;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,2","MTF1",0,"Pin1:((RES==640,480;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,2","MTF2",0,"Pin2:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,2","MTF3",0,"Pin3:(!)"
+
+; BalancedVideoAndPhoto Profile
+; 16:9
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF0",0,"Pin0:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF1",0,"Pin1:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF2",0,"Pin2:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF3",0,"Pin3:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF0",0,"Pin0:((RES==640,360;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF1",0,"Pin1:((RES==640,360;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF2",0,"Pin2:((RES==1280,720;FRT==30,1;SUT==ALL))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF3",0,"Pin3:(!)"
+; 4：3
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,2","MTF0",0,"Pin0:((RES==640,480;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,2","MTF1",0,"Pin1:((RES==640,480;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,2","MTF2",0,"Pin2:((RES==1024,768;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,2","MTF3",0,"Pin3:(!)"
+
+; FaceAuth profile.
+HKR,"Profiles\KSCAMERAPROFILE_FaceAuth_Mode,0","BlockedControls",0,"FACEDT"
+HKR,"Profiles\KSCAMERAPROFILE_FaceAuth_Mode,0","MTF0",0,"Pin0:((RES<=1280,720;FRT>=15,1;SUT==NV12))"
+HKR,"Profiles\KSCAMERAPROFILE_FaceAuth_Mode,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_FaceAuth_Mode,0","MTF2",0,"Pin2:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_FaceAuth_Mode,0","MTF3",0,"Pin3:((RES>=320,240;FRT>=15,1;SUT==NV12))"
+
+[iacamera.AddRegOV01A]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameOV01A%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+; Profile version v2
+HKR,,"OEMCameraProfileVersion",0x00010001,2
+; Legacy Profile
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF0",0,"Pin0:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF1",0,"Pin1:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF2",0,"Pin2:((RES==;FRT==;SUT==ALL))"
+; Photo Sequence Profile
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF0",0,"Pin0:((RES==1280,720;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF2",0,"Pin2:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF0",0,"Pin0:((RES==640,480;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF2",0,"Pin2:((RES==640,480;FRT==30,1;SUT!=P010))"
+; High Quality Photo Profile
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF0",0,"Pin0:((RES==1280,720;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF2",0,"Pin2:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF0",0,"Pin0:((RES==640,480;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF2",0,"Pin2:((RES==640,480;FRT==30,1;SUT!=P010))"
+; Video Recording Profile
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF0",0,"Pin0:((RES==1280,720;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF1",0,"Pin1:((RES==1280,720;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF2",0,"Pin2:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF0",0,"Pin0:((RES==640,480;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF1",0,"Pin1:((RES==640,480;FRT<=30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,1","MTF2",0,"Pin2:(!)"
+; Balanced Video And Photo Profile
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF0",0,"Pin0:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF1",0,"Pin1:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF2",0,"Pin2:((RES==1280,720;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF0",0,"Pin0:((RES==640,480;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF1",0,"Pin1:((RES==640,480;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,1","MTF2",0,"Pin2:((RES==640,480;FRT==30,1;SUT!=P010))"
+
+[iacamera.AddRegOV9234]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameOV9234%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+HKR,,FSSensorGroupID,,"{55B26476-C5C9-4BA8-8559-73D905E1F40E}"
+HKR,,FSSensorGroupName,,"IntelIRCameraSensorGroup"
+
+; Profile version v2
+HKR,,"OEMCameraProfileVersion",0x00010001,2
+
+; Declare Legacy profile.
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF0",0,"Pin0:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF1",0,"Pin1:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF2",0,"Pin2:((RES==;FRT==;SUT==ALL))"
+
+; Declare FaceAuth profile.
+HKR,"Profiles\KSCAMERAPROFILE_FaceAuth_Mode,0","BlockedControls",0,"FACEDT"
+HKR,"Profiles\KSCAMERAPROFILE_FaceAuth_Mode,0","MTF0",0,"Pin0:((RES==;FRT==;SUT==NV12))"
+HKR,"Profiles\KSCAMERAPROFILE_FaceAuth_Mode,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_FaceAuth_Mode,0","MTF2",0,"Pin2:(!)"
+
+[iacamera.AddRegChimera1]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameChimera1%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+
+[iacamera.AddRegChimera2]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameChimera2%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+
+[iacamera.AddRegChimera3]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameChimera3%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+
+[iacamera.AddRegChimera4]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameChimera4%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+[iacamera.AddRegS5K3J1SX04]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameS5K3J1SX04%
+HKR,,CameraDeviceMftClsid,,%IHV_DEVICE_PLUGIN%
+
+; Profile version v2
+HKR,,"OEMCameraProfileVersion",0x00010001,2
+
+; Legacy Profile
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF0",0,"Pin0:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF1",0,"Pin1:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF2",0,"Pin2:((RES==;FRT==;SUT!=P010))"
+
+; Photo Sequence Profile
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF0",0,"Pin0:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,0","MTF2",0,"Pin2:((RES==3648,2736;FRT==30,1;SUT==ALL))"
+
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF0",0,"Pin0:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_PhotoSequence,1","MTF2",0,"Pin2:((RES==3840,2160;FRT==30,1;SUT==ALL))"
+
+; High Quality Photo Profile
+
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF0",0,"Pin0:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,0","MTF2",0,"Pin2:((RES==3648,2736;FRT==30,1;SUT==ALL))"
+
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF0",0,"Pin0:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF1",0,"Pin1:(!)"
+HKR,"Profiles\KSCAMERAPROFILE_HighQualityPhoto,1","MTF2",0,"Pin2:((RES==3840,2160;FRT==30,1;SUT==ALL))"
+
+; VideoRecording Profile
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF0",0,"Pin0:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF1",0,"Pin1:((RES==;FRT==;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_VideoRecording,0","MTF2",0,"Pin2:(!)"
+
+; Balanced Video And Photo Profile
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF0",0,"Pin0:((RES==3840,2160;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF1",0,"Pin1:((RES==3840,2160;FRT==30,1;SUT!=P010))"
+HKR,"Profiles\KSCAMERAPROFILE_BalancedVideoAndPhoto,0","MTF2",0,"Pin2:((RES==3840,2160;FRT==30,1;SUT==ALL))"
+
+[iacamera.AddRegOV02C10]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameOV02C10%
+HKR,,CameraDeviceMftCLSIDChain, 0x00010000, %IHV_DEVICE_PLUGIN%
+HKR,,FSSensorGroupId,0,"{55B26476-C5C9-4BA8-8559-73D905E1F40E}"
+HKR,,FSSensorGroupName,0,"IntelIRCameraSensorGroup"
+
+[iacamera.AddRegLT6911UXC]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameLT6911UXC%
+
+; Profile version v2
+HKR,,"OEMCameraProfileVersion",0x00010001,2
+
+; Legacy Profile
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF0",0,"Pin0:((RES==;FRT==;SUT==))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF1",0,"Pin1:((RES==;FRT==;SUT==))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF2",0,"Pin2:((RES==;FRT==;SUT==))"
+
+[iacamera.AddRegLT6911UXC_1]
+HKR,,CLSID,,%Proxy.CLSID%
+HKR,,FriendlyName,,%iacamera.FriendlyNameLT6911UXC_1%
+
+; Profile version v2
+HKR,,"OEMCameraProfileVersion",0x00010001,2
+
+; Legacy Profile
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF0",0,"Pin0:((RES==;FRT==;SUT==))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF1",0,"Pin1:((RES==;FRT==;SUT==))"
+HKR,"Profiles\KSCAMERAPROFILE_Legacy,0","MTF2",0,"Pin2:((RES==;FRT==;SUT==))"
+
+[iacamera.NT.Services]
+AddService=camera, 0x00000002, iacamera.ServiceInstall
+
+[iacamera.ServiceInstall]
+ServiceType=%SERVICE_KERNEL_DRIVER%
+StartType=%SERVICE_DEMAND_START%
+ErrorControl=%SERVICE_ERROR_NORMAL%
+ServiceBinary=%12%\iacamera64.sys
+AddReg = SpecificParameter
+
+[SpecificParameter]
+HKR,, "DisableVRAM", %REG_DWORD%, 0
+HKR,, "SupportMuteMode", %REG_DWORD%, 1
+HKR,, "FrontMuteState", %REG_DWORD%, 0
+HKR,, "BackMuteState", %REG_DWORD%, 0
+HKR,, "EnableP010", %REG_DWORD%, 1
+HKR,, "EnableTPGSensor", %REG_DWORD%, 0
+HKR,, "ISysPinForRaw", %REG_DWORD%, 0
+HKR,, "EnableRaw10TPG", %REG_DWORD%, 0
+HKR,, "EnableWaterMark", %REG_DWORD%, 1
+HKR,, "SecureModeEnabled", %REG_DWORD%, 1
+HKR,, "EnableDualDest", %REG_DWORD%, 0
+HKR,, "DumpISysOutputBuffer", %REG_DWORD%, 0
+HKR,, "EnablePollingISysInterrupt", %REG_DWORD%, 0
+HKR,, "EnablePollingPSysInterrupt", %REG_DWORD%, 0
+HKR,, "Enable4K60FPSVideo", %REG_DWORD%, 1
+HKR,, "EnableOTF", %REG_DWORD%, 0
+HKR,, "EnablePPG", %REG_DWORD%, 1
+HKR,, "EnablePpgSuspendResume", %REG_DWORD%, 1
+HKR,, "EnableCmdDispatcher", %REG_DWORD%, 1
+HKR,, "EnableLTM", %REG_DWORD%, 1
+HKR,, "EnableDec400", %REG_DWORD%, 7
+HKR,, "EnableHPPipe", %REG_DWORD%, 0
+HKR,, "EnableBurstIsp", %REG_DWORD%, 1
+HKR,, "EnablePsysPowerGating", %REG_DWORD%, 1
+HKR,, "EnablePSysRecovery", %REG_DWORD%, 1
+HKR,, "EnablePpgAlign", %REG_DWORD%, 1
+HKR,, "EnableISysSofAlign", %REG_DWORD%, 1
+HKR,, "EnableFastThrottle", %REG_DWORD%, 0
+HKR,, "EnableLinearCaptureSurface", %REG_DWORD%, 1
+HKR,, "EnableDualStillPipeline", %REG_DWORD%, 1
+HKR,, "AicCallRateMode", %REG_DWORD%, 2
+HKR,, "iWake", %REG_DWORD%, 0x42
+HKR,, "MemOpenThreshold", %REG_DWORD%, 0x4
+;HKR,, "DVFS", %REG_DWORD%, 0x111100
+HKR,, "EnableIsysLowPerf", %REG_DWORD%, 1
+HKR,, "EnableSaAicAiqLock", %REG_DWORD%, 1
+HKR,, "SurvivabilityRequestFps", %REG_DWORD%, 2
+HKR,, "EnablePoorLightCondition", %REG_DWORD%, 1
+;HKLM, "Software\Intel\KMD", EnableLinearCaptureSurface, %REG_DWORD%, 0
+
+[camera_hw_AddReg]
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties", MSISupported, 0x00010001, 0
+HKR,,"DeviceCharacteristics",0x10001,0x0100     ; Use same security checks on relative opens
+HKR,,Security,,"D:P(A;;GA;;;SY)(A;;GRGWGX;;;BA)(A;;GRGWGX;;;WD)(A;;GR;;;RC)"
+
+
+[Strings]
+Proxy.CLSID="{17CCA71B-ECD7-11D0-B908-00A0C9223196}"
+KSCATEGORY_VIDEO_CAMERA="{E5323777-F976-4f5b-9B55-B94699C46E44}"
+KSCATEGORY_CAPTURE="{65E8773D-8F56-11D0-A3B9-00A0C9223196}"
+KSCATEGORY_VIDEO="{6994AD05-93EF-11D0-A3CC-00A0C9223196}"
+KSCATEGORY_SENSOR_CAMERA="{24E552D7-6523-47F7-A647-D3465BF1F5CA}"
+IHV_DEVICE_PLUGIN="{A4996FA6-F083-4516-97D4-2B272F26E6A2}"
+
+SERVICE_KERNEL_DRIVER=1
+SERVICE_DEMAND_START=3
+SERVICE_ERROR_NORMAL=1
+REG_DWORD=0x00010001
+REG_SZ=0x00000000
+REG_EXPAND_SZ=0x00020000
+REG_MULTI_SZ=0x00010000
+
+;localizable
+PROVIDER_NAME="Intel"
+COMPANY_NAME="Intel Corporation"
+iacamera.DeviceDesc_ADL="Intel(R) AVStream Camera"
+iacamera.FriendlyNameDeviceMFT="Intel Camera DeviceMFT Class"
+iacamera.DeviceDesc_ADL_HAPS="Intel(R) ADL HAPS AVStream Camera"
+iacamera.DeviceDesc_ADL_SIMICS="Intel(R) ADL Simics AVStream Camera"
+iacamera.FriendlyName="Intel FIFO camera"
+iacamera.FriendlyNameTPG1="TPG1"
+iacamera.FriendlyNameTPG2="TPG2"
+iacamera.FriendlyNameOV13858="OV13858"
+iacamera.FriendlyNameOV13858_1="OV13858_1"
+iacamera.FriendlyNameOV13858U="OV13858U"
+iacamera.FriendlyNameOV13858W="OV13858W"
+iacamera.FriendlyNameOV01AS="OV01AS"
+iacamera.FriendlyNameOV01AS_2="OV01AS_2"
+iacamera.FriendlyNameIMX488="IMX488"
+iacamera.FriendlyNameOV9234="OV9234"
+iacamera.FriendlyNameOV01A="OV01A"
+iacamera.FriendlyNameChimera1="Chimera1"
+iacamera.FriendlyNameChimera2="Chimera2"
+iacamera.FriendlyNameChimera3="Chimera3"
+iacamera.FriendlyNameChimera4="Chimera4"
+iacamera.FriendlyNameS5K3J1SX04="S5K3J1SX04"
+iacamera.FriendlyNameLT6911UXC="HDMI Capture 0"
+iacamera.FriendlyNameLT6911UXC_1="HDMI Capture 1"
+iacamera.FriendlyNameOV02C10="Camera Sensor Front"
+cdname="Intel(R) AVStream Camera Installation Disk"
+FilterTPG1="{53BBBF18-2914-4485-8152-1226C1E7D0BC}"
+FilterTPG2="{DC65E111-332F-4782-B009-08549E68F74E}"
+FilterFIFO="{a6d06f47-23d2-4b5c-9b3c-40f9bca2bc6e}"
+FilterOV13858="{ACE27DEB-56DB-45A2-8FCA-D2957D66484E}"
+FilterOV13858_1="{A66FE6D4-9D5A-45A5-8532-553717A89F8E}"
+FilterOV13858U="{FFCE5838-8665-4421-85C2-852A2AB4A134}"
+FilterOV13858W="{d27add16-3808-4213-a227-5719b4ce2e96}"
+FilterOV01AS="{19EC5A54-93DF-4269-ACE4-21CA02D76E55}"
+FilterOV01AS_2="{57D5AA80-0B74-4837-ACD8-6047EA9189F0}"
+FilterIMX488="{61EE6089-44E5-40E7-9031-33BE684FC8C9}"
+FilterOV01A="{FB8A467A-9C2E-4B71-AACE-E65CB1FA0EE3}"
+FilterChimera1="{5FB94180-CD81-4A98-896C-AF018E6021CB}"
+FilterChimera2="{A9447285-19F3-4D1A-A80C-CCAA49CA5971}"
+FilterChimera3="{2691B730-EC5E-4C62-957C-94CDF03BF62E}"
+FilterChimera4="{E4495F6D-C849-4EC4-8862-693F9E20738A}"
+FilterOV9234="{CD59E198-F241-4ACD-BB6D-16CB977E5DDC}"
+FilterS5K3J1SX04="{3A8F9369-FC1A-4C83-9C66-FF3C57DB2328}"
+FilterLT6911UXC="{15402E91-3B12-4E77-A42D-4FBA80A3A73C}"
+FilterLT6911UXC_1="{7A82ff4C-A58A-4909-99B5-C7482EDD6A51}"
+FilterOV02C10="{D74668DE-6A64-4554-A819-B97C4ED9FFE5}"

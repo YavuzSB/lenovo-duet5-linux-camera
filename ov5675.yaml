@@ -1,0 +1,28 @@
+# SPDX-License-Identifier: CC0-1.0
+# Lenovo IdeaPad Duet 5 12IRU8 - Chicony OV5678 RGB-IR Factory Tuning
+# Extracted from Lenovo Windows 11 Driver (OV5678_CJFL515_ADL.aiqb)
+# Includes NIR leakage cancellation in Red/Green channels to prevent black fabric glowing red.
+%YAML 1.1
+---
+version: 1
+algorithms:
+  - BlackLevel:
+      black_level: 64
+  - Awb:
+  - Ccm:
+      ccms:
+        - ct: 6500
+          ccm: [ 2.219, -1.109, -0.110,
+                -0.093,  1.759, -0.665,
+                -0.042, -0.830,  1.872 ]
+        - ct: 4000
+          ccm: [ 2.068, -0.609, -0.459,
+                -0.325,  1.552, -0.227,
+                -0.151, -0.863,  2.014 ]
+        - ct: 2850
+          ccm: [ 2.220, -0.782, -0.438,
+                -0.128,  1.785, -0.656,
+                 0.017, -0.682,  1.664 ]
+  - Adjust:
+  - Agc:
+...

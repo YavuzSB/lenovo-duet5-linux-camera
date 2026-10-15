@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SvenDictionary Name="IPU catalog">
+
+  <Guids>
+    <Guid ID="{00000000-001b-0000-0000-000000000000}" Mask="{00000000-ffff-0000-0000-000000000000}" />
+    <Guid ID="{dfc0867a-4853-4cbf-b6d3-563e9a431ada}" />
+  </Guids>
+
+  <SourceFiles>
+    <File ID="0x00000000"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/dec400_flush_service/src/dec400_flush_service.c]]></File>
+    <File ID="0x00000001"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/err_handling_support/src/v1/err_handling_support.c]]></File>
+    <File ID="0x00000002"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/clock_gating/src/v2/ia_css_clock_gating.c]]></File>
+    <File ID="0x00000003"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/psys_con_mgr/src/ia_css_connection_mgr.c]]></File>
+    <File ID="0x00000004"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/process_manager/src/ia_css_pm.c]]></File>
+    <File ID="0x00000005"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/psys_dispatcher/src/ia_css_psys_dispatcher.c]]></File>
+    <File ID="0x00000006"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/psys_dispatcher/src/v1/ia_css_psys_dispatcher_caches_dep.c]]></File>
+    <File ID="0x00000007"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/psys_server/src/ia_css_psys_eq_configure/v1/ia_css_psys_eq_configure.c]]></File>
+    <File ID="0x00000008"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/psys_server/src/ia_css_psys_proxy.c]]></File>
+    <File ID="0x00000009"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/psys_server/src/ia_css_psys_server_remote_object_access_init.c]]></File>
+    <File ID="0x0000000a"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/routing_bitmap/src/ia_css_rbm_manifest.c]]></File>
+    <File ID="0x0000000b"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/resource_manager/src/ia_css_rm_cont_resources.c]]></File>
+    <File ID="0x0000000c"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/syscom/src/ia_css_syscom_fw.c]]></File>
+    <File ID="0x0000000d"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/psys_server/src/psys_server.c]]></File>
+    <File ID="0x0000000e"><![CDATA[/nfs/site/disks/sc_viedrepo.0406/ci/77/ci_ifw_production/repo/viedifw-trunk/ifw/applications/isp/FrameWork/css/bxt_sandbox/vied_nci_access_blocker/src/vied_nci_access_blocker.c]]></File>
+  </SourceFiles>
+
+  <Messages IdSize="32Bit">
+    <Message ID="0xb388585a" File="0x00000000" Line="220"><![CDATA[[PSYS_SERVER]DEC400 flush: dec400_flush_service_ack_event_handler 					|| Stream_Id = [%x] process_Id [%x] EQ [%x]
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4d151155" File="0x00000000" Line="123"><![CDATA[[PSYS_SERVER]DEC400 flush: add_eq_idx_to_output_stream_idx(): eq_idx = [%x] stream idx = [%x]
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x06948b98" File="0x00000000" Line="161"><![CDATA[[PSYS_SERVER]DEC400 flush: add_process_to_stream_idx(): idx = [%x] id = [%x]
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9415c3d4" File="0x00000000" Line="205"><![CDATA[[PSYS_SERVER]DEC400 flush: dec400_flush_service_ack_event_handler || 					Detected hardware error irq. irq_error_mask: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x74cafbea" File="0x00000000" Line="178"><![CDATA[[PSYS_SERVER]DEC400 flush: Explicit flush: stream id: %d, process id = [%x]
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf70f750b" File="0x00000000" Line="240"><![CDATA[[PSYS_SERVER]DEC400 flush: dec400_flush_service_ack_event_handler || 							Generating self-event token for: stream_Id = [%x] process_Id [%x]. (token: 0x%08x)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xaf9d4e49" File="0x00000000" Line="256"><![CDATA[[PSYS_SERVER]DEC400 flush: dec400_flush_service_ack_event_handler || 							Could not find a process ID for DEC400 flush event: stream_Id = [%x]
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8332fe7a" File="0x00000000" Line="142"><![CDATA[[PSYS_SERVER]DEC400 flush: add_process_to_output_stream_idx(): idx = [%x] id = [%x] proc_grp_idx = [%d] process_idx = [%d]
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3c9a89cb" File="0x00000001" Line="89"><![CDATA[[ERR_HANDLING]err_handling_get_validity_and_replace | ERROR: Frame address: %x was not found
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf6d56cfd" File="0x00000002" Line="46"><![CDATA[[CLOCK_GATING]ff_clock_gating_enable || -> ff_clock_gating_enable
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xbadbd035" File="0x00000003" Line="75"><![CDATA[[CON_MGR]ia_css_connection_mgr_connect_terminal_to_port(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc7ffc0fb" File="0x00000003" Line="450"><![CDATA[[CON_MGR]Terminal not implemented yet || {type: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x34a51a06" File="0x00000003" Line="288"><![CDATA[[CON_MGR]Connecting data terminal to port || {terminal id: %d, fragment index: %d base address: %#x symbol addr: %#x, con_type: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x77742a59" File="0x00000003" Line="208"><![CDATA[[CON_MGR]Connection_bitmap: %x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x485d72b6" File="0x00000003" Line="362"><![CDATA[[CON_MGR]Connecting spatial parameter terminal to port || {terminal id: %d, terminal addr 0x%016lx symbol addr: %#x base addr: 0x%x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9c58b483" File="0x00000003" Line="456"><![CDATA[[CON_MGR]ia_css_connection_mgr_connect_terminal_to_port(): failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb11fc028" File="0x00000004" Line="224"><![CDATA[[PSYS_SERVER]ia_css_connection_mgr_connect_update_dfm_ratio_conv_buf_chasing_reg: link_id: %d, rc_buf_chasing: %x @ %x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x873ca846" File="0x00000004" Line="1234"><![CDATA[[PSYS_SERVER]Program ctrl init terminal connect || INCOMPATIBILITY: {Terminal type = %d not expected}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xfc3d4867" File="0x00000004" Line="1372"><![CDATA[[PSYS_SERVER]Following section type: %d unsupported on DEC compression
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8c3658a7" File="0x00000004" Line="1175"><![CDATA[[PSYS_SERVER]Invalid Format: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x85e918ba" File="0x00000004" Line="184"><![CDATA[[PROCESS_MANAGER]ia_css_pm_load(): enter || {proc_grp_handle: %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe7f750cd" File="0x00000004" Line="162"><![CDATA[[NCI_ACB]nci_acb_update_event: pg_idx: %d , process_id: %d, created new token: %08X
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8a2380d3" File="0x00000004" Line="213"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_dfm_enable_buffer_ctrl(dev_id=%d, port=%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb43130e9" File="0x00000004" Line="296"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_start_dfm(): exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb7b798fd" File="0x00000004" Line="774"><![CDATA[[PROCESS_MANAGER]ia_css_pm_start_process_group(): enter 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb90c1d82" File="0x00000004" Line="257"><![CDATA[[PSYS_SERVER]ia_css_connection_mgr_connect_update_dfm_agent_addr_reg: link_id: %d, BEGIN: %x, MIDDLE: %x, ack_addr: %x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xade7c91b" File="0x00000004" Line="396"><![CDATA[[PSYS_SERVER]ia_css_connection_mgr_derive_program_control_init_terminal_connect_section_symbol(): Failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf1cf6144" File="0x00000004" Line="154"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_dfm_enable_ratio_conv(dev_id=%d, port=%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x65ff8975" File="0x00000004" Line="1554"><![CDATA[[CON_MGR]ia_css_connection_mgr_connect_fragment_lite(): failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x833c417d" File="0x00000004" Line="353"><![CDATA[[PSYS_SERVER]ia_css_server_derive_program_control_init_terminal_load_section_symbol(): Failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5c4ce1b5" File="0x00000004" Line="996"><![CDATA[[PSYS_SERVER]Invalid plane index (%u) for BAYER format: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2cca19bb" File="0x00000004" Line="684"><![CDATA[[PSYS_SERVER]ia_css_program_control_init_store_connect_section_symbol(): TNR frame init: cmd = %x, dest_addr = %x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1f2691f7" File="0x00000004" Line="1172"><![CDATA[[PSYS_SERVER]Special Format: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xbd6d29fb" File="0x00000004" Line="483"><![CDATA[[PSYS_SERVER]store_connect_section_symbol() CMDBANK_ACK_ADDR: BEGIN: %x, MIDDLE: %x, link_id: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x59768247" File="0x00000004" Line="161"><![CDATA[[CON_MGR]ia_css_connection_mgr_connect_acc_cells(): failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x207cc24b" File="0x00000004" Line="834"><![CDATA[[CON_MGR]ia_css_connection_mgr_apply_private_manifest_mux_cfg(): failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xdad81255" File="0x00000004" Line="755"><![CDATA[[PSYS_SERVER]Cached termdesc_symbol_size(%d) can't be greater than progdesc_symbol_size(%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5c5a7aea" File="0x00000004" Line="855"><![CDATA[[CON_MGR]ia_css_connection_mgr_connect_frame(): failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x88e342f1" File="0x00000004" Line="788"><![CDATA[[PSYS_SERVER]Program termdesc_symbol_size(%d) can't be greater than progdesc_symbol_size(%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xafddcb2b" File="0x00000004" Line="963"><![CDATA[[PSYS_SERVER]Invalid plane index (%u) for YUV420 format: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x546385e0" File="0x00000004" Line="1002"><![CDATA[[PSYS_SERVER]Following Format: %d unsupported on DEC compression
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x963d4343" File="0x00000004" Line="449"><![CDATA[[PSYS_SERVER]ia_css_server_load_program_ctrl_init_terminal(): Enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd9408b45" File="0x00000004" Line="675"><![CDATA[[PROCESS_MANAGER]ia_css_pm_start_process_lite() failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2e9beb83" File="0x00000004" Line="488"><![CDATA[[PSYS_SERVER]ia_css_program_control_init_store_connect_section_symbol():(dev_id = %d, port_num = %d) not allocated by the process
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xec16b384" File="0x00000004" Line="208"><![CDATA[[PSYS_SERVER]ia_css_server_get_indexed_program_descriptor(): Failed! 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x603c43b0" File="0x00000004" Line="1425"><![CDATA[[CON_MGR]ia_css_connection_mgr_connect_fragment_lite(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xec81a3b6" File="0x00000004" Line="337"><![CDATA[[PROCESS_MANAGER]ia_css_pm_run_entry(): failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb81e6bb8" File="0x00000004" Line="87"><![CDATA[[NCI_ACB]nci_acb_start || {acb_dev_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x36859bc2" File="0x00000004" Line="237"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_start_dfm(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1dac53d1" File="0x00000004" Line="431"><![CDATA[[PSYS_SERVER]store_connect_section_symbol() RC Buffer Chasing @ %x for link_id %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe588abdd" File="0x00000004" Line="652"><![CDATA[[PROCESS_MANAGER]ia_css_pm_start_process_lite(): process->program_idx %d enter 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x136cc403" File="0x00000004" Line="73"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_start_cells(): exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x23f3b41e" File="0x00000004" Line="582"><![CDATA[[PSYS_SERVER]ia_css_server_load_program_ctrl_init_terminal(): Failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xea126424" File="0x00000004" Line="848"><![CDATA[[CON_MGR]ia_css_connection_mgr_connect_frame(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x857b9444" File="0x00000004" Line="299"><![CDATA[[PROCESS_MANAGER]ia_css_pm_load(): failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x08963c65" File="0x00000004" Line="99"><![CDATA[[CON_MGR]ia_css_connection_mgr_connect_acc_cells(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf9b274b7" File="0x00000004" Line="986"><![CDATA[[PSYS_SERVER]Invalid plane index (%u) for NV12/TileY format: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc112acc1" File="0x00000004" Line="62"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_start_cells(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xfcb7fcd8" File="0x00000004" Line="468"><![CDATA[[PSYS_SERVER]Program ctrl init terminal load || {param_payload_base %#x, param_payload_frag_base %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc10af512" File="0x00000004" Line="138"><![CDATA[[PROCESS_MANAGER]ia_css_pm_load_process_lite(): failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xaa6b3d2d" File="0x00000004" Line="792"><![CDATA[[CON_MGR]ia_css_connection_mgr_apply_rbm_mux_cfg(): failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3fb23597" File="0x00000004" Line="67"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_start_cells cell_res_id %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1a430da3" File="0x00000004" Line="644"><![CDATA[[PSYS_SERVER]Terminal load: initializing for new frame/fragment.
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1af72dbc" File="0x00000004" Line="771"><![CDATA[[CON_MGR]Mux with index %d has invalid value in RBM. There are multiple bits hot; this should be exactly one. RBM is invalid.
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6e5c1fa0" File="0x00000004" Line="758"><![CDATA[[CON_MGR]ia_css_connection_mgr_apply_rbm_mux_cfg(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x292ace0b" File="0x00000004" Line="467"><![CDATA[[PSYS_SERVER]pg_term_idx %i
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc226a614" File="0x00000004" Line="313"><![CDATA[[PROCESS_MANAGER]ia_css_pm_run_entry(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xde32461f" File="0x00000004" Line="122"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_dfm_update_ack_msg(dev_id=%d, port=%d, addr=%08X, token=%08X)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9230c63e" File="0x00000004" Line="797"><![CDATA[[PROCESS_MANAGER]ia_css_pm_start_process_group() failed process_count=%d|| {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb00dbe54" File="0x00000004" Line="377"><![CDATA[[PSYS_SERVER]Fail to read compression value from terminal : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x18d126ec" File="0x00000004" Line="494"><![CDATA[[PSYS_SERVER]ia_css_program_control_init_store_connect_section_symbol():(dev_id (%d) >= %d) || ((port_num = %d) >= %d) 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb329e6ed" File="0x00000004" Line="667"><![CDATA[[PROCESS_MANAGER]ia_css_pm_start_process_lite() n_active_process: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x33e7171f" File="0x00000004" Line="405"><![CDATA[[PSYS_SERVER]Fail to read compression value from terminal : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9a893782" File="0x00000004" Line="544"><![CDATA[[PSYS_SERVER]Program ctrl init terminal load || INCOMPATIBILITY: {load_section_desc->device_descriptor_id.data %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x75358fa0" File="0x00000004" Line="800"><![CDATA[[CON_MGR]ia_css_connection_mgr_apply_private_manifest_mux_cfg(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4e0367d0" File="0x00000004" Line="776"><![CDATA[[CON_MGR]Configuring muxer using RBM || {gp_dev_id %d, mux_id %d, conf %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc3caffd9" File="0x00000004" Line="1501"><![CDATA[[PSYS_SERVER]Program ctrl init terminal connect || cannot connect: {connect_section_desc->device_descriptor_id.data %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x16b527db" File="0x00000004" Line="487"><![CDATA[[PSYS_SERVER]Program ctrl init terminal load || Loading payloads for frame counter %d, connection_type %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xfb37dfe8" File="0x00000004" Line="117"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_dfm_update_ack_msg-skip rw(dev_id=%d, port=%d, addr=%08X, token=%08X)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x458447fe" File="0x00000004" Line="187"><![CDATA[[PROCESS_MANAGER]ia_css_pm_load(): {state: %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xca6ca00d" File="0x00000005" Line="160"><![CDATA[[PSYS_SERVER]argument size < 1
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1ef3a04e" File="0x00000005" Line="922"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule_executing_pipeline_prepare(): Failed || {disp_ret_val: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf2b30859" File="0x00000005" Line="1059"><![CDATA[[DISPATCHER]ia_css_dispatcher_send_abort_response(): Entry || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xafcbe85b" File="0x00000005" Line="1676"><![CDATA[[DISPATCHER]Process group failed process manager run (null pointer) || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2d525beb" File="0x00000005" Line="434"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_flush(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2de7a886" File="0x00000005" Line="317"><![CDATA[[DISPATCHER]securiy_check skipped for non-dual-cmd-ctx case
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x94fc60aa" File="0x00000005" Line="987"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0dbe98c2" File="0x00000005" Line="426"><![CDATA[[PROCESS_MANAGER]ia_css_pm_try(): IA_CSS_PM_RESOURCE_FAILURE on contiguous resources
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9ce570ce" File="0x00000005" Line="368"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule_new_buffer_set_prepare_pipeline_config(): Failed {PM_status: %d} {DISP_status: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x41bec8d2" File="0x00000005" Line="313"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule_new_buffer_set_prepare_pipeline_config(): Enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe37d28d6" File="0x00000005" Line="89"><![CDATA[[RESOURCE_MANAGER]resource_bitmap :%x ia_css_rm_cells_bitmap:%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x35cf88dc" File="0x00000005" Line="929"><![CDATA[[DISPATCHER]DISP_PROC_GRP_WAITING | DISP_PROC_GRP_WAITING_ACK not pipelining: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x940858ed" File="0x00000005" Line="905"><![CDATA[[DISPATCHER]Scheduled update remote objects || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x25ee3180" File="0x00000005" Line="761"><![CDATA[[PROCESS_MANAGER]ia_css_pm_prepare_process_group() failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x55a3d90f" File="0x00000005" Line="413"><![CDATA[[PROCESS_MANAGER]ia_css_pm_try(): IA_CSS_PM_PG_VALIDATION_ERROR
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9546a924" File="0x00000005" Line="125"><![CDATA[[RESOURCE_MANAGER]Process %d dynamic dfm %d resource bitmaps intersection is not empty
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x95c46926" File="0x00000005" Line="225"><![CDATA[[PSYS_SERVER]manifest_size (%d) is bigger than manifest_mem_size (%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x14d0b134" File="0x00000005" Line="490"><![CDATA[[PROCESS_MANAGER]ia_css_pm_retry(): process group still blocked on impediments.
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x88326941" File="0x00000005" Line="342"><![CDATA[[DISPATCHER]security_check() failed with terminal %d type %d buffer %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x75869153" File="0x00000005" Line="793"><![CDATA[[DISPATCHER]Aborting process group || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf1b7395a" File="0x00000005" Line="289"><![CDATA[[DISPATCHER]Scheduled process group execution || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2e2d515d" File="0x00000005" Line="850"><![CDATA[[DISPATCHER]Process group will be flushed || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa3715161" File="0x00000005" Line="198"><![CDATA[[PROCESS_MANAGER]ia_css_pm_acquire_process_group_ctx(): proc_group_ctx_idx:%d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x06d33980" File="0x00000005" Line="390"><![CDATA[[DISPATCHER]Process group failed process manager run (on run phase) || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x60a97989" File="0x00000005" Line="398"><![CDATA[[DISPATCHER]Process group failed process manager run (on load phase) || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x80fe9444" File="0x00000005" Line="255"><![CDATA[[PSYS_SERVER]ia_css_server_get_remote_object_size(): proc_grp_size %i, manifest_size %i, client_pkg_size %i
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa56ba1b9" File="0x00000005" Line="242"><![CDATA[[PSYS_SERVER]ia_css_server_client_pkg_manifest_addr_calculation(): client_pkg_size is zero
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2ed179dd" File="0x00000005" Line="509"><![CDATA[[PROCESS_MANAGER]ia_css_pm_retry(): IA_CSS_PM_RESOURCE_FAILURE on link ID resources
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x143289f3" File="0x00000005" Line="948"><![CDATA[[DISPATCHER]DISP_PROC_GRP_EXECUTING In a FRAGMENT CASE proc_grp->curr_frag: %d proc_grp->limit_frag: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa80e510c" File="0x00000005" Line="1804"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule_init(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb5a28a1f" File="0x00000005" Line="826"><![CDATA[[DISPATCHER]proc_grp->state = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcc726224" File="0x00000005" Line="1838"><![CDATA[[DISPATCHER]ia_css_dispatcher_acquire_local_objects(): cache = %d, addr = %p, acquired by proc_grp %d, addr = %p
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xdc7a2a52" File="0x00000005" Line="269"><![CDATA[[PROCESS_MANAGER]ia_css_pm_set_error(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc055f9b9" File="0x00000005" Line="64"><![CDATA[[POWER_MANAGER]ia_css_power_mgr_task_add_dfm: dfm_id/sub domain invalided
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4b5aa258" File="0x00000005" Line="248"><![CDATA[[PSYS_SERVER]desc_size (%d) is bigger than client_pkg_mem_size (%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe0fd0267" File="0x00000005" Line="1094"><![CDATA[[DISPATCHER]ia_css_dispatcher_send_pg_done(): Entry || {proc_grp_handle %#x,  mask_irq %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3d72aa6d" File="0x00000005" Line="555"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule_waiting_pipeline_prepare_configuration(): security check failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1c595271" File="0x00000005" Line="1601"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule_blocked(): Entry || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5a5daa84" File="0x00000005" Line="1857"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_suspend_cmd(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5c8f1a8e" File="0x00000005" Line="177"><![CDATA[[PSYS_SERVER]proc_grp_size (%d) is bigger than proc_grp_mem_size (%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x375502af" File="0x00000005" Line="517"><![CDATA[[PROCESS_MANAGER]Resources ready to be acquired
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc13d0ab4" File="0x00000005" Line="531"><![CDATA[[DISPATCHER]ia_css_dispatcher_prepare_otf_configuration: Exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x83cf52d3" File="0x00000005" Line="458"><![CDATA[[DISPATCHER]ia_css_dispatcher_started_pg_flush(): Entry || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xdfe29af2" File="0x00000005" Line="330"><![CDATA[[DISPATCHER]security_check() failed with proc_grp_handle %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5cf9db03" File="0x00000005" Line="501"><![CDATA[[PROCESS_MANAGER]ia_css_pm_retry(): IA_CSS_PM_RESOURCE_FAILURE on enumerable resources
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0c7dc33c" File="0x00000005" Line="325"><![CDATA[[DISPATCHER]security_check() PG #%d secure %d proc_grp_handle 0x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6fb7d354" File="0x00000005" Line="132"><![CDATA[[PSYS_SERVER]ia_css_psys_server_request_dma_chan(%u)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x86249b5d" File="0x00000005" Line="208"><![CDATA[[PSYS_SERVER]ia_css_server_get_indexed_program_descriptor(): Failed! 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x14ae3b63" File="0x00000005" Line="141"><![CDATA[[RESOURCE_MANAGER]Process %d static cell resource bitmaps intersection is not empty
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3b96db81" File="0x00000005" Line="102"><![CDATA[[DISPATCHER]xcom_send: OTF LINK_ACTIVATE link_id: %d, vmem_offset: %x, dfm_port_addr: %x bcpr_reg_addr: %x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4c73eb8d" File="0x00000005" Line="452"><![CDATA[[PROCESS_MANAGER]Resources ready to be acquired
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4ed07b9e" File="0x00000005" Line="91"><![CDATA[[PSYS_SERVER]ia_css_server_update_remote_object(): Entry || {proc_grp_handle %#x, size %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0810bb9f" File="0x00000005" Line="206"><![CDATA[[PROCESS_MANAGER]ia_css_pm_release_process_group_ctx(): proc_group_ctx_idx:%d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x583dc3a4" File="0x00000005" Line="324"><![CDATA[[DISPATCHER]proc_grp->link_id_bitmask %i
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x41e013ae" File="0x00000005" Line="118"><![CDATA[[RESOURCE_MANAGER]Some enumerable resources cannot be acquired
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb46e2bba" File="0x00000005" Line="970"><![CDATA[[PSYS_SERVER]ia_css_proc_ctrl_set_next_enabled (%d, %d) = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x23154bbf" File="0x00000005" Line="1760"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_process_group_done. xcom_send: OTF LINK_DEACTIVATE link_id: %d, stopped
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf75e33c8" File="0x00000005" Line="1123"><![CDATA[[DISPATCHER]ia_css_dispatcher_send_pg_done(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa77903e1" File="0x00000005" Line="258"><![CDATA[[POWER_MANAGER]ia_css_power_mgr_task_end(): enter, mask %d:
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x421273e8" File="0x00000005" Line="92"><![CDATA[[RESOURCE_MANAGER]Process Group cell resource bitmaps intersection is not empty
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa897b3f3" File="0x00000005" Line="484"><![CDATA[[DISPATCHER]ia_css_dispatcher_prepare_otf_configuration: Enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x449bcc09" File="0x00000005" Line="752"><![CDATA[[PROCESS_MANAGER]ia_css_pm_prepare_process_group() process_idx %d program_id %d 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x10e44c0e" File="0x00000005" Line="1715"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule_init(): Entry || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc71f9410" File="0x00000005" Line="70"><![CDATA[[PSYS_SERVER]ia_css_psys_event_queue_send trigger SW IRQ
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x09b71419" File="0x00000005" Line="323"><![CDATA[[DISPATCHER]security_check() VTL0_addr_mask %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8f33441b" File="0x00000005" Line="1818"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_abort_cmd(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf6f6841f" File="0x00000005" Line="193"><![CDATA[[PROCESS_MANAGER]ia_css_pm_acquire_process_group_ctx(): failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0fa82c2b" File="0x00000005" Line="283"><![CDATA[[PSYS_SERVER]ia_css_server_retrieve_remote_objects(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x46cfec30" File="0x00000005" Line="845"><![CDATA[[DISPATCHER]Process group will be flushed after DMA token returns || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5db1943b" File="0x00000005" Line="720"><![CDATA[[PROCESS_MANAGER]ia_css_pm_setup_process() failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7f68b445" File="0x00000005" Line="444"><![CDATA[[PROCESS_MANAGER]ia_css_pm_try(): IA_CSS_PM_RESOURCE_FAILURE on link ID resources
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc944bc53" File="0x00000005" Line="304"><![CDATA[[DISPATCHER]calculate_symbols_count_of_processes(): failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd9e6fc54" File="0x00000005" Line="1504"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_prog_ctrl_init(): Failed || {PM_status: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf81f8c60" File="0x00000005" Line="1629"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule_blocked(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8fe48c6a" File="0x00000005" Line="1793"><![CDATA[[DISPATCHER]No available cache fits process group 0x%x, stalling.
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd35a2ca5" File="0x00000005" Line="110"><![CDATA[[RESOURCE_MANAGER]Process %d dynamic cell resource bitmaps intersection is not empty
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x590eccbf" File="0x00000005" Line="1881"><![CDATA[[DISPATCHER]Suspending process group 0x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1e23a4c9" File="0x00000005" Line="1930"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_pending_device_cmds(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x43c82ccb" File="0x00000005" Line="473"><![CDATA[[PROCESS_MANAGER]ia_css_pm_retry(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5f0efcd9" File="0x00000005" Line="485"><![CDATA[[DISPATCHER]ia_css_dispatcher_prepare_otf_configuration:frame_counter = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x22350ce0" File="0x00000005" Line="692"><![CDATA[[PROCESS_MANAGER]ia_css_pm_setup_process(): prog_idx %d enter 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x58d5cce8" File="0x00000005" Line="536"><![CDATA[[DISPATCHER]ia_css_dispatcher_prepare_otf_configuration(): Failed || {pm_status_val: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb5a1ccf0" File="0x00000005" Line="1659"><![CDATA[[DISPATCHER]Process group has incompatible protocol version || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc49fc4f6" File="0x00000005" Line="120"><![CDATA[[PSYS_SERVER]ia_css_server_update_remote_object(): Failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x69589d10" File="0x00000005" Line="153"><![CDATA[[RESOURCE_MANAGER]Process %d dynamic dfm %d resource bitmaps intersection is not empty
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x52db5d1c" File="0x00000005" Line="525"><![CDATA[[DISPATCHER]ia_css_dispatcher_send_abort_response(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2ea3f52a" File="0x00000005" Line="379"><![CDATA[[RESOURCE_MANAGER]link ID %d resource is not empty
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x84fbc556" File="0x00000005" Line="1077"><![CDATA[[DISPATCHER]ia_css_dispatcher_send_abort_response(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7bb14558" File="0x00000005" Line="551"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule_waiting_pipeline_prepare_configuration() security check
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf7d0ed77" File="0x00000005" Line="288"><![CDATA[[PROCESS_MANAGER]ia_css_pm_set_error(): failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x59839d82" File="0x00000005" Line="606"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule_waiting_pipeline_prepare_configuration(): Failed || {disp_ret_val: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x55d2f642" File="0x00000005" Line="492"><![CDATA[[DISPATCHER]ia_css_dispatcher_cond_ack_send(): Sending Ack %d || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd4c75d95" File="0x00000005" Line="912"><![CDATA[[DISPATCHER]DMA channel is claimed by another process group, suspending (%i)'s ia_css_server_update_remote_object().
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x70806dab" File="0x00000005" Line="167"><![CDATA[[PSYS_SERVER]ia_css_server_retrieve_remote_objects(): Entry || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf39595dd" File="0x00000005" Line="891"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule() DISP_PROC_GRP_COMPLETE || {proc_grp->cmd %d, process_group->state %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4e932de0" File="0x00000005" Line="219"><![CDATA[[PSYS_SERVER]ia_css_server_client_pkg_manifest_addr_calculation(): manifest_size is zero
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa751d5e6" File="0x00000005" Line="360"><![CDATA[[DISPATCHER]Final: tproxy_operation_queue_load->operation_range[%d].size:%d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd21ca5ef" File="0x00000005" Line="241"><![CDATA[[PSYS_SERVER]ia_css_server_get_remote_object_size(): proc_grp_size is zero
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x790c3dfb" File="0x00000005" Line="64"><![CDATA[[PSYS_SERVER]ia_css_psys_event_queue_send (secure %d, trigger_irq %d) start
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9d7b4e42" File="0x00000005" Line="232"><![CDATA[[DISPATCHER]ia_css_dispatcher_started_queue_remove(): entry not found
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6a19f663" File="0x00000005" Line="356"><![CDATA[[PSYS_SERVER]ia_css_server_get_remote_object_size: Failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2637be66" File="0x00000005" Line="66"><![CDATA[[PSYS_SERVER]ia_css_tproxy_operation_operation_queue_add_async_ack entry()
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb4269e7c" File="0x00000005" Line="1698"><![CDATA[[DISPATCHER]ia_css_dispatcher_shedule_ready(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc3891680" File="0x00000005" Line="1755"><![CDATA[[DISPATCHER]DMA channel is claimed by another process group, suspending (%i)'s ia_css_server_retrieve_remote_objects().
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2eacee83" File="0x00000005" Line="1648"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule_ready(): Entry || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xee889516" File="0x00000005" Line="372"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule_new_buffer_set_prepare_pipeline_config(): Exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8e4736a2" File="0x00000005" Line="943"><![CDATA[[DISPATCHER]DISP_PROC_GRP_EXECUTING not pipelining: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x533a26b7" File="0x00000005" Line="233"><![CDATA[[DISPATCHER]calculate_symbols_count_of_processes(): Enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5f2a8ebe" File="0x00000005" Line="436"><![CDATA[[PROCESS_MANAGER]ia_css_pm_try(): IA_CSS_PM_RESOURCE_FAILURE on enumerable resources
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x179d76f0" File="0x00000005" Line="107"><![CDATA[[POWER_MANAGER]ia_css_power_mgr_task_add: cell ID/sub domain invalided
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd0910721" File="0x00000005" Line="360"><![CDATA[[PSYS_SERVER]ia_css_server_remote_object_copy_to_local_memory(): Failed!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe885bf2d" File="0x00000005" Line="361"><![CDATA[[DISPATCHER]Process group blocked on resources || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd7bdaf32" File="0x00000005" Line="1787"><![CDATA[[DISPATCHER]Scheduled local objects request || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xdc07873c" File="0x00000005" Line="248"><![CDATA[[PSYS_SERVER]ia_css_psys_server_init_dma_chan - Error encountered 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xed0bbf41" File="0x00000005" Line="423"><![CDATA[[PROCESS_MANAGER]ia_css_pm_try(): IA_CSS_PM_PG_VALIDATION_ERROR
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcfc8074c" File="0x00000005" Line="245"><![CDATA[[RESOURCE_MANAGER]Link ID resource cannot be acquired
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1bca2f6e" File="0x00000005" Line="395"><![CDATA[[PROCESS_MANAGER]ia_css_pm_try(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb37debeb" File="0x00000005" Line="934"><![CDATA[[DISPATCHER]proc_grp->all_links_activated: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1dc4278c" File="0x00000005" Line="207"><![CDATA[[POWER_MANAGER]ia_css_power_mgr_task_begin(): enter, mask %d:
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3fc51fb1" File="0x00000005" Line="300"><![CDATA[[DISPATCHER]calculate_symbols_count_of_processes(): Exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf038efb7" File="0x00000005" Line="274"><![CDATA[[PSYS_SERVER]ia_css_server_retrieve_remote_objects(): Failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5c51afc1" File="0x00000005" Line="334"><![CDATA[[DISPATCHER]Setting stream2gen link %u hptr update address
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x12dc1ffc" File="0x00000005" Line="94"><![CDATA[[RESOURCE_MANAGER]Memory or DMA resources cannot be acquired
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf9943ad0" File="0x00000006" Line="228"><![CDATA[[DISPATCHER]ia_css_dispatcher_shared_cache_per_prog_grp_init(): Not used for IPU5, IPU6, IPU6s
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd4abf9eb" File="0x00000007" Line="75"><![CDATA[[PSYS_SERVER]ia_css_psys_spc_configure_event_queue(): Enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4abe5c39" File="0x00000007" Line="92"><![CDATA[[PSYS_SERVER]ia_css_psys_spc_configure_eqc(): Enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9ea3e9dd" File="0x00000008" Line="99"><![CDATA[[PSYS_SERVER]Tproxy ready !
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x335c70d6" File="0x00000008" Line="88"><![CDATA[[PSYS_SERVER]Polling for proxies ready
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x932b4ec3" File="0x00000008" Line="62"><![CDATA[[PSYS_SERVER]ia_css_psys_proxy_start(): Enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x45704f19" File="0x00000008" Line="119"><![CDATA[[PSYS_SERVER]ia_css_psys_proxy_stop(): Enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3b390f97" File="0x00000008" Line="73"><![CDATA[[PSYS_SERVER]Tproxy prefetch: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1950492d" File="0x00000009" Line="294"><![CDATA[[PSYS_SERVER]- terminal[IA_CSS_TPROXY_TERMINAL_B].cio_info_setup = %d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1edbc98f" File="0x00000009" Line="179"><![CDATA[[PSYS_SERVER]ia_css_server_client_pkg_manifest_addr_calculation: Failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf9595a25" File="0x00000009" Line="248"><![CDATA[[PSYS_SERVER]ia_css_psys_server_init_dma_chan - Error encountered 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8fbe025e" File="0x00000009" Line="286"><![CDATA[[PSYS_SERVER]- buttress secure_mode = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x04dfba9c" File="0x00000009" Line="132"><![CDATA[[PSYS_SERVER]ia_css_psys_server_request_dma_chan(%u)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x90791300" File="0x00000009" Line="360"><![CDATA[[PSYS_SERVER]ia_css_server_remote_object_copy_to_local_memory(): Failed!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x44040b93" File="0x00000009" Line="95"><![CDATA[[PSYS_SERVER]ia_css_server_client_pkg_manifest_addr_calculation: enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4cb5cc9f" File="0x00000009" Line="70"><![CDATA[[PSYS_SERVER]get_available_index_in_client_pkg_manifest_info: Failed, client_pkg_manifest_info is full
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x94a4acec" File="0x00000009" Line="190"><![CDATA[[PSYS_SERVER]ia_css_psys_server_get_client_pkg_manifest_access: program_group_id = %d not found
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7d2bfd5f" File="0x00000009" Line="160"><![CDATA[[PSYS_SERVER]argument size < 1
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4c234ec1" File="0x00000009" Line="157"><![CDATA[[PSYS_SERVER]- man_prog_grp_id %i
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x13e50f95" File="0x00000009" Line="280"><![CDATA[[PSYS_SERVER]ia_css_psys_server_init_dma_chan_secure - Error encountered 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5c353051" File="0x0000000a" Line="414"><![CDATA[[RBM]}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc3f70081" File="0x0000000a" Line="409"><![CDATA[[RBM]ia_css_rbm_print(): rbm: {
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1851a10c" File="0x0000000a" Line="216"><![CDATA[[RBM]ia_css_rbm_set_mux mux mux_id %d.%d, value %d illegal
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7819a129" File="0x0000000a" Line="81"><![CDATA[[RBM]Rule expected_value: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe451b9ac" File="0x0000000a" Line="160"><![CDATA[[RBM]ia_css_rbm_manifest_check_rbm_validity failed: RBM is empty.
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3453c21d" File="0x0000000a" Line="180"><![CDATA[[RBM]ia_css_rbm_manifest_check_rbm_validity: RBM is not valid, RBM:
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1fadca37" File="0x0000000a" Line="142"><![CDATA[[RBM]ia_css_rbm_manifest_print failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xbfa8eaed" File="0x0000000a" Line="115"><![CDATA[[RBM]id: %d.%d offstet: %d size_bits: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6c0c93eb" File="0x0000000a" Line="211"><![CDATA[[RBM]ia_css_rbm_set_mux mux with mux_id %d.%d not found
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5ba6c49e" File="0x0000000a" Line="132"><![CDATA[[RBM]terminal_id: %d connection_state: %d mux_id: %d state: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x41982cc0" File="0x0000000a" Line="184"><![CDATA[[RBM]ia_css_rbm_manifest_check_rbm_validity: RBM manifest:
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb4e484da" File="0x0000000a" Line="412"><![CDATA[[RBM]	%08x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x899415b5" File="0x0000000a" Line="182"><![CDATA[[RBM]ia_css_rbm_manifest_check_rbm_validity: RBM partial match:
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x406ce78d" File="0x0000000a" Line="174"><![CDATA[[RBM]ia_css_rbm_manifest_check_rbm_validity: failed on rule %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x62ad401b" File="0x0000000b" Line="158"><![CDATA[[RESOURCE_MANAGER]resource_contiguous_release: Invalid resource id (%u) : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xff3c193d" File="0x0000000b" Line="80"><![CDATA[[RESOURCE_MANAGER]No valid flag was provided
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x82ba0945" File="0x0000000b" Line="142"><![CDATA[[RESOURCE_MANAGER]No valid flag was provided
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x07e1d1d7" File="0x0000000b" Line="55"><![CDATA[[RESOURCE_MANAGER]resource_contiguous_try_acquire: Invalid resource id (%u) : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3be939e2" File="0x0000000b" Line="73"><![CDATA[[RESOURCE_MANAGER]Memory resource (%d) couldn't be released for process %u
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd74ff9e5" File="0x0000000b" Line="67"><![CDATA[[RESOURCE_MANAGER]resource_contiguous_try_acquire: The number of pre-allocated nodes has been reached
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcbf9b9fc" File="0x0000000b" Line="188"><![CDATA[[RESOURCE_MANAGER]resource_contiguous_release: no corresponding node to free
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xac096a34" File="0x0000000b" Line="58"><![CDATA[[RESOURCE_MANAGER]Memory resource (%d) is not available for process %u
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9ba3026a" File="0x0000000b" Line="135"><![CDATA[[RESOURCE_MANAGER]Device channel resource (%d) couldn't be released for process %u
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x34e8ba6f" File="0x0000000b" Line="125"><![CDATA[[RESOURCE_MANAGER]Device channel resource (%d) has invalid offset (%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x843ada7e" File="0x0000000b" Line="95"><![CDATA[[RESOURCE_MANAGER]manifest and process group mismatch on device channels: %i/%i on program id %i, device %i
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcdbd2aab" File="0x0000000b" Line="116"><![CDATA[[RESOURCE_MANAGER]resource_contiguous_try_acquire: offs(%u), size(%u) - list: offs(%u), size(%u)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd5f24c0c" File="0x0000000b" Line="99"><![CDATA[[RESOURCE_MANAGER]cont_rm_free_node %d is out of range (0 .. %d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa5737d16" File="0x0000000b" Line="63"><![CDATA[[RESOURCE_MANAGER]Memory resource (%d) has invalid offset (%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x52187663" File="0x0000000b" Line="88"><![CDATA[[RESOURCE_MANAGER]Memory(ID:%d) offset was not provided for process ID: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2a873705" File="0x0000000b" Line="196"><![CDATA[[RESOURCE_MANAGER]resource_contiguous_release: size and offset were not found
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcafb1799" File="0x0000000b" Line="120"><![CDATA[[RESOURCE_MANAGER]Device channel resource (%d) is not available for process %u
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xfc7b47a9" File="0x0000000b" Line="114"><![CDATA[[RESOURCE_MANAGER]resource_contiguous_try_acquire: Unable to allocate resource. Conflict detected
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4a5367b6" File="0x0000000b" Line="60"><![CDATA[[RESOURCE_MANAGER]resource_contiguous_try_acquire: Maximum size (%u) for the offset (%u) and size (%u) of res_id (%u) has been reached
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x60a2183a" File="0x0000000c" Line="103"><![CDATA[[SYSCOM]ia_css_syscom_is_dmem_ready() dmem_addr(0x%x) secure(%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x10d3f83d" File="0x0000000c" Line="298"><![CDATA[[SYSCOM]ia_css_syscom_open_fw (secure %d) completed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x59f18896" File="0x0000000c" Line="227"><![CDATA[[SYSCOM]ia_css_syscom_open_fw failed: MAX_CONTEXTS(%d) already opened
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9d9b589d" File="0x0000000c" Line="159"><![CDATA[[SYSCOM]ia_css_syscom_open_fw (secure %d) start
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x84ed10ef" File="0x0000000c" Line="204"><![CDATA[[SYSCOM]ia_css_syscom_open_fw load CONFIG_REG @ %#x = %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x58de8102" File="0x0000000c" Line="618"><![CDATA[[SYSCOM]ia_css_syscom_get_vtl0_addr_mask reg(0x%x) (secure %d) mask %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb3ac8919" File="0x0000000c" Line="263"><![CDATA[[SYSCOM]ia_css_syscom_open_fw store STATE_REG %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5f51f11e" File="0x0000000c" Line="180"><![CDATA[[SYSCOM]ia_css_syscom_open_fw load STATE_REG @ %#x = %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x50d051a3" File="0x0000000c" Line="575"><![CDATA[[SYSCOM]ia_css_syscom_get_trustlet_status() fail - invalid syscom_id
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7d3ce1aa" File="0x0000000c" Line="546"><![CDATA[[SYSCOM]ia_css_syscom_set_irq (secure %d) start
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8525eafe" File="0x0000000c" Line="595"><![CDATA[[SYSCOM]ia_css_syscom_set_ab_spc_ready() fail - invalid syscom_id
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd7cc8b3e" File="0x0000000c" Line="182"><![CDATA[[SYSCOM]ia_css_syscom_open_fw load COMMAND_REG @ %#x = %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9a8efb80" File="0x0000000c" Line="117"><![CDATA[[SYSCOM]ia_css_syscom_is_dmem_ready - secure(%d): wait-retry(%d), cmd(0x%x) state(0x%x)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe0d443f8" File="0x0000000c" Line="548"><![CDATA[[SYSCOM]ia_css_syscom_set_irq load IRQ_REG @ %#x= %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x04b3f49f" File="0x0000000c" Line="189"><![CDATA[[SYSCOM]ia_css_syscom_open_fw (secure %d) is uninitialized. Skip!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x372e2d75" File="0x0000000c" Line="363"><![CDATA[[SYSCOM]ia_css_syscom_check_close_requests closing due to unexpected num_contexts (%d) MAX (%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x34a24ddf" File="0x0000000c" Line="217"><![CDATA[[SYSCOM]ia_css_syscom_open_fw failed: num_output_queues=%d from cfg is greater than MAX_OUTPUT_QUEUES(%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x45ba6e16" File="0x0000000c" Line="165"><![CDATA[[SYSCOM]ia_css_syscom_open_fw (secure %d) invalid uninitialized state. Skip!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3aaf9652" File="0x0000000c" Line="211"><![CDATA[[SYSCOM]ia_css_syscom_open_fw failed: num_input_queues=%d from cfg is greater than MAX_INPUT_QUEUES(%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5d4ae699" File="0x0000000c" Line="237"><![CDATA[[SYSCOM]ia_css_syscom_open_fw contexts %d inputQ %d outputQ %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1815c769" File="0x0000000c" Line="556"><![CDATA[[SYSCOM]ia_css_syscom_set_irq store IRQ_REG @ %#x= %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xef18777f" File="0x0000000c" Line="581"><![CDATA[[SYSCOM]ia_css_syscom_get_trustlet_status(%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0102a792" File="0x0000000c" Line="592"><![CDATA[[SYSCOM]ia_css_syscom_set_ab_spc_ready ssid(%d) ipu_device_idx(%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xbfd03012" File="0x0000000d" Line="959"><![CDATA[[PSYS_SERVER]ia_css_proc_ctrl_set_enabled (%d, %d) = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1e593823" File="0x0000000d" Line="2836"><![CDATA[[DISPATCHER][PERFORMANCE MEASURE] Warm PG load start timestamp: %d, proc_grp_handle: %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0de20025" File="0x0000000d" Line="298"><![CDATA[[PROCESS_MANAGER]ia_css_pm_unload_process(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3ed8d02a" File="0x0000000d" Line="659"><![CDATA[[DISPATCHER]ia_css_dispatcher_otf_updates_after_all_processes_kicked: Enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1e726841" File="0x0000000d" Line="2373"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_device_queue(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa5f47844" File="0x0000000d" Line="99"><![CDATA[[RESOURCE_MANAGER]cont_rm_free_node %d is out of range (0 .. %d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5fc7f04b" File="0x0000000d" Line="2506"><![CDATA[[DISPATCHER]ia_css_dispatcher_init_secure(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7353b060" File="0x0000000d" Line="961"><![CDATA[[DISPATCHER]setup_process_link_id(): Data terminal [tm_index = %d] with link_id > 0 doesn't support Online/Buffer Chasing mode
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x30775166" File="0x0000000d" Line="154"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_dfm_enable_ratio_conv(dev_id=%d, port=%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x45984866" File="0x0000000d" Line="1584"><![CDATA[[DISPATCHER][PERFORMANCE MEASURE] PG current_frame_processes_kick_time:%u, proc_grp_handle: %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0a04f072" File="0x0000000d" Line="1029"><![CDATA[[DISPATCHER]ia_css_dispatcher_cache_pg_otf_params(): No link_id>0 found
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8952c080" File="0x0000000d" Line="116"><![CDATA[[RESOURCE_MANAGER]resource_contiguous_try_acquire: offs(%u), size(%u) - list: offs(%u), size(%u)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcbfbaec1" File="0x0000000d" Line="413"><![CDATA[[DISPATCHER]prepare_cached_out_config_entries(): Enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x569a5144" File="0x0000000d" Line="76"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_clear_acc(): %d 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1c74608d" File="0x0000000d" Line="2228"><![CDATA[[PSYS_SERVER]%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x95c10892" File="0x0000000d" Line="947"><![CDATA[[DISPATCHER]setup_process_link_id(): Data terminal [tm_index = %d] INVALID connection_bitmap %x:
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6ae8b6c3" File="0x0000000d" Line="101"><![CDATA[[PSYS_SERVER]prefetch enable SP: %d, ISP: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa77848a2" File="0x0000000d" Line="1148"><![CDATA[[DISPATCHER]ia_css_dispatcher_poll_hw_event_queues(): Event token from Tproxy {event %x} pg_id: %d service_id: %d, frame_counter: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3daf10c3" File="0x0000000d" Line="270"><![CDATA[[PSYS_SERVER]PSYS dispatcher closed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x23a348c6" File="0x0000000d" Line="87"><![CDATA[[NCI_ACB]nci_acb_start || {acb_dev_id = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd62bc0c7" File="0x0000000d" Line="162"><![CDATA[[NCI_ACB]nci_acb_update_event: pg_idx: %d , process_id: %d, created new token: %08X
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3eee90c9" File="0x0000000d" Line="2651"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_tproxy_pipeline_otf_config_done(): Failed: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1b5f00dd" File="0x0000000d" Line="172"><![CDATA[[DISPATCHER]ia_css_pause_resume_psys: Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x34b3e0e1" File="0x0000000d" Line="1228"><![CDATA[[DISPATCHER]ia_css_dispatcher_poll_hw_event_queues(): Event token from DEC400 Compressor {event %x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xfca8f0e6" File="0x0000000d" Line="2898"><![CDATA[[DISPATCHER]ia_css_dispatcher_retrieve_proc_grp_ctx 0x%lx
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0882f8eb" File="0x0000000d" Line="1499"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_xcom: rcv OTF LINK_DEACTIVATE_CANCEL
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9f40c8ec" File="0x0000000d" Line="2381"><![CDATA[[DISPATCHER]Device command || {command %#x,  proc grp viedaddr %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x72d0457e" File="0x0000000d" Line="954"><![CDATA[[DISPATCHER]setup_process_link_id(): Data terminal [tm_index = %d] link_id: %d connection_bitmap %x prog_idx: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8ea0b8fe" File="0x0000000d" Line="996"><![CDATA[[DISPATCHER]setup_process_link_id(): invalid link id %d : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x50835103" File="0x0000000d" Line="114"><![CDATA[[RESOURCE_MANAGER]resource_contiguous_try_acquire: Unable to allocate resource. Conflict detected
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xfa48c904" File="0x0000000d" Line="262"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_check_if_done_ack(): OFS is done!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5f827907" File="0x0000000d" Line="213"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_dfm_enable_buffer_ctrl(dev_id=%d, port=%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x00d4b90e" File="0x0000000d" Line="1138"><![CDATA[[DISPATCHER]ia_css_dispatcher_send_frame_done(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6e46f110" File="0x0000000d" Line="2027"><![CDATA[[DISPATCHER]Dispatcher started queue full, back off
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1694e113" File="0x0000000d" Line="758"><![CDATA[[DISPATCHER]ia_css_dispatcher_otf_skip_ack: Handle Tproxy ACK
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x602d4118" File="0x0000000d" Line="112"><![CDATA[[PSYS_SERVER]ia_css_psys_init_syscom_fw(): Failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe998b11f" File="0x0000000d" Line="2038"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_cmd_queue(): proc_grp NULL
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1c037927" File="0x0000000d" Line="2685"><![CDATA[[DISPATCHER]DMA token arrived. Flushing process group
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x29bce12c" File="0x0000000d" Line="2221"><![CDATA[[DISPATCHER]New buffer set attached || {proc_grp handle %#x, buffer_set handle %#x, frame_counter: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc545713f" File="0x0000000d" Line="237"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_start_dfm(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xafe77149" File="0x0000000d" Line="1377"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_link_protocol EXECUTING: state BUF_CHASING, otf_state_next: %d, frame_id: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x979c8166" File="0x0000000d" Line="2110"><![CDATA[[DISPATCHER]Added item to dispatcher started queue || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2a889986" File="0x0000000d" Line="534"><![CDATA[[PROCESS_MANAGER][PERFORMANCE MEASURE] last frag done ack time: %d, total frags processing cycles: %ju nof frag done events: %d proc_grp_handle: %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5006eeed" File="0x0000000d" Line="2987"><![CDATA[[DISPATCHER]ia_css_dispatcher_task(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3ca05193" File="0x0000000d" Line="2885"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_fragment_done(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0750a445" File="0x0000000d" Line="176"><![CDATA[[PSYS_SERVER]ia_css_psys_server(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1b2291a0" File="0x0000000d" Line="1210"><![CDATA[[DISPATCHER]ia_css_dispatcher_poll_hw_event_queues(): Event token from Tproxy OTF pipeline {event %x} pg_id: %d service_id: %d, link_id: %d, frame_counter: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7f8339a6" File="0x0000000d" Line="1458"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_xcom: rcv OTF LINK_DEACTIVATE_ACK Link Id :%i
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd9a8ec47" File="0x0000000d" Line="67"><![CDATA[[PSYS_SERVER]ia_css_psys_init_syscom_fw() no secure context, skipped
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x11df359d" File="0x0000000d" Line="2867"><![CDATA[[DISPATCHER]Process group fragment %d done, process next
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xaa9b71b3" File="0x0000000d" Line="224"><![CDATA[[PSYS_SERVER]Dynamic secure ctx open and close support enabled
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0d4281b6" File="0x0000000d" Line="1323"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_link_protocol WAITING: xcom_send REQUEST_ONLINE: state otf: %d frame_id: %d link_id: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x18133bbb" File="0x0000000d" Line="2623"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_tproxy_otf_config_done(): Failed: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x380b81ce" File="0x0000000d" Line="128"><![CDATA[[PSYS_SERVER]pkg_dir loaded || {pkg_dir_dmem_address 0x%016lx, nof_entries %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9c3241d6" File="0x0000000d" Line="981"><![CDATA[[PSYS_SERVER]ia_css_proc_ctrl_set_has_cached_out (%d, %d) = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x91a569e0" File="0x0000000d" Line="2404"><![CDATA[[DISPATCHER]ia_css_dispatcher_init(): dispatcher_scratch_space address :0x%lx
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xeb3219e1" File="0x0000000d" Line="798"><![CDATA[[DISPATCHER]ia_css_dispatcher_otf_process_kicking: xcom_send REQUEST_START: otf_state: %d, frame_id: %d, link_id: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x641a69e7" File="0x0000000d" Line="182"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_dfm_clear_dfm_port_state(dev_id=%d, port=%d)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8f2d31ea" File="0x0000000d" Line="169"><![CDATA[[PSYS_SERVER]ia_css_server_store_parameter_terminal_prepare(): Enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa4b979f0" File="0x0000000d" Line="2625"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_tproxy_otf_config_done(): Exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb4f67203" File="0x0000000d" Line="1123"><![CDATA[[DISPATCHER]ia_css_dispatcher_poll_hw_event_queues(): Event token from DMA found belonging to proc_grp_id: %i with event type %i.
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4e17b20b" File="0x0000000d" Line="381"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule_new_buffer_set_prepare_cached_out_pipeline_config(): Enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf695f20e" File="0x0000000d" Line="2846"><![CDATA[[DISPATCHER]Update data_barrier_frame_counter[%d] to %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1fc33227" File="0x0000000d" Line="2556"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_tproxy_config_done(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd927922a" File="0x0000000d" Line="2576"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_tproxy_pipeline_config_done(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3db88a3f" File="0x0000000d" Line="1446"><![CDATA[[DISPATCHER]PG Id: %d: All Links are now activated!!!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8acd3a49" File="0x0000000d" Line="528"><![CDATA[[PROCESS_MANAGER]ia_css_pm_measure_frame_done(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb59f4256" File="0x0000000d" Line="911"><![CDATA[[PROCESS_MANAGER]ia_css_pm_handle_process_group_ack(): failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3e6b1066" File="0x0000000d" Line="63"><![CDATA[[PSYS_SERVER][DEC400] device id: %u axuser value: %u
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe3be2276" File="0x0000000d" Line="142"><![CDATA[[DISPATCHER]ia_css_resume_spp0: Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc2c6c27f" File="0x0000000d" Line="1564"><![CDATA[[DISPATCHER]ia_css_dispatcher_start_non_terminal_bound_processes(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x841d8289" File="0x0000000d" Line="525"><![CDATA[[DISPATCHER]ia_css_dispatcher_send_abort_response(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x02ede28a" File="0x0000000d" Line="62"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_start_cells(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xac9cca8b" File="0x0000000d" Line="2362"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_device_queue(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0b410a9a" File="0x0000000d" Line="879"><![CDATA[[DISPATCHER]set_dynamic_process_enable_bitmap: failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1845daa6" File="0x0000000d" Line="1578"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_xcom: rcv OTF DENIED_ONLINE: link_id: %d otf_state: %d frame_id: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x57f3a2a9" File="0x0000000d" Line="266"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_check_if_done_ack(): TNR is done!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0cf89aac" File="0x0000000d" Line="1485"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_xcom: rcv OTF LINK_ACTIVATE_CANCEL
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xbe6bdab1" File="0x0000000d" Line="844"><![CDATA[[DISPATCHER]ia_css_dispatcher_pipeline_otf_all_processes_kicking: Exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x160d62b8" File="0x0000000d" Line="166"><![CDATA[[PSYS_SERVER]ia_css_psys_uninit_syscom_fw(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf329d2c1" File="0x0000000d" Line="246"><![CDATA[[PSYS_SERVER]Prepare output cached section|| {cell_id %#x, kernel_id %d, mem_size %#x, dest %#x, orig %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2c0f22c7" File="0x0000000d" Line="1003"><![CDATA[[DISPATCHER]setup_process_link_id: exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x07abfae5" File="0x0000000d" Line="155"><![CDATA[[PSYS_SERVER]ia_css_psys_server: ia_css_server_init_cell FAILED
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd86c6aeb" File="0x0000000d" Line="183"><![CDATA[[PSYS_SERVER]%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6241d9d6" File="0x0000000d" Line="228"><![CDATA[[PROCESS_CONTROL]process_id:%d, device_type:%d, device_inst:%d, device_ch:%d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7f7a8081" File="0x0000000d" Line="1235"><![CDATA[[DISPATCHER]Invalid sid 0x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3597330a" File="0x0000000d" Line="139"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_handle_ack(): Done events left for process (process_id=0x%x): %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9a9c0325" File="0x0000000d" Line="1737"><![CDATA[[DISPATCHER]error: err_handling_msg.cmd not valid
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x732cb326" File="0x0000000d" Line="2337"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_cmd_queue(): handled || {command: %i}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x984e6328" File="0x0000000d" Line="1353"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_link_protocol EXECUTING: xcom_send REQUEST_ONLINE: otf_state_next: %d, frame_id: %d, link_id: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xee279732" File="0x0000000d" Line="1139"><![CDATA[[DISPATCHER]ia_css_dispatcher_send_frame_done() || {proc_grp_handle %#x, for frame %u}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa10dfb35" File="0x0000000d" Line="126"><![CDATA[[PSYS_SERVER]ia_css_psys_init_syscom_fw_secure(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x23ac7b42" File="0x0000000d" Line="133"><![CDATA[[PSYS_SERVER]pkg_dir_load(): Failed!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1f0fc9e2" File="0x0000000d" Line="213"><![CDATA[[DISPATCHER]tproxy_operation_queue_store->operation_range[i]: %d, start_index:%d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc2c84b56" File="0x0000000d" Line="254"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_check_if_done_ack(): DFM is_done_ack pg_idx:%d, process_idx:%d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x02266358" File="0x0000000d" Line="1987"><![CDATA[[DISPATCHER]Invalid process group command (ignoring) || {command %#x,  proc grp viedaddr %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2c9c2b3c" File="0x0000000d" Line="2045"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_cmd_queue(): proc_grp->proc_grp_handle is NOT NULL
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc9067b6f" File="0x0000000d" Line="2520"><![CDATA[[DISPATCHER]ia_css_dispatcher_close_secure(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x59977de8" File="0x0000000d" Line="892"><![CDATA[[PROCESS_MANAGER]ia_css_pm_handle_process_group_ack(): Active processes left for proc_group (proc_group_context_idx) %d, frame %d: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf7b7fb79" File="0x0000000d" Line="2593"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_tproxy_pipeline_config_done(): Failed: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf236bb7c" File="0x0000000d" Line="2694"><![CDATA[[DISPATCHER]pg cached from 0x%x has ID %i
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x42e92b7f" File="0x0000000d" Line="185"><![CDATA[[PSYS_SERVER]ia_css_psys_uninit_syscom_fw(): Leave
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3480a38c" File="0x0000000d" Line="848"><![CDATA[[DISPATCHER]ia_css_dispatcher_pipeline_otf_all_processes_kicking: Failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe8e480c9" File="0x0000000d" Line="1654"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_xcom: rcv OTF ACCEPT_ONLINE: link_id: %d otf_state_next: %d frame_id: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa5f47bd2" File="0x0000000d" Line="734"><![CDATA[[DISPATCHER]ia_css_dispatcher_pipeline_processes_kicking: Exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0dc953d9" File="0x0000000d" Line="195"><![CDATA[[DISPATCHER]ia_css_pause_resume_psys : tproxy pause failed 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc9f5d3e3" File="0x0000000d" Line="2635"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_tproxy_pipeline_otf_config_done(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe74e73f1" File="0x0000000d" Line="1369"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_link_protocol EXECUTING: state OFFLINE, otf_state_next: %d, frame_id: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x163fe0aa" File="0x0000000d" Line="2605"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_tproxy_otf_config_done(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x87161421" File="0x0000000d" Line="322"><![CDATA[[PROCESS_MANAGER]ia_css_pm_unload_process(): failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x037ac42a" File="0x0000000d" Line="218"><![CDATA[[PSYS_SERVER][PERFORMANCE MEASURE] psys init: %u
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x011a6a0b" File="0x0000000d" Line="301"><![CDATA[[PSYS_SERVER]ia_css_server_store_parameter_terminal_prepare(): Failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7addbc47" File="0x0000000d" Line="2118"><![CDATA[[DISPATCHER][PERFORMANCE MEASURE] Cold PG load start timestamp: %d, proc_grp_handle: %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa401444c" File="0x0000000d" Line="2272"><![CDATA[[DISPATCHER]STOP command: Process group done || {num of fragments %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x55222c57" File="0x0000000d" Line="1556"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_xcom: otf_started_processes_bitmask %x, link_id_bitmask %x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7486746c" File="0x0000000d" Line="2006"><![CDATA[[DISPATCHER]PAUSE_RESUME PSYS FAILED
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd659cc78" File="0x0000000d" Line="1324"><![CDATA[[DISPATCHER]Late binding buffer_set_mask: 0x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9175e47c" File="0x0000000d" Line="122"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_dfm_update_ack_msg(dev_id=%d, port=%d, addr=%08X, token=%08X)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x93cf0c7e" File="0x0000000d" Line="254"><![CDATA[[PSYS_SERVER]Secure ctx open requested
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf21174c0" File="0x0000000d" Line="1330"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_link_protocol WAITING: otf_ctx_entry[link_id].otf_state: %d active_link_frame: %d link_id: %d frame_id: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x261a0c85" File="0x0000000d" Line="2282"><![CDATA[[DISPATCHER][PERFORMANCE MEASURE] PG complete start point %u, PG complete end point cycles %u,
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xad1c8c87" File="0x0000000d" Line="2227"><![CDATA[[DISPATCHER]running on commit:
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x685fa490" File="0x0000000d" Line="155"><![CDATA[[POWER_MANAGER]ia_css_power_mgr_init(): mask %d:
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5fe53494" File="0x0000000d" Line="180"><![CDATA[[DISPATCHER]ia_css_pause_resume_psys: Read back loop start after write - from tproxy icache cfg ctrl reg @SPPO_ICACHE_STAT_CTRL_ADDR = 0x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0ba7ff6e" File="0x0000000d" Line="652"><![CDATA[[PROCESS_MANAGER]ia_css_pm_start_process_lite(): process->program_idx %d enter 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5483d4b6" File="0x0000000d" Line="1149"><![CDATA[[DISPATCHER]ia_css_dispatcher_send_frame_done() || {frame_done_token sent contain: status = %u, command = %u, context_handle = %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x48a9b4ca" File="0x0000000d" Line="193"><![CDATA[[PSYS_SERVER][PERFORMANCE MEASURE] psys init after init timers: %u
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3b1e8cce" File="0x0000000d" Line="76"><![CDATA[[PSYS_SERVER]PSYS server proxies closed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf9bf9cef" File="0x0000000d" Line="64"><![CDATA[[PSYS_SERVER]ia_css_psys_event_queue_send (secure %d, trigger_irq %d) start
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4bfcacfe" File="0x0000000d" Line="2229"><![CDATA[[PSYS_SERVER]%x%x%x%x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x26516d05" File="0x0000000d" Line="154"><![CDATA[[PSYS_SERVER]ia_css_psys_init_syscom_fw_secure(): Failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x07065d0f" File="0x0000000d" Line="2566"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_tproxy_config_done(): Exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd9b75d15" File="0x0000000d" Line="1720"><![CDATA[[DISPATCHER]error: proc_group_ctx_id: %u out of disp_local_ctx[] bounds
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1675cb84" File="0x0000000d" Line="687"><![CDATA[[DISPATCHER]ia_css_dispatcher_otf_updates_after_all_processes_kicked: Failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xaa43ed1f" File="0x0000000d" Line="234"><![CDATA[[PSYS_SERVER]dispatcher error %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcdcd7526" File="0x0000000d" Line="1018"><![CDATA[[DISPATCHER]ia_css_dispatcher_cache_pg_otf_params(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x69ab753c" File="0x0000000d" Line="492"><![CDATA[[DISPATCHER]ia_css_dispatcher_cond_ack_send(): Sending Ack %d || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6fb5af8d" File="0x0000000d" Line="282"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_check_if_done_ack(): DFM is_done_ack pg_idx:%d, process_idx:%d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xda57ed52" File="0x0000000d" Line="2564"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_tproxy_config_done(): Failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x313e2563" File="0x0000000d" Line="408"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule_new_buffer_set_prepare_cached_out_pipeline_config(): Exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x01f95d6e" File="0x0000000d" Line="663"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_xcom: otf cond_ack_send frame %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x68799570" File="0x0000000d" Line="1135"><![CDATA[[DISPATCHER]ia_css_dispatcher_poll_hw_event_queues(): Event token from XCOM {event %x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe79cbd76" File="0x0000000d" Line="2002"><![CDATA[[DISPATCHER]Received PAUSE PSYS CMD
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xdb35dd7e" File="0x0000000d" Line="1247"><![CDATA[[DISPATCHER]ia_css_dispatcher_poll_hw_event_queues(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x22ed6d7f" File="0x0000000d" Line="143"><![CDATA[[DISPATCHER]ia_css_resume_spp0:Attempting to write 0x%x: to tproxy icache cfg ctrl reg @SPPO_ICACHE_STAT_CTRL_ADDR = 0x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3f20d591" File="0x0000000d" Line="1229"><![CDATA[[DISPATCHER]ia_css_dispatcher_send_late_binding_done(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf5039d99" File="0x0000000d" Line="1189"><![CDATA[[DISPATCHER]ia_css_dispatcher_poll_hw_event_queues(): Event token from Tproxy OTF {event %x} pg_id: %d service_id: %d link_id: %d, frame_counter: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x7a331d9a" File="0x0000000d" Line="145"><![CDATA[[DISPATCHER]ia_css_resume_spp0: Read back loop start after write - from tproxy icache cfg ctrl reg @SPPO_ICACHE_STAT_CTRL_ADDR = 0x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9e44759d" File="0x0000000d" Line="184"><![CDATA[[PSYS_SERVER]%x%x%x%x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3dad05ad" File="0x0000000d" Line="2334"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_cmd_queue(): handled || {command: %i, proc_grp_handle: 0x%x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9f4695bf" File="0x0000000d" Line="70"><![CDATA[[PSYS_SERVER]ia_css_psys_event_queue_send trigger SW IRQ
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd301edc7" File="0x0000000d" Line="1432"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_xcom: rcv OTF LINK_ACTIVATE_ACK Link Id %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x90c3f5cd" File="0x0000000d" Line="217"><![CDATA[[DISPATCHER]calculate_symbols_count_of_cached_out_processes(): Exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x990bd5d0" File="0x0000000d" Line="198"><![CDATA[[PSYS_SERVER]Cached terminal buffer || {param_payload_base %#x, nof_sections %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4d0ac5d1" File="0x0000000d" Line="861"><![CDATA[[PROCESS_MANAGER]ia_css_pm_handle_process_ack(): failed
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x301795dc" File="0x0000000d" Line="1562"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_xcom: All processes loaded for frame %d.
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3f0525e2" File="0x0000000d" Line="1439"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_xcom: buffer set frame_counter: %u
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x209e3de8" File="0x0000000d" Line="208"><![CDATA[[PSYS_SERVER]ia_css_server_get_indexed_program_descriptor(): Failed! 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc1a885f1" File="0x0000000d" Line="202"><![CDATA[[DISPATCHER]ia_css_pause_psys: Attempting to write 0x%x: to psys spc0 icache cfg ctrl reg @SPC0_ICACHE_STAT_CTRL_ADDR = 0x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x41b45df4" File="0x0000000d" Line="643"><![CDATA[[DISPATCHER]ia_css_dispatcher_schedule_waiting: [PERFORMANCE MEASURE] PG load cycles: %d, proc_grp_handle: %#x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe3b0acfe" File="0x0000000d" Line="1040"><![CDATA[[DISPATCHER]dispatcher_poll_hw_event_queues(): DONE_ACK for process_group = %#x for processing frame %u
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6630b7a9" File="0x0000000d" Line="881"><![CDATA[[PROCESS_MANAGER]ia_css_pm_handle_process_group_ack(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1aacae02" File="0x0000000d" Line="2135"><![CDATA[[DISPATCHER]Need buffer set size:%d, max_buffer_set_size:%d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xac5eee06" File="0x0000000d" Line="67"><![CDATA[[RESOURCE_MANAGER]resource_contiguous_try_acquire: The number of pre-allocated nodes has been reached
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc5cec101" File="0x0000000d" Line="696"><![CDATA[[DISPATCHER]ia_css_dispatcher_pipeline_processes_kicking: Enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x82ae6e0e" File="0x0000000d" Line="156"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_handle_ack() failed!
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x85389e11" File="0x0000000d" Line="2042"><![CDATA[[DISPATCHER]pg context is %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xfb43a61c" File="0x0000000d" Line="214"><![CDATA[[PSYS_SERVER]PSYS Server Initialized
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x55683e21" File="0x0000000d" Line="948"><![CDATA[[PSYS_SERVER]ia_css_proc_ctrl_has_cached_out (%d, %d) <- %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x60c03630" File="0x0000000d" Line="1675"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_xcom: rcv OTF DENIED_ONLINE: link_id: %d otf_state_next: %d frame_id: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb9232651" File="0x0000000d" Line="710"><![CDATA[[DISPATCHER]ia_css_dispatcher_pipeline_processes_kicking: Finish waiting, Gen is ready
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9cb1150f" File="0x0000000d" Line="970"><![CDATA[[DISPATCHER]setup_process_link_id(): Data barrier data terminal [tm_index = %d]
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x3a4f0666" File="0x0000000d" Line="2366"><![CDATA[[DISPATCHER]Dispatcher device cmd ctx full, back off
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6e954f99" File="0x0000000d" Line="1310"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_link_protocol WAITING: STATE_OFFLINE frame_id: %d %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x74a5fbbf" File="0x0000000d" Line="175"><![CDATA[[DISPATCHER]ia_css_pause_resume_psys: Attempting to write 0x%x: to tproxy icache cfg ctrl reg @SPPO_ICACHE_STAT_CTRL_ADDR = 0x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x430e767d" File="0x0000000d" Line="401"><![CDATA[[DISPATCHER]Final: tproxy_operation_queue_store->operation_range[%d].size:%d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8f353e81" File="0x0000000d" Line="1744"><![CDATA[[DISPATCHER]error: event_msg_type not valid
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb31aae89" File="0x0000000d" Line="1627"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_xcom: rcv OTF DENIED_START: link_id: %d otf_state: %d frame_id: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd1d2d692" File="0x0000000d" Line="425"><![CDATA[[DISPATCHER]prepare_cached_out_config_entries(): Exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8af87519" File="0x0000000d" Line="2779"><![CDATA[[DISPATCHER]Process group failed in SERVER_EVENT_PROC_GROUP_DONE
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x6264be9d" File="0x0000000d" Line="2348"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_cmd_queue(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd9dd57c5" File="0x0000000d" Line="844"><![CDATA[[PROCESS_MANAGER]ia_css_pm_handle_process_ack(): enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa8127ea7" File="0x0000000d" Line="258"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_check_if_done_ack(): GDC is done
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5fe386a8" File="0x0000000d" Line="1262"><![CDATA[[DISPATCHER]Invalid process group command (ignoring) || {command %#x,  proc grp viedaddr %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9a66dd1c" File="0x0000000d" Line="1157"><![CDATA[[DISPATCHER]ia_css_dispatcher_send_frame_done(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9b238eb6" File="0x0000000d" Line="51"><![CDATA[[PSYS_SERVER]ia_css_tproxy_operation_operation_queue_sync_poll enter:
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9d882eb8" File="0x0000000d" Line="675"><![CDATA[[PROCESS_MANAGER]ia_css_pm_start_process_lite() failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc9316ebc" File="0x0000000d" Line="732"><![CDATA[[DISPATCHER]ia_css_dispatcher_pipeline_processes_kicking(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2c0adec4" File="0x0000000d" Line="636"><![CDATA[[NCI_DEC400]nci_dec400_irq_wrapper_regs_setup || {enable_mask: %d, edge_mask: %d, level_n_pulse_mask: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8e9a36cb" File="0x0000000d" Line="1034"><![CDATA[[DISPATCHER]ia_css_dispatcher_cache_pg_otf_params(): failed || {return: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xfcdd9ed6" File="0x0000000d" Line="1424"><![CDATA[[DISPATCHER]proc_grp %#x connected through link id %u
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x4d769eef" File="0x0000000d" Line="1211"><![CDATA[[DISPATCHER]ia_css_dispatcher_send_late_binding_done(): Entry || {proc_grp_handle %#x}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd356def1" File="0x0000000d" Line="55"><![CDATA[[RESOURCE_MANAGER]resource_contiguous_try_acquire: Invalid resource id (%u) : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x0984a6f2" File="0x0000000d" Line="1168"><![CDATA[[DISPATCHER]ia_css_dispatcher_poll_hw_event_queues(): Event token from Tproxy pipeline {event %x} pg_id: %d service_id: %d, frame_counter: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x1b9f76f7" File="0x0000000d" Line="501"><![CDATA[[PROCESS_CONTROL]ia_css_proc_control_clear_process_state()
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xefaa86fb" File="0x0000000d" Line="970"><![CDATA[[PSYS_SERVER]ia_css_proc_ctrl_set_next_enabled (%d, %d) = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xe0ac2efe" File="0x0000000d" Line="73"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_start_cells(): exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xebe1cf04" File="0x0000000d" Line="266"><![CDATA[[PSYS_SERVER]PSYS server finished main loop
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x407f8f10" File="0x0000000d" Line="2760"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_dma_ack(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xfc80b384" File="0x0000000d" Line="184"><![CDATA[[DISPATCHER]calculate_symbols_count_of_cached_out_processes(): Enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x98870726" File="0x0000000d" Line="60"><![CDATA[[PSYS_SERVER]ia_css_tproxy_operation_operation_queue_sync_poll exit:
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x83944f28" File="0x0000000d" Line="58"><![CDATA[[PSYS_SERVER][DEC400] device id: %u axuser value: %u
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x31c7672a" File="0x0000000d" Line="810"><![CDATA[[DISPATCHER]ia_css_dispatcher_otf_process_kicking: Failed {PM_status: %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xc821a345" File="0x0000000d" Line="213"><![CDATA[[DISPATCHER]ia_css_pause_resume_psys : tproxy resume failed 
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9828d742" File="0x0000000d" Line="704"><![CDATA[[DISPATCHER]ia_css_dispatcher_pipeline_processes_kicking: Start waiting for Gen to be ready
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x8bd15f46" File="0x0000000d" Line="106"><![CDATA[[PSYS_SERVER]pkg_dir_load(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd9d7b74e" File="0x0000000d" Line="218"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_check_if_done_ack(): enter msg:%d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x09167f50" File="0x0000000d" Line="874"><![CDATA[[DISPATCHER]set_dynamic_process_enable_bitmap: enabled_process_count: %d bitmap: 0x%x-0x%x
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x16f85f51" File="0x0000000d" Line="1547"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_xcom: rcv OTF ACCEPT_START: link_id: %d otf_state: %d frame_id: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xefef8f54" File="0x0000000d" Line="2402"><![CDATA[[DISPATCHER]ia_css_dispatcher_init(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x37d01f59" File="0x0000000d" Line="667"><![CDATA[[PROCESS_MANAGER]ia_css_pm_start_process_lite() n_active_process: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcac6b763" File="0x0000000d" Line="56"><![CDATA[[PSYS_SERVER]ia_css_psys_init_syscom_fw(): Entry
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xd571bf75" File="0x0000000d" Line="1193"><![CDATA[[DISPATCHER]Late binding buffer from 0x%x used for terminal %i
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xb4a2af9b" File="0x0000000d" Line="753"><![CDATA[[DISPATCHER]ia_css_dispatcher_otf_skip_ack: Skip Tproxy ACK
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcdaa85fb" File="0x0000000d" Line="296"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_start_dfm(): exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x2ceecfa5" File="0x0000000d" Line="246"><![CDATA[[PSYS_SERVER]Secure ctx close requested
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9c7f2fa8" File="0x0000000d" Line="182"><![CDATA[[PSYS_SERVER]running on commit:
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x585e7799" File="0x0000000d" Line="1316"><![CDATA[[DISPATCHER]Late binding parameter buffer from 0x%x was submitted for terminal %i
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x797c87b9" File="0x0000000d" Line="1515"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_xcom: rcv OTF ACCEPT_ONLINE: link_id: %d otf_state: %d frame_id: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xbd994fbb" File="0x0000000d" Line="117"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_dfm_update_ack_msg-skip rw(dev_id=%d, port=%d, addr=%08X, token=%08X)
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x03cebfbc" File="0x0000000d" Line="241"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_check_if_done_ack(): ACB is_done_ack = %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x5ea607bd" File="0x0000000d" Line="824"><![CDATA[[DISPATCHER]ia_css_dispatcher_pipeline_otf_all_processes_kicking: Enter
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x760877c5" File="0x0000000d" Line="1416"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_xcom: cmd: %d, frame_counter: %d, valid = %u, link_id: %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xeb3a17ca" File="0x0000000d" Line="986"><![CDATA[[DISPATCHER]setup_process_link_id(): Stream2gen link, data terminal [tm_index = %d]
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xcfe657de" File="0x0000000d" Line="2595"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_tproxy_pipeline_config_done(): Exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa81637e6" File="0x0000000d" Line="295"><![CDATA[[PSYS_SERVER]ia_css_psys_server(): Failed || {error = %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xa2dbbfed" File="0x0000000d" Line="2653"><![CDATA[[DISPATCHER]ia_css_dispatcher_handle_tproxy_pipeline_otf_config_done(): Exit
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x60f747f2" File="0x0000000d" Line="60"><![CDATA[[RESOURCE_MANAGER]resource_contiguous_try_acquire: Maximum size (%u) for the offset (%u) and size (%u) of res_id (%u) has been reached
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0xf00207f8" File="0x0000000d" Line="67"><![CDATA[[PROCESS_CONTROL]ia_css_proc_ctrl_start_cells cell_res_id %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x9ca507f9" File="0x0000000d" Line="946"><![CDATA[[DISPATCHER]dispatcher_poll_hw_event_queues(): token received: eq_token %u, pid %u sid %u
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x49980ffe" File="0x0000000d" Line="2941"><![CDATA[[DISPATCHER]dispatcher_handle_context_queues(): Failed || {Error %d}
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+    <Message ID="0x57de496a" File="0x0000000e" Line="109"><![CDATA[[VIED_NCI_ACCESS_BLOCKER]nci_ab_set_ab_config_array device %d target %d
+ : PID = %x : Timestamp = %d : PC = %x]]></Message>
+  </Messages>
+
+</SvenDictionary>

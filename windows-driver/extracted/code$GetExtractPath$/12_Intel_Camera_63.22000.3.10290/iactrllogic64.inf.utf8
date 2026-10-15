@@ -1,0 +1,82 @@
+﻿;/*++
+;
+;Copyright (c) 2010-2020 Intel Corporation
+;
+;Module Name:
+;
+;    skccontroller.inf
+;
+;Abstract:
+;    INF file for installing skylake camera pmic (ACPI\XXXX) driver
+;
+;Installation Notes:
+;    Using Devcon: Type "devcon update skccontroller.inf ACPI\XXXX" to install
+;
+;--*/
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%INTEL%
+DriverVer = 11/29/2022,63.22000.1.3
+CatalogFile=iactrllogic64.cat
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 13
+
+;*****************************************
+; Sensor Device  Install Section
+;*****************************************
+
+[Manufacturer]
+%INTEL%=Standard,NTamd64
+
+; For XP and later
+[Standard.NTamd64]
+%iactrllogic.DeviceDesc%=iactrllogic_Device, ACPI\INT3472
+%iactrllogic.DeviceDesc%=iactrllogic_Device, ACPI\INT346F
+
+[iactrllogic_Device.NTamd64]
+CopyFiles=iactrllogic_Device.NT.Copy
+Reboot
+
+[iactrllogic_Device.NT.Copy]
+iactrllogic64.sys
+
+;-------------- Service installation
+[iactrllogic_Device.NTamd64.Services]
+AddService = iactrllogic, %SPSVCINST_ASSOCSERVICE%, SKC_Service_Inst
+
+[SKC_Service_Inst]
+DisplayName    = %iactrllogic.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %13%\iactrllogic64.sys
+Dependencies   = SpbCx,inteli2c
+
+[iactrllogic_Device.NTamd64.HW]
+AddReg         = iactrllogic_Device.AddReg
+
+[iactrllogic_Device.AddReg]
+;Use same security checks on relative opens
+HKR,Parameters,DeviceCharacteristics,0x10001,0x0100
+;Grant access just to built-in administrators, local system, and usermode drivers
+HKR,Parameters,Security,,"D:P(A;;GA;;;BA)(A;;GA;;;SY)(A;;GA;;;S-1-5-84-0-0-0-0-0)(D;;GA;;;WD)"
+HKR,"WDF","WdfDirectedPowerTransitionEnable",0x00010001,1
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+iactrllogic64.sys = 1
+
+[Strings]
+SPSVCINST_ASSOCSERVICE = 0x00000002
+INTEL = "Intel Corporation"
+iactrllogic = "Intel Control Logic Driver"
+DiskId1 = "Intel Control Logic Installation Disk #1"
+iactrllogic.DeviceDesc = "Intel(R) Control Logic"
+iactrllogic.SVCDESC = "Intel(R) Control Logic"
