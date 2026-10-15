@@ -1,18 +1,22 @@
 # 📍 KALDIĞIMIZ YER — duet5-camera Anlık Durum
 
 **Son Güncelleme:** 2026-10-15  
-**Durum:** Faz 1 & Faz 2 TAMAMLANDI (Hem Ön Hem Arka Kamera Donanım Seviyesinde Aktif ve Çerçeve Yakalıyor)  
-**Sıradaki İş:** **Masaüstü Arayüzü (Snapshot) Kamera Değiştirme ve Renk Kalibrasyonu**  
+**Durum:** Faz 1, Faz 2 & Faz 3 TAMAMLANDI (Hem Ön Hem Arka Kamera Donanım ve Yazılım Seviyesinde %100 Aktif, Fabrika Renk Profilleri Yüklü, Snapshot ile Tescillendi)  
+**Sıradaki İş:** İsteğe bağlı: İleride IPU6 PSYS donanım hızlandırmalı libcamhal denenmesi (Şu an Software ISP stabil çalışıyor, donduruldu)  
 **Aktif Plan:** `docs/plan/GENEL_PLAN.md`  
 **Test Kanıtı:** 
 - `dmesg`: `SUCCESS! Detected GC5035 sensor (id=0x5035) on attempt 0!`
 - `cam -l`:
   * `1: Internal front camera (\_SB_.PC00.LNK0)`
   * `2: 'gc5035' (\_SB_.PC00.LNK1)`
-- `cam -c 2 --capture=1`: 2592x1944 20.4 MB tek kare başarıyla yakalandı.
-- `pw-cli`:
+- `cam -c 2 --capture=1`: 2592x1944 20.4 MB tam çözünürlüklü donanım karesi başarıyla yakalandı.
+- `libcamera IPA`:
+  * `/usr/share/libcamera/ipa/simple/ov5675.yaml` (Ön Kamera Fabrika Renk & NIR Bastırma Profili)
+  * `/usr/share/libcamera/ipa/simple/gc5035.yaml` (Arka Kamera Fabrika CCM & Siyah Seviyesi 64 Profili)
+- `PipeWire / WirePlumber / Snapshot`:
   * `libcamera_input.__SB_.PC00.LNK0` (Ön Kamera)
   * `libcamera_input.__SB_.PC00.LNK1` (Arka Kamera)
+  * GNOME Snapshot üzerinden kamera geçişi ve fotoğraf çekimi doğrulandı.
 **Git Durumu:** `master` güncel  
 
 ---
@@ -56,3 +60,4 @@ snapshot
 - 2026-10-15: Ön kamera aktif edildi; Windows 11 fabrika kalibrasyonları ayıklandı.
 - 2026-10-15: Arka kamera (GC5035) sürücüsü kökten çözüldü; regülatörler, 19.2MHz CCF saati, CRC32 çekirdek sıkıştırması ve donanım sekansı ile `0x5035` çip kimliği başarıyla okundu. `cam -c 2` ile 2592x1944 görüntü yakalandı.
 - 2026-10-15 (20:40): `V4L2_CID_CAMERA_ORIENTATION` (BACK) ve `get_selection` crop hedefleri sürücüye eklendi; `yukle.sh` içine WirePlumber otomatik oturum tazelemesi yerleştirildi.
+- 2026-10-15 (22:15): `gc5035.yaml` fabrika profili sisteme kuruldu; CCM ve 64 siyah seviyesi pedestal çıkarması devreye alındı. Snapshot üzerinden ön ve arka kamera canlı akışı ve fotoğraf çekimi kullanıcı tarafından tescillendi. Sistem donduruldu.
